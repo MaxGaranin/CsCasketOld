@@ -1,0 +1,99 @@
+﻿<Window x:Class="WpfSamples40.ComplexSamples.FluidModels.Views.FluidModelBankView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:controls="clr-namespace:WpfSamples40.Controls"
+        xmlns:views="clr-namespace:WpfSamples40.ComplexSamples.FluidModels.Views"
+        Title="Банк моделей жидкости" Height="630" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <telerik:Label Grid.Row="0" Grid.Column="0" Content="Группа" Margin="0,5,0,0"/>
+            <telerik:RadComboBox Grid.Row="1" Grid.Column="0"
+                                 ItemsSource="{Binding Groups}" 
+                                 SelectedItem="{Binding CurrentGroup, Mode=TwoWay}"
+                                 DisplayMemberPath="Name"/>
+            <telerik:Label Grid.Row="2" Grid.Column="0" Content="Модель" Margin="0,5,0,0"/>
+            <telerik:RadComboBox Grid.Row="3" Grid.Column="0"
+                                 ItemsSource="{Binding CurrentGroup.FluidModels}" 
+                                 SelectedItem="{Binding CurrentFluidModel, Mode=TwoWay}"
+                                 DisplayMemberPath="Name"/>
+            <telerik:Label Grid.Row="4" Grid.Column="0" Content="Описание" Margin="0,5,0,0"/>
+            <telerik:RadWatermarkTextBox Grid.Row="5" Grid.Column="0" Height="50" VerticalContentAlignment="Top" 
+                                         IsEnabled="False"
+                                         Text="{Binding CurrentFluidModel.Description}"/>
+        </Grid>
+
+        <controls:CustomStackPanel Grid.Row="1" HorizontalAlignment="Left"
+                                   IsReadOnly="True">
+            <TextBox Width="200" Text="1314"/>
+            <ComboBox Width="200" SelectedIndex="0">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="aaa"/>
+                    <ComboBoxItem Content="bbb"/>
+                    <ComboBoxItem Content="ccc"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <Grid>
+                <Grid>
+                    <Grid>
+                        <DataGrid Width="400" Height="200">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                            </DataGrid.Columns>
+
+                            <!-- Static Data which will automatically go in the datagrid -->
+                            <views:MockRecord FirstName="Fred" LastName="Flintstone" Email="fred@noemail.org" />
+                            <views:MockRecord FirstName="Wilma" LastName="Flintstone" Email="wilma@noemail.org" />
+                            <views:MockRecord FirstName="Barney" LastName="Rubble" Email="barney@noemail.org" />
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <TextBox Width="200" Text="1314"/>
+            <TextBox Width="200" Text="1314"/>
+            <TextBox Width="200" Text="1314"/>
+            <TextBox Width="200" Text="1314"/>
+            <TextBox Width="200" Text="1314"/>
+        </controls:CustomStackPanel>
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <telerik:RadButton Content="Создать.." Margin="5" Width="90" Height="30"
+                                   Command="{Binding CreateModelCommand}"/>
+                <telerik:RadButton Content="Редактировать.." Margin="5" Width="110" Height="30"
+                                   Command="{Binding EditModelCommand}"/>
+                <telerik:RadButton Content="Удалить" Margin="5" Width="110" Height="30"
+                                   Command="{Binding RemoveModelCommand}"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <telerik:RadButton Content="Сохранить банк" Margin="5" Width="110"
+                                   Command="{Binding SaveBankCommand}"/>
+                <telerik:RadButton Content="Закрыть" Margin="5" Width="90" Click="CloseButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

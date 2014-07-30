@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96AAB0BD-AE7E-4DCE-A33A-88CB783B315A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfSamples40</RootNamespace>
+    <AssemblyName>WpfSamples4.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.1.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.1.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WPF4">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net40\GalaSoft.MvvmLight.Extras.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WPF4">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net40\GalaSoft.MvvmLight.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=0.9.0.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Others\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter, Version=2.3.3.0, Culture=neutral, PublicKeyToken=c7694541b0ac80e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2013.3.1204.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ComplexSamples\ExcelImport\ColumnContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelImporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterTestView.xaml.cs">
+      <DependentUpon>ExcelImporterTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterView.xaml.cs">
+      <DependentUpon>ExcelImporterView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\ExcelSheet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\ExcelImport\NameIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\FluidModels\Views\MockRecord.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Domain\DomainObject.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\GraphEditorApp.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\GraphEditorView.xaml.cs">
+      <DependentUpon>GraphEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\GraphEditor\Model\Coord.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Model\GraphEditorMode.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\ElementViewModel.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\PipeViewModel.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\UpsvViewModel.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\WellViewModel.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Operations\AddNewPointElementOperation.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Operations\AddPipeOperation.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Operations\IOperation.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\Operations\SelectOperation.cs" />
+    <Compile Include="ComplexSamples\GraphEditor\SelectionManager.cs" />
+    <Compile Include="ComplexSamples\Measures\Measure.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureCode.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureContainer.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureExtensions.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureGroupCode.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureGroups.cs" />
+    <Compile Include="ComplexSamples\Measures\MeasureManager.cs" />
+    <Compile Include="ComplexSamples\Measures\Measures.cs" />
+    <Compile Include="ComplexSamples\Measures\TestMeasureControl.xaml.cs">
+      <DependentUpon>TestMeasureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\Measures\TestMeasureItemControl.xaml.cs">
+      <DependentUpon>TestMeasureItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\Measures\TestMeasureView.xaml.cs">
+      <DependentUpon>TestMeasureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomGrid.cs" />
+    <Compile Include="Controls\CustomStackPanel.cs" />
+    <Compile Include="Controls\DataGridControl\CustomDataGrid.cs" />
+    <Compile Include="Controls\OldMeasureControl.xaml.cs">
+      <DependentUpon>OldMeasureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BooleanConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="Converters\IntToStringConverter.cs" />
+    <Compile Include="Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\DoubleToStringConverter.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Helpers\DispatcherHelper.cs" />
+    <Compile Include="Helpers\FileDialogHelper.cs" />
+    <Compile Include="Helpers\ICanceller.cs" />
+    <Compile Include="Model\BigData.cs" />
+    <Compile Include="Model\ModelObject.cs" />
+    <Compile Include="Model\Parameter.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Utils\ClipboardHelper.cs" />
+    <Compile Include="Utils\ObjectUtils.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="ValidationRules\DoubleRangeValidationRule.cs" />
+    <Compile Include="ValidationRules\DoubleValidationRule.cs" />
+    <Compile Include="ValidationRules\PositiveDoubleValidationRule.cs" />
+    <Compile Include="ViewModel\ControlDataContext\ControlDataContextLauncher.cs" />
+    <Compile Include="ViewModel\ControlDataContext\ComplexViewModel.cs" />
+    <Compile Include="ViewModel\ControlDataContext\FIrstViewModel.cs" />
+    <Compile Include="ViewModel\ControlDataContext\SecondViewModel.cs" />
+    <Compile Include="ViewModel\MultiTriggerViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
+    <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\TestViewModel.cs" />
+    <Compile Include="ViewModel\TriggersTestsViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\ValidationTestModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\BackgroundWorkerView.xaml.cs">
+      <DependentUpon>BackgroundWorkerView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\FieldUserControl.xaml.cs">
+      <DependentUpon>FieldUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\Measures\MeasureControl.xaml.cs">
+      <DependentUpon>MeasureControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleControlWithoutDp.xaml.cs">
+      <DependentUpon>SimpleControlWithoutDp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxControl.xaml.cs">
+      <DependentUpon>TextBoxControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\Draw\DataReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\Draw\DrawWellsMapView.xaml.cs">
+      <DependentUpon>DrawWellsMapView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\Draw\WellPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\ControlDataContext\ControlDataContextView.xaml.cs">
+      <DependentUpon>ControlDataContextView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ControlDataContext\FirstControl.xaml.cs">
+      <DependentUpon>FirstControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ControlDataContext\SecondControl.xaml.cs">
+      <DependentUpon>SecondControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomDataGridTestView.xaml.cs">
+      <DependentUpon>CustomDataGridTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataTableDateColumnView.xaml.cs">
+      <DependentUpon>DataTableDateColumnView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataTableAutoGenerateView.xaml.cs">
+      <DependentUpon>DataTableAutoGenerateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditCollectionsView.xaml.cs">
+      <DependentUpon>EditCollectionsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\EventCommands\DelegateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\EventCommands\EventCommandsView.xaml.cs">
+      <DependentUpon>EventCommandsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\EventCommands\EventCommandsViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\EventCommands\ViewModelBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\FluidModels\FluidModel.cs" />
+    <Compile Include="ComplexSamples\FluidModels\FluidModelBank.cs" />
+    <Compile Include="ComplexSamples\FluidModels\FluidModelBankViewModel.cs" />
+    <Compile Include="ComplexSamples\FluidModels\FluidModelEditorViewModel.cs" />
+    <Compile Include="ComplexSamples\FluidModels\FluidModelGroup.cs" />
+    <Compile Include="ComplexSamples\FluidModels\FluidModelsBankLauncher.cs" />
+    <Compile Include="ComplexSamples\FluidModels\Views\FluidModelBankView.xaml.cs">
+      <DependentUpon>FluidModelBankView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\FluidModels\Views\FluidModelEditorView.xaml.cs">
+      <DependentUpon>FluidModelEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\GridSizeView.xaml.cs">
+      <DependentUpon>GridSizeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\LauncherView.xaml.cs">
+      <DependentUpon>LauncherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\Measures\MeasureWithControlView.xaml.cs">
+      <DependentUpon>MeasureWithControlView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\MultiTriggerView.xaml.cs">
+      <DependentUpon>MultiTriggerView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\RadGridViewTestView.xaml.cs">
+      <DependentUpon>RadGridViewTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShowImageView.xaml.cs">
+      <DependentUpon>ShowImageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SimpleControlTestView.xaml.cs">
+      <DependentUpon>SimpleControlTestView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\BankFluidModel.xaml.cs">
+      <DependentUpon>BankFluidModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\BankFluidViewModel.cs" />
+    <Compile Include="ComplexSamples\TestNestedControls\NestedControlsLauncher.cs" />
+    <Compile Include="ComplexSamples\TestNestedControls\LocalFluidModel.xaml.cs">
+      <DependentUpon>LocalFluidModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\LocalFluidViewModel.cs" />
+    <Compile Include="ComplexSamples\TestNestedControls\WellFluidModel.xaml.cs">
+      <DependentUpon>WellFluidModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\WellFluidViewModel.cs" />
+    <Compile Include="ComplexSamples\TestNestedControls\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexSamples\TestNestedControls\WellModelViewModel.cs" />
+    <Compile Include="View\TabView.xaml.cs">
+      <DependentUpon>TabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransparentView.xaml.cs">
+      <DependentUpon>TransparentView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\TriggersTestsView.xaml.cs">
+      <DependentUpon>TriggersTestsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\ValidationTestView.xaml.cs">
+      <DependentUpon>ValidationTestView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\WaitDialogView.xaml.cs">
+      <DependentUpon>WaitDialogView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ComplexSamples\ExcelImport\ExcelImporterTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\ExcelImport\ExcelImporterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\GraphEditor\GraphEditorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComplexSamples\Measures\TestMeasureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\Measures\TestMeasureItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\Measures\TestMeasureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\OldMeasureControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\GraphEditorResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\CommonResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\BackgroundWorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FieldUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\Measures\MeasureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SimpleControlWithoutDp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TextBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\Draw\DrawWellsMapView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ControlDataContext\ControlDataContextView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ControlDataContext\FirstControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ControlDataContext\SecondControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomDataGridTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DataTableDateColumnView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DataTableAutoGenerateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditCollectionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\EventCommands\EventCommandsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\FluidModels\Views\FluidModelBankView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComplexSamples\FluidModels\Views\FluidModelEditorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\GridSizeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\TestNestedControls\LauncherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\Measures\MeasureWithControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MultiTriggerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RadGridViewTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShowImageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SimpleControlTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\TestNestedControls\BankFluidModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\TestNestedControls\LocalFluidModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\TestNestedControls\WellFluidModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComplexSamples\TestNestedControls\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TransparentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TriggersTestsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ValidationTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WaitDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\loading3.gif" />
+    <Resource Include="Resources\Images\star.png" />
+    <Resource Include="ComplexSamples\Draw\B2-HO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\KS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
