@@ -1,12 +1,11 @@
-﻿using System.Globalization;
+﻿using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Markup;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
-using WpfSamples40.ComplexSamples.FluidModels;
-using WpfSamples40.ComplexSamples.GraphEditor;
-using WpfSamples40.ComplexSamples.Measures;
-using WpfSamples40.View;
+using WpfSamples40.View.Master;
+using WpfSamples40.ViewModel.Master;
 
 namespace WpfSamples40
 {
@@ -21,17 +20,16 @@ namespace WpfSamples40
         {
             Init();
 
-//            var view = new TestMeasureView();
-//            var view = new MeasureWithControlView();
-//            var view = new GraphEditorView();
+            var viewModel = new MasterViewModel();
+            viewModel.TabViewModels = new ObservableCollection<ITabViewModel>
+            {
+                new Control1 { Header = "Control1"},
+                new Control2 { Header = "Control2"},
+                new Control3 { Header = "Control3"},
+            };
 
-//            var view = new TabView();
-//            view.Show();
-
-//            var launcher = new FluidModelsBankLauncher();
-//            launcher.Run();
-
-            var view = new ShowImageView();
+            var view = new MasterView();
+            view.DataContext = viewModel;
             view.Show();
         }
 

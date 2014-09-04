@@ -237,6 +237,8 @@
     <Compile Include="ViewModel\ControlDataContext\ComplexViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\FIrstViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\SecondViewModel.cs" />
+    <Compile Include="ViewModel\Master\ITabViewModel.cs" />
+    <Compile Include="ViewModel\Master\MasterViewModel.cs" />
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -343,6 +345,18 @@
     <Compile Include="ComplexSamples\Measures\MeasureWithControlView.xaml.cs">
       <DependentUpon>MeasureWithControlView.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\Master\Control1.xaml.cs">
+      <DependentUpon>Control1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Master\Control2.xaml.cs">
+      <DependentUpon>Control2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Master\Control3.xaml.cs">
+      <DependentUpon>Control3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Master\MasterView.xaml.cs">
+      <DependentUpon>MasterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MultiTriggerView.xaml.cs">
       <DependentUpon>MultiTriggerView.xaml</DependentUpon>
@@ -506,6 +520,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComplexSamples\Measures\MeasureWithControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Master\Control1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Master\Control2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Master\Control3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Master\MasterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
