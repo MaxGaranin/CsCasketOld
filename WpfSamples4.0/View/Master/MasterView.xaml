@@ -33,7 +33,8 @@
 
             <TabControl.ItemContainerStyle>
                 <Style TargetType="TabItem">
-                    <Setter Property="Header" Value="{Binding Header}" />
+                    <Setter Property="Header" Value="{Binding Header}"/>
+                    <Setter Property="Visibility" Value="Collapsed"/>
                 </Style>
             </TabControl.ItemContainerStyle>
         </TabControl>
@@ -42,10 +43,10 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                 <telerik:RadButton Content="Назад" Width="80" Height="30" Margin="5,0,0,0"
                                    Command="{Binding BackCommand}"
-                                   x:Name="BackButton" Click="BackButton_OnClick" />
+                                   x:Name="BackButton" />
                 <telerik:RadButton Content="Вперед" Width="80" Height="30" Margin="5,0,0,0"
                                    Command="{Binding ForwardCommand}"
-                                   x:Name="ForwardButton" Click="ForwardButton_OnClick" />
+                                   x:Name="ForwardButton" />
                 <telerik:RadButton Content="Готово" Width="80" Height="30" Margin="5,0,0,0"
                                    Command="{Binding OkCommand}"
                                    x:Name="OkButton" Click="OkButton_OnClick" />
