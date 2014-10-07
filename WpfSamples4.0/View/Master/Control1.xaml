@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Background="AliceBlue">
-        <TextBlock Text="Первая вкладка" FontSize="24"
+        <TextBlock Text="{Binding Text1}" FontSize="24"
                    HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </UserControl>

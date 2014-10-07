@@ -1,10 +1,26 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
 namespace WpfSamples40.ViewModel.Master
 {
+    // 
+    //    Способ инициализации данной ViewModel
+    //
+    //    var viewModel = new MasterViewModel();
+    //    viewModel.TabViewModels = new ObservableCollection<ITabViewModel>
+    //    {
+    //        new Control1 { Header = "Control1"},
+    //        new Control2 { Header = "Control2"},
+    //        new Control3 { Header = "Control3"},
+    //    };
+    //
+    //    var view = new MasterView();
+    //    view.DataContext = viewModel;
+    //    view.Show();
+
     public class MasterViewModel : ViewModelBase
     {
         private int _selectedIndex;
@@ -12,9 +28,22 @@ namespace WpfSamples40.ViewModel.Master
         private bool _isEnableForward;
         private bool _isEnableOk;
 
+        public MasterViewModel()
+        {
+            Text1 = "Text1";
+            Text2 = "Text2";
+            Text3 = "Text3";
+        }
+
         #region Properties
 
         public bool DialogResult { get; set; }
+
+        public string Text1 { get; set; }
+        public string Text2 { get; set; }
+        public string Text3 { get; set; }
+
+        #region TabViewModels
 
         private ObservableCollection<ITabViewModel> _tabViewModels;
         public ObservableCollection<ITabViewModel> TabViewModels
@@ -31,12 +60,10 @@ namespace WpfSamples40.ViewModel.Master
                 _selectedIndex = 0;
                 SetTabViewModel(_selectedIndex);
             }
-        }
+        } 
+        #endregion
 
-        private void SetTabViewModel(int index)
-        {
-            SelectedTabViewModel = TabViewModels[index];
-        }
+        #region SelectedTabViewModel
 
         private ITabViewModel _selectedTabViewModel;
         public ITabViewModel SelectedTabViewModel
@@ -50,15 +77,8 @@ namespace WpfSamples40.ViewModel.Master
 
                 UpdateCanExecuteCommands();
             }
-        }
-
-        private void UpdateCanExecuteCommands()
-        {
-            var index = TabViewModels.IndexOf(SelectedTabViewModel);
-            _isEnableBack = index > 0;
-            _isEnableForward = index < TabViewModels.Count - 1;
-            _isEnableOk = index == TabViewModels.Count - 1;
-        }
+        } 
+        #endregion
 
         #endregion
 
@@ -79,7 +99,8 @@ namespace WpfSamples40.ViewModel.Master
 
         protected virtual void Back()
         {
-            SetTabViewModel(--_selectedIndex);
+            _selectedIndex--;
+            SetTabViewModel(_selectedIndex);
         }
 
         protected virtual bool CanExecuteBack()
@@ -104,7 +125,8 @@ namespace WpfSamples40.ViewModel.Master
 
         protected virtual void Forward()
         {
-            SetTabViewModel(++_selectedIndex);
+            _selectedIndex++;
+            SetTabViewModel(_selectedIndex);
         }
 
         protected virtual bool CanExecuteForward()
@@ -158,6 +180,22 @@ namespace WpfSamples40.ViewModel.Master
 
         #endregion 
 
+        #endregion
+
+        #region Private methods
+
+        private void SetTabViewModel(int index)
+        {
+            SelectedTabViewModel = TabViewModels[index];
+        }
+
+        private void UpdateCanExecuteCommands()
+        {
+            var index = TabViewModels.IndexOf(SelectedTabViewModel);
+            _isEnableBack = index > 0;
+            _isEnableForward = index < TabViewModels.Count - 1;
+            _isEnableOk = index == TabViewModels.Count - 1;
+        } 
         #endregion
     }
 }
