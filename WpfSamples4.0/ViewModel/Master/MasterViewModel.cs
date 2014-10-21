@@ -28,20 +28,9 @@ namespace WpfSamples40.ViewModel.Master
         private bool _isEnableForward;
         private bool _isEnableOk;
 
-        public MasterViewModel()
-        {
-            Text1 = "Text1";
-            Text2 = "Text2";
-            Text3 = "Text3";
-        }
-
         #region Properties
 
         public bool DialogResult { get; set; }
-
-        public string Text1 { get; set; }
-        public string Text2 { get; set; }
-        public string Text3 { get; set; }
 
         #region TabViewModels
 

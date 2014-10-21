@@ -18,13 +18,11 @@ namespace WpfSamples40.View.Master
     /// <summary>
     /// Interaction logic for Control1.xaml
     /// </summary>
-    public partial class Control1 : UserControl, ITabViewModel
+    public partial class Control1 : UserControl
     {
         public Control1()
         {
             InitializeComponent();
         }
-
-        public string Header { get; set; }
     }
 }

@@ -237,6 +237,8 @@
     <Compile Include="ViewModel\ControlDataContext\ComplexViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\FIrstViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\SecondViewModel.cs" />
+    <Compile Include="ViewModel\Master\Control2ViewModel.cs" />
+    <Compile Include="ViewModel\Master\Control3ViewModel.cs" />
     <Compile Include="ViewModel\Master\ITabViewModel.cs" />
     <Compile Include="ViewModel\Master\MasterViewModel.cs" />
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
@@ -349,6 +351,7 @@
     <Compile Include="View\Master\Control1.xaml.cs">
       <DependentUpon>Control1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Master\Control1ViewModel.cs" />
     <Compile Include="View\Master\Control2.xaml.cs">
       <DependentUpon>Control2.xaml</DependentUpon>
     </Compile>

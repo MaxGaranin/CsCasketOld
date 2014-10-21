@@ -20,13 +20,13 @@
                     ItemsSource="{Binding TabViewModels}"
                     SelectedItem="{Binding SelectedTabViewModel}">
             <TabControl.Resources>
-                <DataTemplate DataType="{x:Type master1:Control1}">
+                <DataTemplate DataType="{x:Type master:Control1ViewModel}">
                     <master1:Control1/>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type master1:Control2}">
+                <DataTemplate DataType="{x:Type master:Control2ViewModel}">
                     <master1:Control2/>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type master1:Control3}">
+                <DataTemplate DataType="{x:Type master:Control3ViewModel}">
                     <master1:Control3/>
                 </DataTemplate>
             </TabControl.Resources>

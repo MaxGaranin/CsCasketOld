@@ -23,9 +23,22 @@ namespace WpfSamples40
             var viewModel = new MasterViewModel();
             viewModel.TabViewModels = new ObservableCollection<ITabViewModel>
             {
-                new Control1 { Header = "Control1"},
-                new Control2 { Header = "Control2"},
-                new Control3 { Header = "Control3"},
+                new Control1ViewModel
+                {
+                    Header = "Control1",
+                    Text1 = "Text1",
+                    TestValue = 25
+                },
+                new Control2ViewModel
+                {
+                    Header = "Control2",
+                    Text2 = "Text2"
+                },
+                new Control3ViewModel
+                {
+                    Header = "Control3",
+                    Text3 = "Text3"
+                },
             };
 
             var view = new MasterView();
