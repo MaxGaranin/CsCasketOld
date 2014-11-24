@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MvvmTest40.View
+namespace WpfSamples45.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

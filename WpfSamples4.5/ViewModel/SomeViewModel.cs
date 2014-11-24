@@ -1,4 +1,4 @@
-﻿namespace MvvmTest40.ViewModel
+﻿namespace WpfSamples45.ViewModel
 {
     public class SomeViewModel
     {

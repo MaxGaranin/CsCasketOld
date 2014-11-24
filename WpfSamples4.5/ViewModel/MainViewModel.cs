@@ -1,6 +1,6 @@
 using GalaSoft.MvvmLight;
 
-namespace MvvmTest40.ViewModel
+namespace WpfSamples45.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

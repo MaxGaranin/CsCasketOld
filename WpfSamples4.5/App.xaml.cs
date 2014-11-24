@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using MvvmTest40.View;
+using WpfSamples45.View;
 
-namespace MvvmTest40
+namespace WpfSamples45
 {
     public partial class App : Application
     {

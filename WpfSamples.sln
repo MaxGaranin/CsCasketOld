@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests4.5", "Tests4.5\Tests4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSamples4.0", "WpfSamples4.0\WpfSamples4.0.csproj", "{96AAB0BD-AE7E-4DCE-A33A-88CB783B315A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmTest4.0", "MvvmTest4.0\MvvmTest4.0.csproj", "{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSamples4.5", "WpfSamples4.5\WpfSamples4.5.csproj", "{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

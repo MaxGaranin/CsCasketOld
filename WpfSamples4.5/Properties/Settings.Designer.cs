@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MvvmTest40.Properties {
+namespace WpfSamples45.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
