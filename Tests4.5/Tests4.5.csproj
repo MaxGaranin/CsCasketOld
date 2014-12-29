@@ -71,6 +71,7 @@
     <Compile Include="CommonTests\AutoMapperTests.cs" />
     <Compile Include="CommonTests\CollectionTests.cs" />
     <Compile Include="CommonTests\Data\MyObject.cs" />
+    <Compile Include="CommonTests\GenericTests.cs" />
     <Compile Include="Common\ItemPropertyChangedEventArgs.cs" />
     <Compile Include="Common\ObservableNotifiableCollection.cs" />
     <Compile Include="Properties\Annotations.cs" />

@@ -148,6 +148,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Behaviors\DragInCanvasBehavior.cs" />
     <Compile Include="ComplexSamples\ExcelImport\ColumnContainer.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -303,6 +304,9 @@
     </Compile>
     <Compile Include="View\DataTableAutoGenerateView.xaml.cs">
       <DependentUpon>DataTableAutoGenerateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DrugInBehaviorView.xaml.cs">
+      <DependentUpon>DrugInBehaviorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditCollectionsView.xaml.cs">
       <DependentUpon>EditCollectionsView.xaml</DependentUpon>
@@ -495,6 +499,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\DataTableAutoGenerateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DrugInBehaviorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

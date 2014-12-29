@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Markup;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
+using WpfSamples40.ComplexSamples.GraphEditor;
 using WpfSamples40.View;
 using WpfSamples40.View.Master;
 using WpfSamples40.ViewModel.Master;
@@ -21,8 +22,13 @@ namespace WpfSamples40
         {
             Init();
 
-            OpenMasterView();
+            // OpenMasterView();
+
+            var view = new TransparentView();
+            view.Show();
         }
+
+        #region OpenMasterView
 
         private void OpenMasterView()
         {
@@ -49,8 +55,10 @@ namespace WpfSamples40
 
             var view = new MasterView();
             view.DataContext = viewModel;
-            view.Show();            
+            view.Show();
         }
+
+        #endregion
 
         private void Init()
         {
