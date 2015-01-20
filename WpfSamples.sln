@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSamples4.5", "WpfSamples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{66916E82-F988-4089-BB01-25392570DB1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaliburnMicroApp", "CaliburnMicroApp\CaliburnMicroApp.csproj", "{21522015-30A7-44E5-AF72-251F660D2CBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{66916E82-F988-4089-BB01-25392570DB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66916E82-F988-4089-BB01-25392570DB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66916E82-F988-4089-BB01-25392570DB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21522015-30A7-44E5-AF72-251F660D2CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21522015-30A7-44E5-AF72-251F660D2CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21522015-30A7-44E5-AF72-251F660D2CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21522015-30A7-44E5-AF72-251F660D2CBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
