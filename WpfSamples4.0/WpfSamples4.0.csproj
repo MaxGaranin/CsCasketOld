@@ -247,6 +247,7 @@
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WpfInfrastructure\MyViewModelBase.cs" />
     <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
     <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
       <SubType>Code</SubType>
@@ -420,6 +421,7 @@
       <DependentUpon>WaitDialogView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WpfInfrastructure\ExpressionExtensions.cs" />
     <Page Include="ComplexSamples\ExcelImport\ExcelImporterTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

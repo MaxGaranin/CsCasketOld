@@ -6,13 +6,20 @@ namespace WpfSamples40.ComplexSamples.EventCommands
     public class EventCommandsViewModel : ViewModelBase
     {
         private string _coords;
+
         public string Coords
         {
             get { return _coords; }
-            set { _coords = value; OnPropertyChanged("Coords"); }
+            set
+            {
+                _coords = value; 
+                //OnPropertyChanged("Coords");
+                NotifyOfPropertyChange(() => Coords);
+            }
         }
 
         private DelegateCommand<MouseEventArgs> _canvasMouseMoveCommand;
+
         public ICommand CanvasMouseMoveCommand
         {
             get

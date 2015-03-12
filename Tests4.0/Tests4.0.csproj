@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallVirtualMember\CallVirtualMemberTests.cs" />
     <Compile Include="ClassesUnderTest\DynamicCollection.cs" />
     <Compile Include="ClassesUnderTest\DynamicLibrary.cs" />
     <Compile Include="Dp\DpTests.cs" />
