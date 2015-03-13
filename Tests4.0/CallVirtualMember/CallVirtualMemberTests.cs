@@ -40,6 +40,7 @@ namespace Test40.CallVirtualMember
 
         public override void DoWork()
         {
+            base.DoWork();
             Console.WriteLine(_myString.ToLower());
         }
     }

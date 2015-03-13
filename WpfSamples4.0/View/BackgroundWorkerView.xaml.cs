@@ -206,7 +206,7 @@ namespace WpfSamples40.View
         
         #endregion
 
-        #region INotifyPropertyChanged
+        #region INotifyPropertyChanged members
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
@@ -218,7 +218,6 @@ namespace WpfSamples40.View
         }
  
 	    #endregion
-
     }
 
     #region MyObject class
