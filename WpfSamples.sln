@@ -11,12 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSamples4.0", "WpfSamples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSamples4.5", "WpfSamples4.5\WpfSamples4.5.csproj", "{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaliburnMicroApp", "CaliburnMicroApp\CaliburnMicroApp.csproj", "{21522015-30A7-44E5-AF72-251F660D2CBC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceBackgroundWorker.Tests", "ReplaceBackgroundWorker.Tests\ReplaceBackgroundWorker.Tests.csproj", "{C5953EDC-EE64-471F-8532-3B7B0EABF053}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceBackgroundWorker", "ReplaceBackgroundWorker\ReplaceBackgroundWorker.csproj", "{66916E82-F988-4089-BB01-25392570DB1A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,18 +33,6 @@ Global
 		{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DAE189E-1509-4787-B976-C7CCBB7EEDFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21522015-30A7-44E5-AF72-251F660D2CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21522015-30A7-44E5-AF72-251F660D2CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21522015-30A7-44E5-AF72-251F660D2CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21522015-30A7-44E5-AF72-251F660D2CBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5953EDC-EE64-471F-8532-3B7B0EABF053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5953EDC-EE64-471F-8532-3B7B0EABF053}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5953EDC-EE64-471F-8532-3B7B0EABF053}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5953EDC-EE64-471F-8532-3B7B0EABF053}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66916E82-F988-4089-BB01-25392570DB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66916E82-F988-4089-BB01-25392570DB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66916E82-F988-4089-BB01-25392570DB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66916E82-F988-4089-BB01-25392570DB1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
