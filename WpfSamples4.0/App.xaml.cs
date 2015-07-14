@@ -1,13 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows;
 using System.Windows.Markup;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
-using WpfSamples40.ComplexSamples.GraphEditor;
 using WpfSamples40.View;
-using WpfSamples40.View.Master;
-using WpfSamples40.ViewModel.Master;
+using WpfSamples40.ViewModel;
 
 namespace WpfSamples40
 {
@@ -24,7 +21,8 @@ namespace WpfSamples40
 
 //           MasterViewHelper.OpenMasterView();
 
-            var view = new BackgroundWorkerView();
+            var viewModel = new ProgressBarTestViewModel();
+            var view = new ProgressBarTestView {DataContext = viewModel};
             view.Show();
         }
 
@@ -34,8 +32,8 @@ namespace WpfSamples40
 
             // Важная штука: применяет культуру системы к WPF.
             FrameworkElement.LanguageProperty.OverrideMetadata(
-                typeof(FrameworkElement),
-                new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));             
+                typeof (FrameworkElement),
+                new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
         }
     }
 }

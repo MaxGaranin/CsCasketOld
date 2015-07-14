@@ -250,6 +250,17 @@
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModel\ProgressBarTestViewModel.cs" />
+    <Compile Include="ViewModel\ProgressBarViewModel.cs" />
+    <Compile Include="View\DataGridStylesView.xaml.cs">
+      <DependentUpon>DataGridStylesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProgressBarTestView.xaml.cs">
+      <DependentUpon>ProgressBarTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProgressBarView.xaml.cs">
+      <DependentUpon>ProgressBarView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfInfrastructure\MyViewModelBase.cs" />
     <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
     <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
@@ -501,6 +512,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\DataGridStylesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DataTableDateColumnView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -558,6 +573,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MultiTriggerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProgressBarTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProgressBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

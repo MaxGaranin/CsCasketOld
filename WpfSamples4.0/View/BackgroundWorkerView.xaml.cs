@@ -56,18 +56,16 @@ namespace WpfSamples40.View
         {
             var thread = new Thread(delegate()
             {
-                Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                    (ThreadStart)(() => MyTestObject.MyString = "Starting..."));
+                // Dispatcher.BeginInvoke(DispatcherPriority.Normal,
+                //    (ThreadStart)(() => MyTestObject.MyString = "Starting..."));
+
+                // И так работает
+                MyTestObject.MyString = "Starting...";
 
                 Thread.Sleep(2000);
-
-                Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                    (ThreadStart)(() => MyTestObject.MyString = "Processing..."));
-
+                MyTestObject.MyString = "Processing...";
                 Thread.Sleep(2000);
-
-                Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                    (ThreadStart)(() => MyTestObject.MyString = "Finished."));
+                MyTestObject.MyString = "Finished.";
             });
 
             thread.Start();
