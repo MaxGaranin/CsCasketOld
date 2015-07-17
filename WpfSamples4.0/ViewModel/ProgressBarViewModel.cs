@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -84,6 +85,8 @@ namespace WpfSamples40.ViewModel
 
         #region Cancel
 
+        public event EventHandler Cancelled;
+
         private RelayCommand _cancelCommand;
 
         public ICommand CancelCommand
@@ -97,7 +100,7 @@ namespace WpfSamples40.ViewModel
 
         private void Cancel()
         {
-            
+            if (Cancelled != null) Cancelled(this, EventArgs.Empty);
         }
 
         #endregion
