@@ -262,6 +262,9 @@
     <Compile Include="View\ProgressBarView.xaml.cs">
       <DependentUpon>ProgressBarView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UserLoginView.xaml.cs">
+      <DependentUpon>UserLoginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfInfrastructure\MyViewModelBase.cs" />
     <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
     <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
@@ -626,6 +629,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TriggersTestsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,11 +19,12 @@ namespace WpfSamples40
         {
             Init();
 
-//           MasterViewHelper.OpenMasterView();
-
-            var viewModel = new ProgressBarTestViewModel();
-            var view = new ProgressBarTestView {DataContext = viewModel};
+            var view = new UserLoginView();
             view.Show();
+
+//            var viewModel = new ProgressBarTestViewModel();
+//            var view = new ProgressBarTestView {DataContext = viewModel};
+//            view.Show();
         }
 
         private void Init()
