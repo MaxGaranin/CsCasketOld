@@ -6,7 +6,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using WpfSamples40.Utils;
 
-namespace WpfSamples40.Controls.DataGridControl
+namespace WpfSamples40.Controls.Common
 {
     public class CustomDataGrid : DataGrid
     {

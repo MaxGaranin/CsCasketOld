@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:view="clr-namespace:WpfSamples40.View"
-        xmlns:dg="clr-namespace:WpfSamples40.Controls.DataGridControl"
+        xmlns:common="clr-namespace:WpfSamples40.Controls.Common"
         mc:Ignorable="d"
         Title="CustomDataGridTestView" Height="600" Width="800"
         d:DataContext="{d:DesignInstance view:CustomDataGridTestView}">
@@ -26,20 +26,20 @@
     </Window.Resources>
     
     <Grid>
-        <dg:CustomDataGrid ItemsSource="{Binding SomeDataItems}" 
+        <common:CustomDataGrid ItemsSource="{Binding SomeDataItems}" 
                            AutoGenerateColumns="False" 
                            RowHeaderWidth="20" RowHeight="25"
                            SelectionMode="Extended" SelectionUnit="CellOrRowHeader"
                            CellStyle="{StaticResource BodyContentDataGridCentering}"
                            ColumnHeaderStyle="{StaticResource IpaDataGridColumnHeaderStyle}">
-            <dg:CustomDataGrid.Columns>
+            <common:CustomDataGrid.Columns>
                 <DataGridTextColumn Header="Строка" Width="100"
                                     Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Целое значение" Width="200"
                                     Binding="{Binding IntValue}" />
                 <DataGridTextColumn Header="Вещественное значение" Width="200"
                                     Binding="{Binding DoubleValue}" />
-            </dg:CustomDataGrid.Columns>
-        </dg:CustomDataGrid>
+            </common:CustomDataGrid.Columns>
+        </common:CustomDataGrid>
     </Grid>
 </Window>

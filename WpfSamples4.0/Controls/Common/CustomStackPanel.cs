@@ -1,9 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Shapes;
 
-namespace WpfSamples40.Controls
+namespace WpfSamples40.Controls.Common
 {
     public class CustomStackPanel : StackPanel
     {

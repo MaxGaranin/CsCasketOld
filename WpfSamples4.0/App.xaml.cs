@@ -19,7 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new UserLoginView();
+            var view = new CustomColorPickerView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();

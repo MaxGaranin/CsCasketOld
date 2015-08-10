@@ -212,12 +212,12 @@
     <Compile Include="ComplexSamples\Measures\TestMeasureView.xaml.cs">
       <DependentUpon>TestMeasureView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CustomGrid.cs" />
-    <Compile Include="Controls\CustomStackPanel.cs" />
-    <Compile Include="Controls\DataGridControl\CustomDataGrid.cs" />
-    <Compile Include="Controls\OldMeasureControl.xaml.cs">
-      <DependentUpon>OldMeasureControl.xaml</DependentUpon>
+    <Compile Include="Controls\Common\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Common\CustomGrid.cs" />
+    <Compile Include="Controls\Common\CustomStackPanel.cs" />
+    <Compile Include="Controls\Common\CustomDataGrid.cs" />
     <Compile Include="Converters\BooleanConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToBooleanConverter.cs" />
@@ -253,6 +253,9 @@
     </Compile>
     <Compile Include="ViewModel\ProgressBarTestViewModel.cs" />
     <Compile Include="ViewModel\ProgressBarViewModel.cs" />
+    <Compile Include="View\CustomColorPickerView.xaml.cs">
+      <DependentUpon>CustomColorPickerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DataGridStylesView.xaml.cs">
       <DependentUpon>DataGridStylesView.xaml</DependentUpon>
     </Compile>
@@ -280,10 +283,6 @@
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\BackgroundWorkerView.xaml.cs">
       <DependentUpon>BackgroundWorkerView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Controls\FieldUserControl.xaml.cs">
-      <DependentUpon>FieldUserControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ComplexSamples\Measures\MeasureControl.xaml.cs">
@@ -396,10 +395,6 @@
     <Compile Include="View\ShowImageView.xaml.cs">
       <DependentUpon>ShowImageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SimpleControlTestView.xaml.cs">
-      <DependentUpon>SimpleControlTestView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="ComplexSamples\TestNestedControls\BankFluidModel.xaml.cs">
       <DependentUpon>BankFluidModel.xaml</DependentUpon>
     </Compile>
@@ -464,9 +459,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\OldMeasureControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Controls\Common\ColorPicker.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\GraphEditorResourceDictionary.xaml">
       <SubType>Designer</SubType>
@@ -477,10 +472,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\BackgroundWorkerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\FieldUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -509,6 +500,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ControlDataContext\SecondControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomColorPickerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -593,10 +588,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ShowImageView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\SimpleControlTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

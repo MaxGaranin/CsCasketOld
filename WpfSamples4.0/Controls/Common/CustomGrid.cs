@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfSamples40.Controls
+namespace WpfSamples40.Controls.Common
 {
     public class CustomGrid : Grid
     {
