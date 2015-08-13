@@ -1,4 +1,4 @@
-﻿namespace WpfSamples40.Model
+﻿namespace WpfSamples40.ViewModel.HelperClasses
 {
     public class BigData
     {

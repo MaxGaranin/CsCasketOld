@@ -169,9 +169,8 @@
     <Compile Include="Helpers\DispatcherHelper.cs" />
     <Compile Include="Helpers\FileDialogHelper.cs" />
     <Compile Include="Helpers\ICanceller.cs" />
-    <Compile Include="Model\BigData.cs" />
-    <Compile Include="Model\ModelObject.cs" />
-    <Compile Include="Model\Parameter.cs" />
+    <Compile Include="ViewModel\HelperClasses\BigData.cs" />
+    <Compile Include="ViewModel\HelperClasses\ModelObject.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Utils\ClipboardHelper.cs" />
     <Compile Include="Utils\ObjectUtils.cs" />
@@ -528,7 +527,9 @@
   <ItemGroup>
     <Resource Include="Resources\Images\KS.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

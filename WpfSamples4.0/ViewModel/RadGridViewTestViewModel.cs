@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using WpfSamples40.Model;
+using WpfSamples40.ViewModel.HelperClasses;
 
 namespace WpfSamples40.ViewModel
 {
