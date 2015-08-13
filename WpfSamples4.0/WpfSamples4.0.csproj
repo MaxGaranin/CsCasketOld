@@ -153,65 +153,6 @@
     </ApplicationDefinition>
     <Compile Include="Behaviors\DragInCanvasBehavior.cs" />
     <Compile Include="Behaviors\WindowBehavior.cs" />
-    <Compile Include="ComplexSamples\ExcelImport\ColumnContainer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelImporter.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterTestView.xaml.cs">
-      <DependentUpon>ExcelImporterTestView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterView.xaml.cs">
-      <DependentUpon>ExcelImporterView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelImporterViewModel.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\ExcelSheet.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\ExcelImport\NameIndex.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\FluidModels\Views\MockRecord.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Domain\DomainObject.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\GraphEditorApp.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\GraphEditorView.xaml.cs">
-      <DependentUpon>GraphEditorView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\GraphEditor\Model\Coord.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Model\GraphEditorMode.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\ElementViewModel.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\PipeViewModel.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\UpsvViewModel.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Model\GraphElements\WellViewModel.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Operations\AddNewPointElementOperation.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Operations\AddPipeOperation.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Operations\IOperation.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\Operations\SelectOperation.cs" />
-    <Compile Include="ComplexSamples\GraphEditor\SelectionManager.cs" />
-    <Compile Include="ComplexSamples\Measures\Measure.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureCode.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureContainer.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureExtensions.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureGroupCode.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureGroups.cs" />
-    <Compile Include="ComplexSamples\Measures\MeasureManager.cs" />
-    <Compile Include="ComplexSamples\Measures\Measures.cs" />
-    <Compile Include="ComplexSamples\Measures\TestMeasureControl.xaml.cs">
-      <DependentUpon>TestMeasureControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\Measures\TestMeasureItemControl.xaml.cs">
-      <DependentUpon>TestMeasureItemControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\Measures\TestMeasureView.xaml.cs">
-      <DependentUpon>TestMeasureView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Common\ColorPicker.xaml.cs">
       <DependentUpon>ColorPicker.xaml</DependentUpon>
     </Compile>
@@ -253,6 +194,9 @@
     </Compile>
     <Compile Include="ViewModel\ProgressBarTestViewModel.cs" />
     <Compile Include="ViewModel\ProgressBarViewModel.cs" />
+    <Compile Include="View\AnimationTestView.xaml.cs">
+      <DependentUpon>AnimationTestView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CustomColorPickerView.xaml.cs">
       <DependentUpon>CustomColorPickerView.xaml</DependentUpon>
     </Compile>
@@ -285,10 +229,6 @@
       <DependentUpon>BackgroundWorkerView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComplexSamples\Measures\MeasureControl.xaml.cs">
-      <DependentUpon>MeasureControl.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Controls\SimpleControlWithoutDp.xaml.cs">
       <DependentUpon>SimpleControlWithoutDp.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -297,14 +237,14 @@
       <DependentUpon>TextBoxControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComplexSamples\Draw\DataReader.cs">
+    <Compile Include="View\Draw\DataReader.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComplexSamples\Draw\DrawWellsMapView.xaml.cs">
+    <Compile Include="View\Draw\DrawWellsMapView.xaml.cs">
       <DependentUpon>DrawWellsMapView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComplexSamples\Draw\WellPoint.cs">
+    <Compile Include="View\Draw\WellPoint.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="View\ControlDataContext\ControlDataContextView.xaml.cs">
@@ -332,44 +272,12 @@
       <DependentUpon>EditCollectionsView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComplexSamples\EventCommands\DelegateCommand.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\EventCommands\EventCommandsView.xaml.cs">
-      <DependentUpon>EventCommandsView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\EventCommands\EventCommandsViewModel.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\EventCommands\ViewModelBase.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\FluidModels\FluidModel.cs" />
-    <Compile Include="ComplexSamples\FluidModels\FluidModelBank.cs" />
-    <Compile Include="ComplexSamples\FluidModels\FluidModelBankViewModel.cs" />
-    <Compile Include="ComplexSamples\FluidModels\FluidModelEditorViewModel.cs" />
-    <Compile Include="ComplexSamples\FluidModels\FluidModelGroup.cs" />
-    <Compile Include="ComplexSamples\FluidModels\FluidModelsBankLauncher.cs" />
-    <Compile Include="ComplexSamples\FluidModels\Views\FluidModelBankView.xaml.cs">
-      <DependentUpon>FluidModelBankView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\FluidModels\Views\FluidModelEditorView.xaml.cs">
-      <DependentUpon>FluidModelEditorView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="View\GridSizeView.xaml.cs">
       <DependentUpon>GridSizeView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\LauncherView.xaml.cs">
-      <DependentUpon>LauncherView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\Measures\MeasureWithControlView.xaml.cs">
-      <DependentUpon>MeasureWithControlView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="View\Master\Control1.xaml.cs">
@@ -395,23 +303,6 @@
     <Compile Include="View\ShowImageView.xaml.cs">
       <DependentUpon>ShowImageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\BankFluidModel.xaml.cs">
-      <DependentUpon>BankFluidModel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\BankFluidViewModel.cs" />
-    <Compile Include="ComplexSamples\TestNestedControls\NestedControlsLauncher.cs" />
-    <Compile Include="ComplexSamples\TestNestedControls\LocalFluidModel.xaml.cs">
-      <DependentUpon>LocalFluidModel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\LocalFluidViewModel.cs" />
-    <Compile Include="ComplexSamples\TestNestedControls\WellFluidModel.xaml.cs">
-      <DependentUpon>WellFluidModel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\WellFluidViewModel.cs" />
-    <Compile Include="ComplexSamples\TestNestedControls\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexSamples\TestNestedControls\WellModelViewModel.cs" />
     <Compile Include="View\TabView.xaml.cs">
       <DependentUpon>TabView.xaml</DependentUpon>
     </Compile>
@@ -435,30 +326,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WpfInfrastructure\ExpressionExtensions.cs" />
-    <Page Include="ComplexSamples\ExcelImport\ExcelImporterTestView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\ExcelImport\ExcelImporterView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\GraphEditor\GraphEditorView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ComplexSamples\Measures\TestMeasureControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\Measures\TestMeasureItemControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\Measures\TestMeasureView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\Common\ColorPicker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -471,11 +338,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\BackgroundWorkerView.xaml">
+    <Page Include="View\AnimationTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ComplexSamples\Measures\MeasureControl.xaml">
+    <Page Include="View\BackgroundWorkerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -487,7 +354,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ComplexSamples\Draw\DrawWellsMapView.xaml">
+    <Page Include="View\Draw\DrawWellsMapView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -531,27 +398,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ComplexSamples\EventCommands\EventCommandsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\FluidModels\Views\FluidModelBankView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ComplexSamples\FluidModels\Views\FluidModelEditorView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\GridSizeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\TestNestedControls\LauncherView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\Measures\MeasureWithControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -588,22 +435,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ShowImageView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\TestNestedControls\BankFluidModel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\TestNestedControls\LocalFluidModel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\TestNestedControls\WellFluidModel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ComplexSamples\TestNestedControls\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -667,7 +498,7 @@
   <ItemGroup>
     <Resource Include="Resources\Images\loading3.gif" />
     <Resource Include="Resources\Images\star.png" />
-    <Resource Include="ComplexSamples\Draw\B2-HO.txt" />
+    <Resource Include="View\Draw\B2-HO.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

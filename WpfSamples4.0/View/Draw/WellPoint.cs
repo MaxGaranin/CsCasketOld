@@ -1,4 +1,4 @@
-﻿namespace WpfSamples40.ComplexSamples.Draw
+﻿namespace WpfSamples40.View.Draw
 {
     public class WellPoint
     {
