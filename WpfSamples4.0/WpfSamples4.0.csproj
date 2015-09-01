@@ -159,6 +159,16 @@
     <Compile Include="Controls\Common\CustomGrid.cs" />
     <Compile Include="Controls\Common\CustomStackPanel.cs" />
     <Compile Include="Controls\Common\CustomDataGrid.cs" />
+    <Compile Include="Controls\Common\DataGridCustomization\ColumnsVisibility\ColumnsVisibilityControl.xaml.cs">
+      <DependentUpon>ColumnsVisibilityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\DataGridCustomization\CustomColumns\AutoNumberColumn.cs" />
+    <Compile Include="Controls\Common\DataGridCustomization\CustomDataGrid.cs" />
+    <Compile Include="Controls\Common\DataGridCustomization\DataGridFootersPresenter.cs" />
+    <Compile Include="Controls\Common\DataGridCustomization\Filter\ColumnItemsFilterControl.xaml.cs">
+      <DependentUpon>ColumnItemsFilterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\DataGridCustomization\FooterData.cs" />
     <Compile Include="Converters\BooleanConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToBooleanConverter.cs" />
@@ -169,6 +179,7 @@
     <Compile Include="Helpers\DispatcherHelper.cs" />
     <Compile Include="Helpers\FileDialogHelper.cs" />
     <Compile Include="Helpers\ICanceller.cs" />
+    <Compile Include="ViewModel\EditableComboBoxViewModel.cs" />
     <Compile Include="ViewModel\HelperClasses\BigData.cs" />
     <Compile Include="ViewModel\HelperClasses\ModelObject.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -201,6 +212,9 @@
     </Compile>
     <Compile Include="View\DataGridStylesView.xaml.cs">
       <DependentUpon>DataGridStylesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditableComboboxView.xaml.cs">
+      <DependentUpon>EditableComboboxView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ProgressBarTestView.xaml.cs">
       <DependentUpon>ProgressBarTestView.xaml</DependentUpon>
@@ -329,6 +343,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Common\DataGridCustomization\ColumnsVisibility\ColumnsVisibilityControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Common\DataGridCustomization\Filter\ColumnItemsFilterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\CustomDataGridTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Resources\GraphEditorResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -390,6 +416,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DrugInBehaviorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditableComboboxView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

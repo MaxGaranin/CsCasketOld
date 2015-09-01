@@ -11,6 +11,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/CommonResourceDictionary.xaml" />
                 <ResourceDictionary Source="Resources/GraphEditorResourceDictionary.xaml" />
+                <ResourceDictionary Source="Resources/CustomDataGridTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
         </ResourceDictionary>

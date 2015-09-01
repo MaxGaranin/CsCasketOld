@@ -19,7 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new AnimationTestView();
+            var view = new EditableComboboxView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();
