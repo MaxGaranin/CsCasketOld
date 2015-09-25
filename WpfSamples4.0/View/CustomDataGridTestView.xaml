@@ -10,17 +10,7 @@
         d:DataContext="{d:DesignInstance view:CustomDataGridTestView}">
 
     <Window.Resources>
-<!--        <Style TargetType="{x:Type DataGridCell}" x:Key="BodyContentDataGridCentering">-->
-<!--            <Setter Property="Template">-->
-<!--                <Setter.Value>-->
-<!--                    <ControlTemplate TargetType="{x:Type DataGridCell}">-->
-<!--                        <Grid Background="{TemplateBinding Background}">-->
-<!--                            <ContentPresenter VerticalAlignment="Center" />-->
-<!--                        </Grid>-->
-<!--                    </ControlTemplate>-->
-<!--                </Setter.Value>-->
-<!--            </Setter>-->
-<!--        </Style>-->
+
     </Window.Resources>
 
     <Grid>
@@ -28,13 +18,14 @@
                                AutoGenerateColumns="False"
                                RowHeaderWidth="20" RowHeight="25"
                                SelectionMode="Extended" SelectionUnit="CellOrRowHeader">
-<!--                               CellStyle="{StaticResource BodyContentDataGridCentering}">-->
             <common:CustomDataGrid.Columns>
                 <DataGridTextColumn Header="Строка" Width="100"
                                     Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Целое значение" Width="200"
+                                    CellStyle="{StaticResource RightAlignedCellStyle}"
                                     Binding="{Binding IntValue}" />
                 <DataGridTextColumn Header="Вещественное значение" Width="200"
+                                    CellStyle="{StaticResource RightAlignedCellStyle}"
                                     Binding="{Binding DoubleValue}" />
             </common:CustomDataGrid.Columns>
         </common:CustomDataGrid>

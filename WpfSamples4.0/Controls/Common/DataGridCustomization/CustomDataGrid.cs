@@ -24,10 +24,10 @@ namespace WpfSamples40.Controls.Common.DataGridCustomization
         public CustomDataGrid()
         {
             //Стиль
-            Resources.MergedDictionaries.Add(new ResourceDictionary
-            {
-                Source = new Uri(@"pack://application:,,,/IPA;component/Resources/CustomDataGridTheme.xaml", UriKind.Absolute)
-            });
+//            Resources.MergedDictionaries.Add(new ResourceDictionary
+//            {
+//                Source = new Uri(@"pack://application:,,,/IPA;component/Resources/CustomDataGridTheme.xaml", UriKind.Absolute)
+//            });
 
             MouseRightButtonDown += OnMouseRightButtonDown;
         }
