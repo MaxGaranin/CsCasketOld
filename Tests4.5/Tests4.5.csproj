@@ -69,22 +69,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonTests\AutoMapperTests.cs" />
-    <Compile Include="CommonTests\CollectionTests.cs" />
-    <Compile Include="CommonTests\Data\MyObject.cs" />
-    <Compile Include="CommonTests\GenericTests.cs" />
-    <Compile Include="CommonTests\ThisBaseClassTests.cs" />
-    <Compile Include="Common\ItemPropertyChangedEventArgs.cs" />
-    <Compile Include="Common\ObservableNotifiableCollection.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="Utils\CloneInjection.cs" />
-    <Compile Include="CommonTests\Data\FluidModelObjects.cs" />
-    <Compile Include="Utils\ObjectUtils.cs" />
-    <Compile Include="CommonTests\ValueInjectorTests.cs" />
-    <Compile Include="CommonTests\ObjectsTests.cs" />
-    <Compile Include="CommonTests\ObjectsTests2.cs" />
-    <Compile Include="CommonTests\ReadOnlyObservableCollectionTests.cs" />
-    <Compile Include="CommonTests\SerializeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using NUnit.Framework;
 
-namespace Tests45.CommonTests
+namespace Test40.Serialization
 {
     [TestFixture]
     public class SerializeTests

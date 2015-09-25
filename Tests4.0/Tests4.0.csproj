@@ -50,19 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CallVirtualMember\CallVirtualMemberTests.cs" />
-    <Compile Include="ClassesUnderTest\DynamicCollection.cs" />
-    <Compile Include="ClassesUnderTest\DynamicLibrary.cs" />
-    <Compile Include="Dp\DpTests.cs" />
+    <Compile Include="Common\CallVirtualMemberInConstructorTests.cs" />
+    <Compile Include="Common\CollectionTests.cs" />
+    <Compile Include="Common\GenericTests.cs" />
+    <Compile Include="Common\ReadOnlyObservableCollectionTests.cs" />
+    <Compile Include="Common\ShallowCopyTests.cs" />
+    <Compile Include="Common\ThisBaseClassTests.cs" />
+    <Compile Include="Dynamics\DynamicCollection.cs" />
+    <Compile Include="Dynamics\DynamicLibrary.cs" />
     <Compile Include="Dynamics\DynamicCollectionTests.cs" />
-    <Compile Include="Fabric\FabricTests.cs" />
-    <Compile Include="ObservableNotifiableCollection\FluidModelObjects.cs" />
-    <Compile Include="ObservableNotifiableCollection\ItemPropertyChangedEventArgs.cs" />
-    <Compile Include="ObservableNotifiableCollection\MyObject.cs" />
-    <Compile Include="ObservableNotifiableCollection\ObservableNotifiableCollection.cs" />
-    <Compile Include="ObservableNotifiableCollection\ObservableNotifiableCollectionTests.cs" />
+    <Compile Include="Common\FabricTests.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\SerializeTests.cs" />
     <Compile Include="Speed\A1.cs" />
     <Compile Include="Speed\A10.cs" />
     <Compile Include="Speed\A2.cs" />

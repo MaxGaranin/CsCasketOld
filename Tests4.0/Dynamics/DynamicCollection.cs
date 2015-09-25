@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Dynamic;
 
-namespace Test40.ClassesUnderTest
+namespace Test40.Dynamics
 {
     public class DynamicCollection
     {

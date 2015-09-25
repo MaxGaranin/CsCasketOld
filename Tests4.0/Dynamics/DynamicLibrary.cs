@@ -7,7 +7,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 
-namespace Test40.ClassesUnderTest
+namespace Test40.Dynamics
 {
     public static class DynamicQueryable
     {

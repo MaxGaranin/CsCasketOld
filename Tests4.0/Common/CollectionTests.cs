@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Tests45.CommonTests
+namespace Test40.Common
 {
     [TestFixture]
     public class CollectionTests

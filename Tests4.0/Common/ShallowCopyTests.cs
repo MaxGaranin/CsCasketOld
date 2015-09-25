@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 
-namespace Tests45.CommonTests
+namespace Test40.Common
 {
     [TestFixture]
-    public class ObjectsTests
+    public class ShallowCopyTests
     {
         public class A
         {

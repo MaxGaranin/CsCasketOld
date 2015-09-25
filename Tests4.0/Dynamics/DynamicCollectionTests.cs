@@ -1,6 +1,5 @@
 ﻿using System.Dynamic;
 using NUnit.Framework;
-using Test40.ClassesUnderTest;
 
 namespace Test40.Dynamics
 {

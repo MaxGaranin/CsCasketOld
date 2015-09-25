@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using NUnit.Framework;
 
-namespace Tests45.CommonTests
+namespace Test40.Common
 {
     [TestFixture]
     public class ReadOnlyObservableCollectionTests

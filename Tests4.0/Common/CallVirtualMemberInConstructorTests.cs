@@ -1,19 +1,15 @@
 ﻿using System;
-using System.ComponentModel;
 using NUnit.Framework;
 
-namespace Test40.CallVirtualMember
+namespace Test40.Common
 {
     [TestFixture]
-    public class CallVirtualMemberTests
+    public class CallVirtualMemberInConstructorTests
     {
         [Test]
         public void Test()
         {
-            Assert.Throws<NullReferenceException>(() =>
-            {
-                var derived = new SomeDerivedClass();
-            });
+            Assert.Throws<NullReferenceException>(() => { var derived = new SomeDerivedClass(); });
         }
     }
 
