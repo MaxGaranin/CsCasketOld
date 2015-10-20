@@ -1,6 +1,4 @@
-﻿using ConsoleApp.Async;
-
-namespace ConsoleApp
+﻿namespace ConsoleApp.Async
 {
     internal class Program
     {

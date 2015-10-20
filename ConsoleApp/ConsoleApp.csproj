@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ConsoleApp.Files.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,9 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Async\Program.cs" />
+    <Compile Include="Files\Program.cs" />
+    <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
+    <Compile Include="WeakEvents\Program.cs" />
+    <Compile Include="WeakEvents\WeakTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
