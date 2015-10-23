@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using NUnit.Framework;
 
-namespace Test40.Speed
+namespace Test40.Speed.NestedObjects
 {
     [TestFixture]
-    public class SpeedTests
+    public class NestedObjectsTests
     {
         [Test]
         public void Test()
@@ -31,11 +31,11 @@ namespace Test40.Speed
             var complexObject = new ComplexObject();
             for (int i = 0; i < count; i++)
             {
-                complexObject.A1.Value = i + 2 * 8;
+                complexObject.A1.Value = i + 2*8;
             }
 
             watch.Stop();
-            Console.WriteLine("Simple object: {0}", watch.ElapsedMilliseconds);
+            Console.WriteLine("Complex object: {0}", watch.ElapsedMilliseconds);
         }
     }
 }

@@ -7,6 +7,17 @@ namespace Test40.Common
     public class CollectionTests
     {
         [Test]
+        public void TestHashSet()
+        {
+            HashSet<int> set = new HashSet<int>();
+            set.Add(1);
+            set.Add(2);
+            set.Add(1);
+
+            Assert.That(set.Count, Is.EqualTo(2));
+        }
+
+        [Test]
         public void TestDoubles()
         {
             var valuesList = new List<double> { 1, 2, 3, 4, 5 };

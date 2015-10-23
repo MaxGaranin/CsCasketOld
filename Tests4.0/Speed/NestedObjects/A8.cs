@@ -1,4 +1,4 @@
-﻿namespace Test40.Speed
+﻿namespace Test40.Speed.NestedObjects
 {
     public class A8
     {

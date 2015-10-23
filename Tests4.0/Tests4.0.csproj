@@ -63,19 +63,20 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\SerializeTests.cs" />
-    <Compile Include="Speed\A1.cs" />
-    <Compile Include="Speed\A10.cs" />
-    <Compile Include="Speed\A2.cs" />
-    <Compile Include="Speed\A3.cs" />
-    <Compile Include="Speed\A4.cs" />
-    <Compile Include="Speed\A5.cs" />
-    <Compile Include="Speed\A6.cs" />
-    <Compile Include="Speed\A7.cs" />
-    <Compile Include="Speed\A8.cs" />
-    <Compile Include="Speed\A9.cs" />
-    <Compile Include="Speed\ComplexObject.cs" />
-    <Compile Include="Speed\SimpleObject.cs" />
-    <Compile Include="Speed\SpeedTests.cs" />
+    <Compile Include="Speed\NestedObjects\A1.cs" />
+    <Compile Include="Speed\NestedObjects\A10.cs" />
+    <Compile Include="Speed\NestedObjects\A2.cs" />
+    <Compile Include="Speed\NestedObjects\A3.cs" />
+    <Compile Include="Speed\NestedObjects\A4.cs" />
+    <Compile Include="Speed\NestedObjects\A5.cs" />
+    <Compile Include="Speed\NestedObjects\A6.cs" />
+    <Compile Include="Speed\NestedObjects\A7.cs" />
+    <Compile Include="Speed\NestedObjects\A8.cs" />
+    <Compile Include="Speed\NestedObjects\A9.cs" />
+    <Compile Include="Speed\NestedObjects\ComplexObject.cs" />
+    <Compile Include="Speed\NestedObjects\SimpleObject.cs" />
+    <Compile Include="Speed\NestedObjects\NestedObjectsTests.cs" />
+    <Compile Include="Speed\PropertiesVsFields\PropertiesVsFieldsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
