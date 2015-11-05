@@ -7,13 +7,15 @@ namespace ConsoleApp.Files
 {
     public class TextFileReader
     {
-        public static void ReadFiles(string folderName, string fileMask = "*.db")
+        public static void ReadFiles(string folderName, string fileMask = "*.*")
         {
             var fileNames = Directory.GetFiles(folderName, fileMask);
-            var outFileName = Path.Combine(folderName, "out.txt");
-
+            
             foreach (var fileName in fileNames)
             {
+                var outFileName = Path.Combine(folderName,
+                    Path.GetFileNameWithoutExtension(fileName) + "_out" + Path.GetExtension(fileName));
+                
                 var watch = Stopwatch.StartNew();
                 using (var sr = new StreamReader(fileName, Encoding.Default))
                 using (var sw = new StreamWriter(outFileName, false, Encoding.Default))
