@@ -19,7 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new DataTableDateColumnView();
+            var view = new CustomDataGridTestView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();

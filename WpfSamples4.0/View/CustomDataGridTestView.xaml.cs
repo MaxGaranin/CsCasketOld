@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace WpfSamples40.View
@@ -16,11 +17,13 @@ namespace WpfSamples40.View
 
         private void Init()
         {
+            var now = DateTime.Now.Date;
+
             SomeDataItems = new ObservableCollection<SomeDataItem>
             {
-                new SomeDataItem {Name = "Test1", IntValue = 22, DoubleValue = 34.2},
-                new SomeDataItem {Name = "Test2", IntValue = 56, DoubleValue = 122.2},
-                new SomeDataItem {Name = "Test3", IntValue = 78, DoubleValue = 66.7},
+                new SomeDataItem {Name = "Test1", IntValue = 22, DoubleValue = 34.2, BeginDate = now, EndDate = now},
+                new SomeDataItem {Name = "Test2", IntValue = 56, DoubleValue = 122.2, BeginDate = now, EndDate = now},
+                new SomeDataItem {Name = "Test3", IntValue = 78, DoubleValue = 66.7, BeginDate = now, EndDate = now},
             };
         }
 
@@ -32,5 +35,7 @@ namespace WpfSamples40.View
         public string Name { get; set; }
         public int IntValue { get; set; }
         public double DoubleValue { get; set; }
+        public DateTime BeginDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

@@ -8,11 +8,6 @@
         mc:Ignorable="d"
         Title="CustomDataGridTestView" Height="600" Width="800"
         d:DataContext="{d:DesignInstance view:CustomDataGridTestView}">
-
-    <Window.Resources>
-
-    </Window.Resources>
-
     <Grid>
         <common:CustomDataGrid ItemsSource="{Binding SomeDataItems}"
                                AutoGenerateColumns="False"
@@ -27,6 +22,10 @@
                 <DataGridTextColumn Header="Вещественное значение" Width="200"
                                     CellStyle="{StaticResource RightAlignedCellStyle}"
                                     Binding="{Binding DoubleValue}" />
+                <DataGridTextColumn Header="Начальная дата" Width="200"
+                                    Binding="{Binding BeginDate}" />
+                <DataGridTextColumn Header="Конечная дата" Width="200"
+                                    Binding="{Binding EndDate}" />
             </common:CustomDataGrid.Columns>
         </common:CustomDataGrid>
     </Grid>

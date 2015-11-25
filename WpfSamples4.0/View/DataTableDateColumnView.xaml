@@ -30,7 +30,7 @@
                 <Setter Property="TextAlignment" Value="Right"/>
             </Style>
         </Grid.Resources>
-        
+
         <DataGrid x:Name="TestDataGrid" ItemsSource="{Binding MyTable}"
                   AutoGenerateColumns="False" EnableRowVirtualization="True"
                   SelectionMode="Extended" SelectionUnit="Cell"
@@ -39,9 +39,18 @@
                   CellStyle="{StaticResource VerticalAlignedCellStyle}"
                   SelectedCellsChanged="DataGrid_OnSelectedCellsChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Скважина" Width="130"
-                                    Binding="{Binding Well}" />
-
+                <DataGridTextColumn Width="130"
+                                    Binding="{Binding Well}">
+                    <DataGridTextColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding 
+                                Path=DataContext.HeaderPart, 
+                                RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:TypeExtension DataGrid}}, 
+                                StringFormat=Скважина{0}}"/>                            
+                        </DataTemplate>
+                    </DataGridTextColumn.HeaderTemplate>
+                </DataGridTextColumn>
+                                    
                 <DataGridTemplateColumn x:Name="DateColumn"
                                         Header="Дата" Width="100">
                     <DataGridTemplateColumn.CellTemplate>

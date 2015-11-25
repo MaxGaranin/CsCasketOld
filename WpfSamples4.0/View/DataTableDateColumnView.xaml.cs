@@ -16,11 +16,13 @@ namespace WpfSamples40.View
         public DataTableDateColumnView()
         {
             InitializeComponent();
-
             DataContext = this;
 
             MyTable = CreateDataTable();
+            HeaderPart = "[ru]";
         }
+
+        public string HeaderPart { get; set; }
 
         public DataTable MyTable
         {
@@ -80,7 +82,6 @@ namespace WpfSamples40.View
                 TestDataGrid.BeginEdit();
             }
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
