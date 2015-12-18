@@ -222,6 +222,9 @@
     <Compile Include="View\ProgressBarView.xaml.cs">
       <DependentUpon>ProgressBarView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RadCartesianChartTestView.xaml.cs">
+      <DependentUpon>RadCartesianChartTestView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserLoginView.xaml.cs">
       <DependentUpon>UserLoginView.xaml</DependentUpon>
     </Compile>
@@ -458,6 +461,10 @@
     <Page Include="View\ProgressBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RadCartesianChartTestView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\RadGridViewTestView.xaml">
       <SubType>Designer</SubType>

@@ -19,7 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new CustomDataGridTestView();
+            var view = new RadCartesianChartTestView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();
