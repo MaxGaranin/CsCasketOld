@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using WpfSamples40.ValidationRules;
+using WpfSamples40.WpfInfrastructure.ValidationRules;
 
 namespace WpfSamples40.View
 {

@@ -151,8 +151,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Behaviors\DragInCanvasBehavior.cs" />
-    <Compile Include="Behaviors\WindowBehavior.cs" />
+    <Compile Include="WpfInfrastructure\Behaviors\DragInCanvasBehavior.cs" />
+    <Compile Include="WpfInfrastructure\Behaviors\WindowBehavior.cs" />
     <Compile Include="Controls\Common\ColorPicker.xaml.cs">
       <DependentUpon>ColorPicker.xaml</DependentUpon>
     </Compile>
@@ -169,17 +169,17 @@
       <DependentUpon>ColumnItemsFilterControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Common\DataGridCustomization\FooterData.cs" />
-    <Compile Include="Converters\BooleanConverter.cs" />
-    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\EnumToBooleanConverter.cs" />
-    <Compile Include="Converters\IntToStringConverter.cs" />
-    <Compile Include="Converters\InverseBooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\DoubleToStringConverter.cs" />
-    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\BooleanConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\IntToStringConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\DoubleToStringConverter.cs" />
+    <Compile Include="WpfInfrastructure\Converters\InverseBooleanConverter.cs" />
     <Compile Include="Helpers\DispatcherHelper.cs" />
     <Compile Include="Helpers\FileDialogHelper.cs" />
     <Compile Include="Helpers\ICanceller.cs" />
-    <Compile Include="ValidationRules\MyStringLengthValidationRule.cs" />
+    <Compile Include="WpfInfrastructure\ValidationRules\MyStringLengthValidationRule.cs" />
     <Compile Include="ViewModel\EditableComboBoxViewModel.cs" />
     <Compile Include="ViewModel\HelperClasses\BigData.cs" />
     <Compile Include="ViewModel\HelperClasses\ModelObject.cs" />
@@ -187,9 +187,9 @@
     <Compile Include="Utils\ClipboardHelper.cs" />
     <Compile Include="Utils\ObjectUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />
-    <Compile Include="ValidationRules\DoubleRangeValidationRule.cs" />
-    <Compile Include="ValidationRules\DoubleValidationRule.cs" />
-    <Compile Include="ValidationRules\PositiveDoubleValidationRule.cs" />
+    <Compile Include="WpfInfrastructure\ValidationRules\DoubleRangeValidationRule.cs" />
+    <Compile Include="WpfInfrastructure\ValidationRules\DoubleValidationRule.cs" />
+    <Compile Include="WpfInfrastructure\ValidationRules\PositiveDoubleValidationRule.cs" />
     <Compile Include="ViewModel\ControlDataContext\ControlDataContextLauncher.cs" />
     <Compile Include="ViewModel\ControlDataContext\ComplexViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\FIrstViewModel.cs" />
@@ -341,8 +341,8 @@
       <DependentUpon>WaitDialogView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="WpfInfrastructure\ExpressionExtensions.cs" />
-    <Compile Include="WpfInfrastructure\IntegerContainer.cs" />
+    <Compile Include="WpfInfrastructure\Classes\ExpressionExtensions.cs" />
+    <Compile Include="WpfInfrastructure\Classes\IntegerContainer.cs" />
     <Page Include="Controls\Common\ColorPicker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

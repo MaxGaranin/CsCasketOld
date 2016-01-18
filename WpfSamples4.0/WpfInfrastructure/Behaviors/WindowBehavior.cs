@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 
-namespace WpfSamples40.Behaviors
+namespace WpfSamples40.WpfInfrastructure.Behaviors
 {
     public class WindowBehavior
     {

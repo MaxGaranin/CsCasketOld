@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Data;
 using WpfSamples40.Utils;
 
-namespace WpfSamples40.Converters
+namespace WpfSamples40.WpfInfrastructure.Converters
 {
     public class DoubleToStringConverter : IValueConverter
     {

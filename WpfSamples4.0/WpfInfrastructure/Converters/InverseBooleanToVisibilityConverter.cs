@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.Converters
+namespace WpfSamples40.WpfInfrastructure.Converters
 {
     public class InverseBooleanToVisibilityConverter : BooleanConverter<Visibility>
     {

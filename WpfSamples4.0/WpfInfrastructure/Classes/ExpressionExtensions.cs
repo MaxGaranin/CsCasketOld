@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using System.Reflection;
 
-namespace WpfSamples40.WpfInfrastructure
+namespace WpfSamples40.WpfInfrastructure.Classes
 {
     /// <summary>
     /// Extension for <see cref="T:System.Linq.Expressions.Expression"/>.

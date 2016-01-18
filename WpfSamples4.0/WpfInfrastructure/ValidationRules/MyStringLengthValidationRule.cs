@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using System.Windows.Controls;
-using WpfSamples40.WpfInfrastructure;
+using WpfSamples40.WpfInfrastructure.Classes;
 
-namespace WpfSamples40.ValidationRules
+namespace WpfSamples40.WpfInfrastructure.ValidationRules
 {
     public class MyStringLengthValidationRule : ValidationRule
     {
