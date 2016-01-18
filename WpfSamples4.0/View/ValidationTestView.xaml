@@ -4,8 +4,8 @@
         xmlns:converters="clr-namespace:WpfSamples40.Converters"
         xmlns:validationRules="clr-namespace:WpfSamples40.ValidationRules"
         xmlns:controls="clr-namespace:WpfSamples40.Controls"
-        Title="ValidationTestView" Height="300" Width="300"
-        DataContext="{Binding Source={StaticResource Locator}, Path=ValidationTest}">
+        xmlns:wpfInfrastructure="clr-namespace:WpfSamples40.WpfInfrastructure"
+        Title="ValidationTestView" Height="300" Width="300">
     <Window.Resources>
         <!-- Конвервер строки в double значение (не использую - плохо работает) -->
         <converters:DoubleToStringConverter x:Key="DoubleConverter"/>
@@ -53,19 +53,43 @@
             </DockPanel>
         </ControlTemplate>
 
+        <FrameworkElement x:Key="DataContextBridge"/>
     </Window.Resources>
+    
+    <Window.DataContext>
+        <Binding Mode="OneWayToSource"
+                 Path="DataContext"
+                 Source="{StaticResource DataContextBridge}"/>
+    </Window.DataContext>
+    
     <Grid>
         <StackPanel>
             <TextBox Style="{StaticResource WaterCutValidation}"
-                     Name="txtWaterCut"
+                     Name="WaterCutTextBox"
                      Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
                      Height="30" Width="100" VerticalAlignment="Center" TextAlignment="Right" Margin="0,10,0,0" 
                      FontSize="16"/>
             
             <Button Height="30" Width="100" Margin="0,10" Content="Press me!" Click="Button_Click"></Button>
            
-            <controls:TextBoxControl x:Name="controlTextBox" Width="150"
+            <controls:TextBoxControl x:Name="ControlTextBox" Width="150"
                                      MyName="Параметр" MyValue="123"/>
+
+            <TextBox Width="100" Margin="5" TextAlignment="Right">
+                <TextBox.Text>
+                    <Binding Path="MyDoubleValue" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validationRules:MyStringLengthValidationRule>
+                                <validationRules:MyStringLengthValidationRule.LengthContainer>
+                                    <wpfInfrastructure:IntegerContainer
+                                        DataContext="{Binding Source={StaticResource DataContextBridge}, Path=DataContext}"
+                                        Value="{Binding MyLength}"/>
+                                </validationRules:MyStringLengthValidationRule.LengthContainer>
+                            </validationRules:MyStringLengthValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>    
+            </TextBox>
         </StackPanel>
     </Grid>
 </Window>

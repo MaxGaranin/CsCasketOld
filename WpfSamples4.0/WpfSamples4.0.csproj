@@ -179,6 +179,7 @@
     <Compile Include="Helpers\DispatcherHelper.cs" />
     <Compile Include="Helpers\FileDialogHelper.cs" />
     <Compile Include="Helpers\ICanceller.cs" />
+    <Compile Include="ValidationRules\MyStringLengthValidationRule.cs" />
     <Compile Include="ViewModel\EditableComboBoxViewModel.cs" />
     <Compile Include="ViewModel\HelperClasses\BigData.cs" />
     <Compile Include="ViewModel\HelperClasses\ModelObject.cs" />
@@ -228,7 +229,6 @@
     <Compile Include="View\UserLoginView.xaml.cs">
       <DependentUpon>UserLoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WpfInfrastructure\MyViewModelBase.cs" />
     <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
     <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
       <SubType>Code</SubType>
@@ -237,7 +237,7 @@
     <Compile Include="ViewModel\TriggersTestsViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModel\ValidationTestModel.cs">
+    <Compile Include="ViewModel\ValidationTestViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -342,6 +342,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WpfInfrastructure\ExpressionExtensions.cs" />
+    <Compile Include="WpfInfrastructure\IntegerContainer.cs" />
     <Page Include="Controls\Common\ColorPicker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

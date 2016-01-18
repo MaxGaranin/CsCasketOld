@@ -56,18 +56,31 @@
                     </chartView:LineSeries.PointTemplate>
                 </chartView:LineSeries>
 
-                <!--                CombineMode="Stack" StackGroupKey="Debit"-->
-                
                 <chartView:BarSeries ItemsSource="{Binding OilProductionLevelItems}"
                                      ValueBinding="OilQ"
-                                     CategoryBinding="LeftBorder" 
-                                     Background="Black" BorderBrush="Green" BorderThickness="3" />
+                                     CategoryBinding="LeftBorder"
+                                     CombineMode="Stack" StackGroupKey="Debit">
+                    <telerik:BarSeries.DefaultVisualStyle>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="SaddleBrown"/>
+                            <Setter Property="BorderBrush" Value="Brown"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </telerik:BarSeries.DefaultVisualStyle>
+                </chartView:BarSeries>
 
-<!--                <chartView:BarSeries ItemsSource="{Binding OilProductionLevelItems}"-->
-<!--                                     CombineMode="Stack" StackGroupKey="Debit"-->
-<!--                                     ValueBinding="WaterQ"-->
-<!--                                     CategoryBinding="LeftBorder"-->
-<!--                                     Background="Blue"/>-->
+                <chartView:BarSeries ItemsSource="{Binding OilProductionLevelItems}"
+                                     CombineMode="Stack" StackGroupKey="Debit"
+                                     ValueBinding="WaterQ"
+                                     CategoryBinding="LeftBorder">
+                    <telerik:BarSeries.DefaultVisualStyle>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="CornflowerBlue"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </telerik:BarSeries.DefaultVisualStyle>
+                </chartView:BarSeries>
 
                 <chartView:LineSeries ItemsSource="{Binding OilProductionLevelItems}"
                                       ValueBinding="GasQ"

@@ -19,7 +19,8 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new RadCartesianChartTestView();
+            var viewModel = new ValidationTestViewModel();
+            var view = new ValidationTestView { DataContext = viewModel };
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();

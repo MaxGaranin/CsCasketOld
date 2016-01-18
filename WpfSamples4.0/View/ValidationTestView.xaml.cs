@@ -12,7 +12,7 @@ namespace WpfSamples40.View
         {
             InitializeComponent();
 
-            var b = controlTextBox.GetMyValueBinding;
+            var b = ControlTextBox.GetMyValueBinding;
             var rule = new DoubleRangeValidationRule { Min = 0, Max = 100 };
             b.ValidationRules.Add(rule);
         }

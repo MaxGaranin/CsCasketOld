@@ -30,7 +30,7 @@ namespace WpfSamples40.ViewModel
             SimpleIoc.Default.Register<SimpleControlTestViewModel>();
             SimpleIoc.Default.Register<TriggersTestsViewModel>();
             SimpleIoc.Default.Register<MultiTriggerViewModel>();
-            SimpleIoc.Default.Register<ValidationTestModel>();
+            SimpleIoc.Default.Register<ValidationTestViewModel>();
             SimpleIoc.Default.Register<TestViewModel>();
         }
 
@@ -49,9 +49,9 @@ namespace WpfSamples40.ViewModel
             get { return ServiceLocator.Current.GetInstance<MultiTriggerViewModel>(); }
         }
 
-        public ValidationTestModel ValidationTest
+        public ValidationTestViewModel ValidationTest
         {
-            get { return ServiceLocator.Current.GetInstance<ValidationTestModel>(); }
+            get { return ServiceLocator.Current.GetInstance<ValidationTestViewModel>(); }
         }
 
         public TestViewModel Test
