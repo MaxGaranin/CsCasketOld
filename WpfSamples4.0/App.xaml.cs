@@ -17,7 +17,7 @@ namespace WpfSamples40
 
         private void ApplicationStartup(object sender, StartupEventArgs e)
         {
-            Init();
+//            Init();
 
             var viewModel = new ValidationTestViewModel();
             var view = new ValidationTestView { DataContext = viewModel };

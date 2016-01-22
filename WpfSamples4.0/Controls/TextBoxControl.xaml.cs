@@ -4,9 +4,6 @@ using System.Windows.Data;
 
 namespace WpfSamples40.Controls
 {
-    /// <summary>
-    /// Interaction logic for TextBoxControl.xaml
-    /// </summary>
     public partial class TextBoxControl : UserControl
     {
         public TextBoxControl()
@@ -16,33 +13,36 @@ namespace WpfSamples40.Controls
             LayoutRoot.DataContext = this;
         }
 
-        public Binding GetMyValueBinding {
-            get { return BindingOperations.GetBinding(txtMyValue, TextBox.TextProperty); } 
+        public Binding GetMyValueBinding
+        {
+            get { return BindingOperations.GetBinding(txtMyValue, TextBox.TextProperty); }
         }
 
         public string MyName
         {
-            get { return (string)GetValue(MyNameProperty); }
+            get { return (string) GetValue(MyNameProperty); }
             set { SetValue(MyNameProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MyNameProperty =
-            DependencyProperty.Register("MyName", typeof(string), typeof(TextBoxControl), new PropertyMetadata(null));
+            DependencyProperty.Register("MyName", typeof (string), typeof (TextBoxControl), new PropertyMetadata(null));
 
-
-
-
-        public int MyValue
+        public int MyIntValue
         {
-            get { return (int)GetValue(MyValueProperty); }
-            set { SetValue(MyValueProperty, value); }
+            get { return (int) GetValue(MyIntValueProperty); }
+            set { SetValue(MyIntValueProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for MyValue.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MyValueProperty =
-            DependencyProperty.Register("MyValue", typeof(int), typeof(TextBoxControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty MyIntValueProperty =
+            DependencyProperty.Register("MyIntValue", typeof (int), typeof (TextBoxControl), new PropertyMetadata(0));
 
-        
+        public double MyDoubleValue
+        {
+            get { return (double) GetValue(MyDoubleValueProperty); }
+            set { SetValue(MyDoubleValueProperty, value); }
+        }
+
+        public static readonly DependencyProperty MyDoubleValueProperty =
+            DependencyProperty.Register("MyDoubleValue", typeof (double), typeof (TextBoxControl), new PropertyMetadata(0));
     }
 }

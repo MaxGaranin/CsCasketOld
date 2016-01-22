@@ -1,4 +1,5 @@
-﻿using System.Windows.Markup;
+﻿using System;
+using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 
 namespace WpfSamples40.ViewModel
@@ -8,7 +9,30 @@ namespace WpfSamples40.ViewModel
         public ValidationTestViewModel()
         {
             WaterCut = 0.6;
+            MyDoubleValue = 11.234;
             MyLength = 3;
+
+            MyList = new ObservableCollection<SomeType>
+            {
+                new SomeType
+                {
+                    DateValue = new DateTime(2016, 1, 22),
+                    DoubleValue = 4.55,
+                    StringValue = "aaaa"
+                },
+                new SomeType
+                {
+                    DateValue = new DateTime(2016, 1, 22),
+                    DoubleValue = 4.55,
+                    StringValue = "aaaa"
+                },
+                new SomeType
+                {
+                    DateValue = new DateTime(2016, 1, 22),
+                    DoubleValue = 4.55,
+                    StringValue = "aaaa"
+                },
+            };
         }
 
         private double _waterCut;
@@ -46,6 +70,46 @@ namespace WpfSamples40.ViewModel
                 _myLength = value;
                 RaisePropertyChanged("MyLength");
             }
+        }
+
+        private ObservableCollection<SomeType> _myList;
+
+        public ObservableCollection<SomeType> MyList
+        {
+            get { return _myList; }
+            set
+            {
+                if (Equals(value, _myList)) return;
+                _myList = value;
+                RaisePropertyChanged("MyList");
+            }
+        }
+    }
+
+    public class SomeType : ObservableObject
+    {
+        private double _doubleValue;
+
+        public double DoubleValue
+        {
+            get { return _doubleValue; }
+            set { Set("DoubleValue", ref _doubleValue, value); }
+        }
+
+        private DateTime _dateValue;
+
+        public DateTime DateValue
+        {
+            get { return _dateValue; }
+            set { Set("DateValue", ref _dateValue, value); }
+        }
+
+        private string _stringValue;
+
+        public string StringValue
+        {
+            get { return _stringValue; }
+            set { Set("StringValue", ref _stringValue, value); }
         }
     }
 }

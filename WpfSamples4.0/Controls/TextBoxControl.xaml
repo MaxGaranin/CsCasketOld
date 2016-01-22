@@ -12,10 +12,7 @@
         <TextBlock Name="lblMyName" Grid.Column="0" Text="{Binding MyName}"></TextBlock>
         <TextBox Name="txtMyValue" Grid.Column="1">
             <TextBox.Text>
-                <Binding x:Name="bindingMyValue" Path="MyValue">
-                    <Binding.ValidationRules>
-                    </Binding.ValidationRules>
-                </Binding>
+                <Binding x:Name="bindingMyValue" Path="MyDoubleValue"/>
             </TextBox.Text>
         </TextBox>
     </Grid>
