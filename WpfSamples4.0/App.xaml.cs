@@ -1,8 +1,10 @@
 ﻿using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Markup;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
+using WpfSamples40.Utils;
 using WpfSamples40.View;
 using WpfSamples40.ViewModel;
 
@@ -17,7 +19,7 @@ namespace WpfSamples40
 
         private void ApplicationStartup(object sender, StartupEventArgs e)
         {
-//            Init();
+            Init();
 
             var viewModel = new ValidationTestViewModel();
             var view = new ValidationTestView { DataContext = viewModel };
@@ -31,11 +33,9 @@ namespace WpfSamples40
         private void Init()
         {
             StyleManager.ApplicationTheme = new Windows8Theme();
-
-            // Важная штука: применяет культуру системы к WPF.
-            FrameworkElement.LanguageProperty.OverrideMetadata(
-                typeof (FrameworkElement),
-                new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
+            
+            // Применяет культуру системы к WPF
+            LocalePatch.Init();
         }
     }
 }

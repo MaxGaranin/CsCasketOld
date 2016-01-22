@@ -75,17 +75,15 @@
     <StackPanel>
 
         <StackPanel HorizontalAlignment="Left">
-            <TextBox Style="{StaticResource WaterCutValidation}"
-                     Name="WaterCutTextBox"
+
+            <TextBox Name="WaterCutTextBox"
+                     Style="{StaticResource WaterCutValidation}"
                      Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
                      Height="30" Width="100" TextAlignment="Right"
                      Margin="0,10,0,0" FontSize="16" />
 
             <Button Height="30" Width="100" Margin="0,10" Content="Press me!"
                     Click="Button_Click" />
-
-<!--            <controls:TextBoxControl x:Name="ControlTextBox" Width="150"-->
-<!--                                     MyName="Параметр" MyDoubleValue="{Binding MyDoubleValue}" />-->
 
             <TextBox Width="100" Margin="5" TextAlignment="Right">
                 <TextBox.Text>
