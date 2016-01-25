@@ -7,6 +7,7 @@ using Telerik.Windows.Controls;
 using WpfSamples40.Utils;
 using WpfSamples40.View;
 using WpfSamples40.ViewModel;
+using WpfSamples40.WpfInfrastructure.Utils;
 
 namespace WpfSamples40
 {
