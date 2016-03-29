@@ -3,41 +3,40 @@ using System.Diagnostics;
 
 namespace ConsoleApp.Finalizer
 {
-    internal class Program
+    class Program
     {
-        private static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Start Application");
-
-            MySingleton.Instanse.Run();
-
+            MyClassB b = new MyClassB();
+            MyClassA a = b;
+            a.abc();
             Console.ReadLine();
-            Console.WriteLine("End Application");
         }
     }
 
-    public class MySingleton
+    class MyClassA
     {
-        private static MySingleton _instanse;
-
-        private MySingleton()
+        public MyClassA()
         {
-            Console.WriteLine("MySingleton Constructor");
+            Console.WriteLine("constructor A");
         }
 
-        public static MySingleton Instanse
+        public void abc()
         {
-            get { return _instanse ?? (_instanse = new MySingleton()); }
+            Console.WriteLine("A");
+        }
+    }
+
+    class MyClassB : MyClassA
+    {
+        public MyClassB()
+        {
+            Console.WriteLine("constructor B");
         }
 
-        public void Run()
+        public void abc()
         {
-            Console.WriteLine("MySingleton Run");
-        }
-
-        ~MySingleton()
-        {
-            Console.WriteLine("MySingleton Finalizer");
+            Console.WriteLine("B");
         }
     }
 }

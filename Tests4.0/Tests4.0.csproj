@@ -54,6 +54,7 @@
     <Compile Include="Common\CollectionTests.cs" />
     <Compile Include="Common\GenericTests.cs" />
     <Compile Include="Common\ReadOnlyObservableCollectionTests.cs" />
+    <Compile Include="Common\ReflectionTests.cs" />
     <Compile Include="Common\ShallowCopyTests.cs" />
     <Compile Include="Common\ThisBaseClassTests.cs" />
     <Compile Include="Dynamics\DynamicCollection.cs" />
