@@ -151,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\DataTemplateSampleView.xaml.cs">
+      <DependentUpon>DataTemplateSampleView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="WpfInfrastructure\Utils\LocalePatch.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\DragInCanvasBehavior.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\WindowBehavior.cs" />
@@ -373,6 +377,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\SimpleControlWithoutDp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DataTemplateSampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

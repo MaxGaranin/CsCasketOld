@@ -22,8 +22,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var viewModel = new ValidationTestViewModel();
-            var view = new ValidationTestView { DataContext = viewModel };
+            var view = new DataTemplateSampleView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();
