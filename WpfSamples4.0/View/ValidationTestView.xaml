@@ -35,9 +35,8 @@
             </Setter>
         </Style>
 
-        <!-- Показ всплывающей подсказки на контролом, если есть ошибки (не использую, достаточно шаблона ниже -->
-        <Style x:Key="WaterCutValidationAndError" TargetType="{x:Type TextBox}"
-               BasedOn="{StaticResource WaterCutValidation}">
+        <!-- Показ всплывающей подсказки на контролом, если есть ошибки -->
+        <Style x:Key="ToolTipValidationStyle" TargetType="{x:Type TextBox}">
             <Style.Triggers>
                 <Trigger Property="Validation.HasError" Value="true">
                     <Setter Property="ToolTip"
@@ -72,17 +71,12 @@
     </Window.DataContext>
 
     <StackPanel>
-
         <StackPanel HorizontalAlignment="Left">
-
             <TextBox Name="WaterCutTextBox"
                      Style="{StaticResource WaterCutValidation}"
                      Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
                      Height="30" Width="100" TextAlignment="Right"
                      Margin="0,10,0,0" FontSize="16" />
-
-            <Button Height="30" Width="100" Margin="0,10" Content="Press me!"
-                    Click="Button_Click" />
 
             <TextBox Width="100" Margin="5" TextAlignment="Right">
                 <TextBox.Text>
@@ -102,8 +96,15 @@
         </StackPanel>
 
         <DataGrid Width="700" Height="300" Margin="5"
+                  RowHeaderWidth="30"
                   AutoGenerateColumns="False"
+                  SelectionMode="Extended" SelectionUnit="CellOrRowHeader"
                   ItemsSource="{Binding MyList}">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="ValidationErrorTemplate" Value="{StaticResource ValidationTemplate}"/>
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Обычный столбец" Width="100"
                                     Binding="{Binding DoubleValue}" />
@@ -111,7 +112,13 @@
                 <DataGridTemplateColumn Header="Внутри TextBox" Width="100">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding DoubleValue, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Validation.ErrorTemplate="{StaticResource ValidationTemplate}">
+                                <Binding Path="DoubleValue" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
+                                    <Binding.ValidationRules>
+                                        <validationRules:PositiveDoubleValidationRule/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
