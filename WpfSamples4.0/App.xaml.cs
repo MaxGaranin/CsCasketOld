@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples40.View;
+using WpfSamples40.View.Async;
 using WpfSamples40.ViewModel;
 using WpfSamples40.WpfInfrastructure.Utils;
 
@@ -18,8 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var viewModel = new ValidationTestViewModel();
-            var view = new ValidationTestView {DataContext = viewModel};
+            var view = new MainAsyncView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();

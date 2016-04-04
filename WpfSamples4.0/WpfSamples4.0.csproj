@@ -152,6 +152,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Async\MainAsyncView.xaml.cs">
+      <DependentUpon>MainAsyncView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Async\SomeDialogView.xaml.cs">
+      <DependentUpon>SomeDialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GraphicsPrimitivesView.xaml.cs">
       <DependentUpon>GraphicsPrimitivesView.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -374,6 +380,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\AnimationTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Async\MainAsyncView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Async\SomeDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
