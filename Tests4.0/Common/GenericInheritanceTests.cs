@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Test40.Common
 {
     [TestFixture]
-    public class GenericTests
+    public class GenericInheritanceTests
     {
         [Test]
         public void Should_inherits_generic_interface()
