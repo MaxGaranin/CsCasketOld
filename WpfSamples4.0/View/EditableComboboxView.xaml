@@ -10,20 +10,33 @@
     </Window.Resources>
 
     <Grid>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Margin="12,13,0,0" Width="62" Height="24">
-            Student
-        </Label>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <ComboBox Height="25" Margin="80,12,12,0" VerticalAlignment="Top"
-                      ItemsSource="{Binding Students}"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Label Margin="5" Width="100"
+                   Content="Student"/>
+
+            <ComboBox ItemsSource="{Binding Students}" Width="300" Margin="5"
                       IsEditable="True" TextSearch.TextPath="StudentName">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding StudentName}" />
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding StudentName}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBox Margin="5" Width="100" />
+            <ComboBox Margin="5" Width="300"
+                      IsEditable="True"
+                      ItemsSource="{Binding Items}"
+                      SelectedItem="{Binding SelectedItem}"
+                      Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}" />
+        </StackPanel>
     </Grid>
-    
+
 </Window>

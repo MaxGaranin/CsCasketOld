@@ -1,8 +1,10 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections;
+using System.Collections.ObjectModel;
+using GalaSoft.MvvmLight;
 
 namespace WpfSamples40.ViewModel
 {
-    public class EditableComboBoxViewModel
+    public class EditableComboBoxViewModel : ObservableObject
     {
         public EditableComboBoxViewModel()
         {
@@ -22,6 +24,50 @@ namespace WpfSamples40.ViewModel
         }
 
         public ObservableCollection<Student> Students { get; set; }
+
+        #region Add items to combobox
+
+        private string _selectedItem;
+
+        private ObservableCollection<string> _items = new ObservableCollection<string>()
+        {
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+        };
+
+        public IEnumerable Items
+        {
+            get { return _items; }
+        }
+
+        public string SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                _selectedItem = value;
+                RaisePropertyChanged("SelectedItem");
+            }
+        }
+
+        public string NewItem
+        {
+            set
+            {
+                if (SelectedItem != null) return;
+                
+                if (!string.IsNullOrEmpty(value))
+                {
+                    _items.Add(value);
+                    SelectedItem = value;
+                }
+            }
+        }
+
+        #endregion
     }
 
     public class Student
