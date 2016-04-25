@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Finalizer.Program</StartupObject>
+    <StartupObject>ConsoleApp.MethodCalls.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,9 @@
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />
+    <Compile Include="MethodCalls\Classes.cs" />
+    <Compile Include="MethodCalls\MethodCallsHelper.cs" />
+    <Compile Include="MethodCalls\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="WeakEvents\Program.cs" />
