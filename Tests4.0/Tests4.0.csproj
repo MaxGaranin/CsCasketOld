@@ -63,6 +63,7 @@
     <Compile Include="Dynamics\DynamicLibrary.cs" />
     <Compile Include="Dynamics\DynamicCollectionTests.cs" />
     <Compile Include="Common\FabricTests.cs" />
+    <Compile Include="Common\ExplicitInterfaceTests.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\SerializeTests.cs" />
