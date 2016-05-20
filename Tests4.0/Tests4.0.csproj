@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Common\CallVirtualMemberInConstructorTests.cs" />
     <Compile Include="Common\CollectionTests.cs" />
+    <Compile Include="Common\CultureInfoTests.cs" />
     <Compile Include="Common\GenericInheritanceTests.cs" />
     <Compile Include="Common\GenericCovarianceTests.cs" />
     <Compile Include="Common\NumbersTests.cs" />
