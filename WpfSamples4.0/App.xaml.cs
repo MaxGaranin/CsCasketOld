@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples40.View;
 using WpfSamples40.View.Async;
+using WpfSamples40.View.ContentPresenterVsContentControl;
 using WpfSamples40.ViewModel;
 using WpfSamples40.WpfInfrastructure.Utils;
 
@@ -19,7 +20,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new EditableComboboxView();
+            var view = new ContentPresenterVsContentControlView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();
