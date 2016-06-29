@@ -164,6 +164,9 @@
     <Compile Include="View\ContentPresenterVsContentControl\DualContentControl.xaml.cs">
       <DependentUpon>DualContentControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ControlTemplateVsDataTemplateView.xaml.cs">
+      <DependentUpon>ControlTemplateVsDataTemplateView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GraphicsPrimitivesView.xaml.cs">
       <DependentUpon>GraphicsPrimitivesView.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -410,6 +413,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ContentPresenterVsContentControl\DualContentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ControlTemplateVsDataTemplateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
