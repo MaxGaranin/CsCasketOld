@@ -20,7 +20,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new ContentPresenterVsContentControlView();
+            var view = new RadCartesianChartTestView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();

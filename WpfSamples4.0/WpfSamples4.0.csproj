@@ -175,6 +175,9 @@
       <DependentUpon>DataTemplateSampleView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\ScrollItemsControlView.xaml.cs">
+      <DependentUpon>ScrollItemsControlView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfInfrastructure\Utils\LocalePatch.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\DragInCanvasBehavior.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\WindowBehavior.cs" />
@@ -513,6 +516,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\RadGridViewTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ScrollItemsControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

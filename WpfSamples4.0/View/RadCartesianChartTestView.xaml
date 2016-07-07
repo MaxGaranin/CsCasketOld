@@ -29,7 +29,7 @@
                                     Binding="{Binding LiquidQ}" />
                 <DataGridTextColumn Header="Добыча нефти" Width="80"
                                     Binding="{Binding OilQ}" />
-                <DataGridTextColumn Header="Добыча воды" Width="80"
+                <DataGridTextColumn Header="Добыча воды" Width="80" IsReadOnly="True"
                                     Binding="{Binding WaterQ}" />
                 <DataGridTextColumn Header="Добыча газа" Width="80"
                                     Binding="{Binding GasQ}" />
