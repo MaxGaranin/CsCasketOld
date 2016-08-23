@@ -55,6 +55,7 @@
     <Compile Include="Common\CultureInfoTests.cs" />
     <Compile Include="Common\GenericInheritanceTests.cs" />
     <Compile Include="Common\GenericCovarianceTests.cs" />
+    <Compile Include="Common\LinqTests.cs" />
     <Compile Include="Common\NumbersTests.cs" />
     <Compile Include="Common\ReadOnlyObservableCollectionTests.cs" />
     <Compile Include="Common\ReflectionTests.cs" />
