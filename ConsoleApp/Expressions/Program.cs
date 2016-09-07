@@ -7,7 +7,7 @@ namespace ConsoleApp.Expressions
     {
         public static void Main(string[] args)
         {
-            var pDict = new ParameterDict {Id = 1, Name = "Давление"};
+            var pDict = new ParameterDict {Id = 2, Name = "Давление"};
             var p = new Parameter
             {
                 Id = 1,
@@ -17,26 +17,23 @@ namespace ConsoleApp.Expressions
 
             // p.ParameterDict.Id == 1 && p.Value > 5
 
-            //            var paramExpr = Expression.Parameter(typeof (Parameter), "item");
-            //            var idExpr = Expression.Property(paramExpr, "Id");
-            //            var equalExpr = Expression.Equal(idExpr, Expression.Constant(1));
-            //            var compiled = Expression.Lambda<Func<Parameter, bool>>(equalExpr).Compile();
-
-            var itemParameter = Expression.Parameter(typeof(Parameter), "item");
+            var itemParameter = Expression.Parameter(typeof (Parameter), "item");
             var whereExpression = Expression.Lambda<Func<Parameter, bool>>
                 (
-                Expression.Equal(
-                    Expression.Property(
-                        itemParameter,
-                        "Id"
+                    Expression.AndAlso(
+                        Expression.Equal(
+                            Expression.Property(Expression.Property(itemParameter, "ParameterDict"), "Id"),
+                            Expression.Constant(1)
+                            ),
+                        Expression.GreaterThan(
+                            Expression.Property(itemParameter, "Value"),
+                            Expression.Constant(5.0, typeof(double)) 
+                            )
                         ),
-                    Expression.Constant(1)
-                    ),
-                new[] { itemParameter }
-                );
+                    new[] {itemParameter}
+                ).Compile();
 
-            Console.WriteLine(whereExpression.Compile()(p));
-
+            Console.WriteLine(whereExpression(p));
             Console.WriteLine(whereExpression.ToString());
             Console.ReadKey();
         }
