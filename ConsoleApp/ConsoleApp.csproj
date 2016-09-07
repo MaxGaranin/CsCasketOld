@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.MethodCalls.Program</StartupObject>
+    <StartupObject>ConsoleApp.Expressions.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\Program.cs" />
+    <Compile Include="Expressions\Program.cs" />
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />

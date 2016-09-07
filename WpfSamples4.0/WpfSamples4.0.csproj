@@ -305,8 +305,8 @@
     <Compile Include="View\DataTableAutoGenerateView.xaml.cs">
       <DependentUpon>DataTableAutoGenerateView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DrugInBehaviorView.xaml.cs">
-      <DependentUpon>DrugInBehaviorView.xaml</DependentUpon>
+    <Compile Include="View\DragInBehaviorView.xaml.cs">
+      <DependentUpon>DragInBehaviorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditCollectionsView.xaml.cs">
       <DependentUpon>EditCollectionsView.xaml</DependentUpon>
@@ -463,7 +463,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\DrugInBehaviorView.xaml">
+    <Page Include="View\DragInBehaviorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
