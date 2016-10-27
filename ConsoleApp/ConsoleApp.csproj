@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Expressions.Program</StartupObject>
+    <StartupObject>ConsoleApp.BigData.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Async\Program.cs" />
     <Compile Include="BigData\Program.cs" />
-    <Compile Include="Expressions\Program.cs" />
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />
