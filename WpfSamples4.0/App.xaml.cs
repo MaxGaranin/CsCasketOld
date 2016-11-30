@@ -4,6 +4,7 @@ using Telerik.Windows.Controls;
 using WpfSamples40.View;
 using WpfSamples40.View.Async;
 using WpfSamples40.View.ContentPresenterVsContentControl;
+using WpfSamples40.View.ControlBindings;
 using WpfSamples40.ViewModel;
 using WpfSamples40.WpfInfrastructure.Utils;
 
@@ -20,7 +21,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new RadCartesianChartTestView();
+            var view = new RepeatView();
             view.Show();
 
 //            var viewModel = new ProgressBarTestViewModel();
