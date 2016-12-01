@@ -16,6 +16,6 @@
         <TextBox Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}"/>
         
         <local:RepeatControl Grid.Row="1"
-                             Repeat1="{Binding Value, Mode=TwoWay}"/>
+                             Repeat1="{Binding Value, Mode=OneWay}"/>
     </Grid>
 </Window>

@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfSamples40.View.ControlBindings
 {
     public partial class RepeatControl : UserControl
     {
+        private bool _isSetInside;
+
         public RepeatControl()
         {
             InitializeComponent();
@@ -30,10 +21,23 @@ namespace WpfSamples40.View.ControlBindings
 
         public static readonly DependencyProperty Repeat1Property =
             DependencyProperty.Register("Repeat1", typeof (string), typeof (RepeatControl),
-                new PropertyMetadata(null, (s, e) =>
+                new FrameworkPropertyMetadata(null, 
+                (s, e) =>
+                {
+//                    var c = s as RepeatControl;
+//                    c.Repeat2 = (string) e.NewValue;
+                },
+                (s, value) =>
                 {
                     var c = s as RepeatControl;
-                    c.Repeat2 = (string) e.NewValue;
+                    if (c._isSetInside)
+                    {
+                        return c.Repeat2;
+                    }
+                    else
+                    {
+                        return value;
+                    }
                 }));
 
         public string Repeat2
@@ -47,7 +51,10 @@ namespace WpfSamples40.View.ControlBindings
                 new PropertyMetadata(null, (s, e) =>
                 {
                     var c = s as RepeatControl;
-                    c.Repeat1 = (string) e.NewValue;
+
+                    c._isSetInside = true;
+                    s.CoerceValue(Repeat1Property);
+                    c._isSetInside = false;
                 }));
     }
 }
