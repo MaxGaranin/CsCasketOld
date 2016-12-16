@@ -188,9 +188,6 @@
     <Compile Include="View\ControlBindings\RepeatView.xaml.cs">
       <DependentUpon>RepeatView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ControlTemplateVsDataTemplateView.xaml.cs">
-      <DependentUpon>ControlTemplateVsDataTemplateView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\GraphicsPrimitivesView.xaml.cs">
       <DependentUpon>GraphicsPrimitivesView.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -247,41 +244,41 @@
     <Compile Include="ViewModel\ControlDataContext\FIrstViewModel.cs" />
     <Compile Include="ViewModel\ControlDataContext\SecondViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\Master\Control2ViewModel.cs" />
-    <Compile Include="ViewModel\Master\Control3ViewModel.cs" />
-    <Compile Include="ViewModel\Master\ITabViewModel.cs" />
-    <Compile Include="ViewModel\Master\MasterViewHelper.cs" />
-    <Compile Include="ViewModel\Master\MasterViewModel.cs" />
+    <Compile Include="ViewModel\MasterWizard\Control2ViewModel.cs" />
+    <Compile Include="ViewModel\MasterWizard\Control3ViewModel.cs" />
+    <Compile Include="ViewModel\MasterWizard\ITabViewModel.cs" />
+    <Compile Include="ViewModel\MasterWizard\MasterViewHelper.cs" />
+    <Compile Include="ViewModel\MasterWizard\MasterViewModel.cs" />
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModel\ProgressBarTestViewModel.cs" />
-    <Compile Include="ViewModel\ProgressBarViewModel.cs" />
+    <Compile Include="ViewModel\Async\ProgressBarTestViewModel.cs" />
+    <Compile Include="ViewModel\Async\ProgressBarViewModel.cs" />
     <Compile Include="View\AnimationTestView.xaml.cs">
       <DependentUpon>AnimationTestView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CustomColorPickerView.xaml.cs">
       <DependentUpon>CustomColorPickerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DataGridStylesView.xaml.cs">
+    <Compile Include="View\Tables\DataGridStylesView.xaml.cs">
       <DependentUpon>DataGridStylesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditableComboboxView.xaml.cs">
       <DependentUpon>EditableComboboxView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ProgressBarTestView.xaml.cs">
+    <Compile Include="View\Async\ProgressBarTestView.xaml.cs">
       <DependentUpon>ProgressBarTestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ProgressBarView.xaml.cs">
+    <Compile Include="View\Async\ProgressBarView.xaml.cs">
       <DependentUpon>ProgressBarView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RadCartesianChartTestView.xaml.cs">
+    <Compile Include="View\Charts\RadCartesianChartTestView.xaml.cs">
       <DependentUpon>RadCartesianChartTestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UserLoginView.xaml.cs">
+    <Compile Include="View\Async\UserLoginView.xaml.cs">
       <DependentUpon>UserLoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\RadGridViewTestViewModel.cs" />
+    <Compile Include="ViewModel\Tables\RadGridViewTestViewModel.cs" />
     <Compile Include="ViewModel\SimpleControlTestViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -293,7 +290,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\BackgroundWorkerView.xaml.cs">
+    <Compile Include="View\Async\BackgroundWorkerView.xaml.cs">
       <DependentUpon>BackgroundWorkerView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -320,13 +317,13 @@
     <Compile Include="View\ControlDataContext\SecondControl.xaml.cs">
       <DependentUpon>SecondControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomDataGridTestView.xaml.cs">
+    <Compile Include="View\Tables\CustomDataGridTestView.xaml.cs">
       <DependentUpon>CustomDataGridTestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DataTableDateColumnView.xaml.cs">
+    <Compile Include="View\Tables\DataTableDateColumnView.xaml.cs">
       <DependentUpon>DataTableDateColumnView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DataTableAutoGenerateView.xaml.cs">
+    <Compile Include="View\Tables\DataTableAutoGenerateView.xaml.cs">
       <DependentUpon>DataTableAutoGenerateView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DragInBehaviorView.xaml.cs">
@@ -344,24 +341,24 @@
       <DependentUpon>GridSizeView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\Master\Control1.xaml.cs">
+    <Compile Include="View\MasterWizard\Control1.xaml.cs">
       <DependentUpon>Control1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\Master\Control1ViewModel.cs" />
-    <Compile Include="View\Master\Control2.xaml.cs">
+    <Compile Include="ViewModel\MasterWizard\Control1ViewModel.cs" />
+    <Compile Include="View\MasterWizard\Control2.xaml.cs">
       <DependentUpon>Control2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Master\Control3.xaml.cs">
+    <Compile Include="View\MasterWizard\Control3.xaml.cs">
       <DependentUpon>Control3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Master\MasterView.xaml.cs">
+    <Compile Include="View\MasterWizard\MasterView.xaml.cs">
       <DependentUpon>MasterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MultiTriggerView.xaml.cs">
       <DependentUpon>MultiTriggerView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\RadGridViewTestView.xaml.cs">
+    <Compile Include="View\Tables\RadGridViewTestView.xaml.cs">
       <DependentUpon>RadGridViewTestView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ShowImageView.xaml.cs">
@@ -385,7 +382,7 @@
       <DependentUpon>ValidationTestView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\WaitDialogView.xaml.cs">
+    <Compile Include="View\Async\WaitDialogView.xaml.cs">
       <DependentUpon>WaitDialogView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -427,7 +424,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\BackgroundWorkerView.xaml">
+    <Page Include="View\Async\BackgroundWorkerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -448,10 +445,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ControlBindings\RepeatView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ControlTemplateVsDataTemplateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -479,19 +472,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CustomDataGridTestView.xaml">
+    <Page Include="View\Tables\CustomDataGridTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\DataGridStylesView.xaml">
+    <Page Include="View\Tables\DataGridStylesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\DataTableDateColumnView.xaml">
+    <Page Include="View\Tables\DataTableDateColumnView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\DataTableAutoGenerateView.xaml">
+    <Page Include="View\Tables\DataTableAutoGenerateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -515,19 +508,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Master\Control1.xaml">
+    <Page Include="View\MasterWizard\Control1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Master\Control2.xaml">
+    <Page Include="View\MasterWizard\Control2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Master\Control3.xaml">
+    <Page Include="View\MasterWizard\Control3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Master\MasterView.xaml">
+    <Page Include="View\MasterWizard\MasterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -535,19 +528,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ProgressBarTestView.xaml">
+    <Page Include="View\Async\ProgressBarTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ProgressBarView.xaml">
+    <Page Include="View\Async\ProgressBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RadCartesianChartTestView.xaml">
+    <Page Include="View\Charts\RadCartesianChartTestView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\RadGridViewTestView.xaml">
+    <Page Include="View\Tables\RadGridViewTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -575,7 +568,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\UserLoginView.xaml">
+    <Page Include="View\Async\UserLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -583,7 +576,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\WaitDialogView.xaml">
+    <Page Include="View\Async\WaitDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

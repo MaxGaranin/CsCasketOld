@@ -5,6 +5,8 @@ using System.Diagnostics;
 using GalaSoft.MvvmLight.Command;
 using Telerik.Windows.Controls;
 using WpfSamples40.View;
+using WpfSamples40.ViewModel.Tables;
+using RadGridViewTestView = WpfSamples40.View.Tables.RadGridViewTestView;
 using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
 
 namespace WpfSamples40.ViewModel

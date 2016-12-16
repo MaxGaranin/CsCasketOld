@@ -8,7 +8,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using GalaSoft.MvvmLight;
 using Telerik.Windows.Controls;
-using WpfSamples40.Annotations;
+using WpfSamples40.Properties;
 
 namespace WpfSamples40.Controls.Common.DataGridCustomization.Filter
 {

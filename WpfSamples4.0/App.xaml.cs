@@ -2,11 +2,10 @@
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples40.View;
-using WpfSamples40.View.Async;
-using WpfSamples40.View.ContentPresenterVsContentControl;
-using WpfSamples40.View.ControlBindings;
 using WpfSamples40.ViewModel;
+using WpfSamples40.ViewModel.Async;
 using WpfSamples40.WpfInfrastructure.Utils;
+using ProgressBarTestView = WpfSamples40.View.Async.ProgressBarTestView;
 
 namespace WpfSamples40
 {
@@ -21,12 +20,9 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new RepeatView();
+            var viewModel = new ProgressBarTestViewModel();
+            var view = new ProgressBarTestView {DataContext = viewModel};
             view.Show();
-
-//            var viewModel = new ProgressBarTestViewModel();
-//            var view = new ProgressBarTestView {DataContext = viewModel};
-//            view.Show();
         }
 
         private void Init()

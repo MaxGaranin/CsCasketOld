@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
-using WpfSamples40.Annotations;
+using WpfSamples40.Properties;
 
 namespace WpfSamples40.View
 {

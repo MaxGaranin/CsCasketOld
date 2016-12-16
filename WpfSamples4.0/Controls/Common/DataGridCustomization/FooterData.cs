@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
-using WpfSamples40.Annotations;
+using WpfSamples40.Properties;
 
 namespace WpfSamples40.Controls.Common.DataGridCustomization
 {

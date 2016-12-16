@@ -6,7 +6,6 @@ using System.Runtime.Serialization;
 using System.Windows;
 using AutoMapper;
 using Omu.ValueInjecter;
-using WpfSamples40.Annotations;
 using WpfSamples40.Properties;
 
 namespace WpfSamples40.View

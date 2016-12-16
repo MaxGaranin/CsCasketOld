@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Markup;
 using GalaSoft.MvvmLight;
-using WpfSamples40.Annotations;
+using WpfSamples40.Properties;
 
 namespace WpfSamples40.View
 {
