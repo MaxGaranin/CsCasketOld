@@ -3,25 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:view="clr-namespace:WpfSamples40.View"
-        xmlns:common="clr-namespace:WpfSamples40.Controls.Common"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:chartView="clr-namespace:Telerik.Windows.Controls.ChartView;assembly=Telerik.Windows.Controls.Chart"
+        xmlns:dg="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization"
+        xmlns:charts="clr-namespace:WpfSamples40.View.Charts"
         mc:Ignorable="d"
         Title="CustomDataGridTestView" Height="800" Width="1200"
-        d:DataContext="{d:DesignInstance view:RadCartesianChartTestView}">
+        d:DataContext="{d:DesignInstance charts:RadCartesianChartTestView}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
-        <common:CustomDataGrid Grid.Column="0"
-                               AutoGenerateColumns="False" RowHeaderWidth="20" RowHeight="25"
-                               SelectionMode="Extended" SelectionUnit="CellOrRowHeader"
-                               ItemsSource="{Binding OilProductionLevelItems}">
-            <common:CustomDataGrid.Columns>
-                <DataGridTextColumn Header="Начальная дата" Width="80" 
+
+        <dg:CustomDataGrid Grid.Column="0"
+                           AutoGenerateColumns="False" RowHeaderWidth="20" RowHeight="25"
+                           SelectionMode="Extended" SelectionUnit="CellOrRowHeader"
+                           ItemsSource="{Binding OilProductionLevelItems}">
+            <dg:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Начальная дата" Width="80"
                                     Binding="{Binding LeftBorder, StringFormat=d}" />
                 <DataGridTextColumn Header="Конечная дата" Width="80"
                                     Binding="{Binding RightBorder, StringFormat=d}" />
@@ -33,15 +33,15 @@
                                     Binding="{Binding WaterQ}" />
                 <DataGridTextColumn Header="Добыча газа" Width="80"
                                     Binding="{Binding GasQ}" />
-            </common:CustomDataGrid.Columns>
-        </common:CustomDataGrid>
+            </dg:CustomDataGrid.Columns>
+        </dg:CustomDataGrid>
 
         <telerik:RadCartesianChart Grid.Column="1" x:Name="LevelsChart">
             <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:DateTimeContinuousAxis Title="Дата" LabelFormat="d"/>
+                <telerik:DateTimeContinuousAxis Title="Дата" LabelFormat="d" />
             </telerik:RadCartesianChart.HorizontalAxis>
             <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis Title="Добыча нефти, т"/>
+                <telerik:LinearAxis Title="Добыча нефти, т" />
             </telerik:RadCartesianChart.VerticalAxis>
 
             <telerik:RadCartesianChart.Series>
@@ -51,7 +51,7 @@
                                       Stroke="#8B0000">
                     <chartView:LineSeries.PointTemplate>
                         <DataTemplate>
-                            <Ellipse Width="10" Height="10" Fill="#8B0000"/>
+                            <Ellipse Width="10" Height="10" Fill="#8B0000" />
                         </DataTemplate>
                     </chartView:LineSeries.PointTemplate>
                 </chartView:LineSeries>
@@ -62,9 +62,9 @@
                                      CombineMode="Stack" StackGroupKey="Debit">
                     <telerik:BarSeries.DefaultVisualStyle>
                         <Style TargetType="Border">
-                            <Setter Property="Background" Value="SaddleBrown"/>
-                            <Setter Property="BorderBrush" Value="Brown"/>
-                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="Background" Value="SaddleBrown" />
+                            <Setter Property="BorderBrush" Value="Brown" />
+                            <Setter Property="BorderThickness" Value="2" />
                         </Style>
                     </telerik:BarSeries.DefaultVisualStyle>
                 </chartView:BarSeries>
@@ -75,9 +75,9 @@
                                      CategoryBinding="LeftBorder">
                     <telerik:BarSeries.DefaultVisualStyle>
                         <Style TargetType="Border">
-                            <Setter Property="Background" Value="CornflowerBlue"/>
-                            <Setter Property="BorderBrush" Value="Blue"/>
-                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="Background" Value="CornflowerBlue" />
+                            <Setter Property="BorderBrush" Value="Blue" />
+                            <Setter Property="BorderThickness" Value="2" />
                         </Style>
                     </telerik:BarSeries.DefaultVisualStyle>
                 </chartView:BarSeries>
@@ -87,8 +87,8 @@
                                       CategoryBinding="LeftBorder"
                                       Stroke="Orange">
                     <chartView:LineSeries.VerticalAxis>
-                        <telerik:LinearAxis Title="Добыча газа, м3" 
-                                            HorizontalLocation="Right"/>
+                        <telerik:LinearAxis Title="Добыча газа, м3"
+                                            HorizontalLocation="Right" />
                     </chartView:LineSeries.VerticalAxis>
                 </chartView:LineSeries>
             </telerik:RadCartesianChart.Series>

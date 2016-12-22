@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:view="clr-namespace:WpfSamples40.View"
+        xmlns:tables="clr-namespace:WpfSamples40.View.Tables"
         mc:Ignorable="d"
         Title="DataTableDateColumnView" Height="400" Width="600"
-        d:DataContext="{d:DesignInstance view:DataTableDateColumnView}">
+        d:DataContext="{d:DesignInstance tables:DataTableDateColumnView}">
     <Grid>
         <Grid.Resources>
             <Style TargetType="DataGridColumnHeader" x:Key="CenteredColumnHeaderStyle">

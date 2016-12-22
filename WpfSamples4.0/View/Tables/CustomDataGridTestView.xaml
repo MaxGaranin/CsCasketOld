@@ -3,30 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:view="clr-namespace:WpfSamples40.View"
-        xmlns:common="clr-namespace:WpfSamples40.Controls.Common"
+        xmlns:tables="clr-namespace:WpfSamples40.View.Tables"
+        xmlns:dg="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization"
+        xmlns:customColumns="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization.CustomColumns"
         mc:Ignorable="d"
         Title="CustomDataGridTestView" Height="600" Width="800"
-        d:DataContext="{d:DesignInstance view:CustomDataGridTestView}">
-    <Grid>
-        <common:CustomDataGrid ItemsSource="{Binding SomeDataItems}"
-                               AutoGenerateColumns="False"
-                               RowHeaderWidth="20" RowHeight="25"
-                               SelectionMode="Extended" SelectionUnit="CellOrRowHeader">
-            <common:CustomDataGrid.Columns>
+        d:DataContext="{d:DesignInstance tables:CustomDataGridTestView}">
+    <Grid x:Name="LayoutRoot">
+        <dg:CustomDataGrid ItemsSource="{Binding SomeDataItems}"
+                           AutoGenerateColumns="False"
+                           RowHeaderWidth="20" RowHeight="25"
+                           SelectionMode="Extended" SelectionUnit="CellOrRowHeader">
+            <dg:CustomDataGrid.Columns>
                 <DataGridTextColumn Header="Строка" Width="100"
                                     Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Целое значение" Width="200"
+                <DataGridTextColumn Header="Целое значение" Width="100"
                                     CellStyle="{StaticResource RightAlignedCellStyle}"
                                     Binding="{Binding IntValue}" />
-                <DataGridTextColumn Header="Вещественное значение" Width="200"
+                <DataGridTextColumn Header="Вещественное значение" Width="100"
                                     CellStyle="{StaticResource RightAlignedCellStyle}"
                                     Binding="{Binding DoubleValue}" />
-                <DataGridTextColumn Header="Начальная дата" Width="200"
-                                    Binding="{Binding BeginDate}" />
-                <DataGridTextColumn Header="Конечная дата" Width="200"
-                                    Binding="{Binding EndDate}" />
-            </common:CustomDataGrid.Columns>
-        </common:CustomDataGrid>
+                <DataGridTextColumn Header="Начальная дата" Width="100"
+                                    Binding="{Binding BeginDate, StringFormat=d}" />
+                <DataGridTextColumn Header="Конечная дата" Width="100"
+                                    Binding="{Binding EndDate, StringFormat=d}" />
+                <DataGridCheckBoxColumn Header="Акт." Width="100"
+                                        Binding="{Binding IsActive}" />
+                <customColumns:DataGridComboBoxColumnWithBindingHack
+                    Header="Регион" Width="150"
+                    ItemsSource="{Binding DataContext.RegionNames, 
+                                  RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type dg:CustomDataGrid}}}"
+                    SelectedItemBinding="{Binding RegionName}" />
+            </dg:CustomDataGrid.Columns>
+        </dg:CustomDataGrid>
     </Grid>
 </Window>
