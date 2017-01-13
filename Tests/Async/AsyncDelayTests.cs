@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Tests45
+namespace Tests45.Async
 {
     /// <summary>
     /// Описание проблемы на страничке
@@ -20,13 +20,24 @@ namespace Tests45
                 Task.Delay(3000).Wait();
                 Debug.WriteLine("Done");
             });
-            t.Wait();
+            t.Wait(); // может вызывать deadlock-и, подробнее в http://stackoverflow.com/questions/13140523/await-vs-task-wait-deadlock
             Debug.WriteLine("All done");
         }
 
         [Test]
         public async Task TestAwait() //Note the return type of Task. This is required to get the async test 'waitable' by the framework
         {
+            // Это работает неправильно
+//            var t = Task.Factory.StartNew(async () =>
+//            {
+//                Debug.WriteLine("Start");
+//                await Task.Delay(3000);
+//                Debug.WriteLine("Done");
+//            });
+//            t.Wait();
+//            Debug.WriteLine("All done");
+
+            // Переделка в правильный вариант
 //            await Task.Factory.StartNew(async () =>
 //            {
 //                Debug.WriteLine("Start");
@@ -35,11 +46,11 @@ namespace Tests45
 //            }).Unwrap();    //Note the call to Unwrap. This automatically attempts to find the most Inner `Task` in the return type.
 //            Debug.WriteLine("All done");
 
-            // Этот способ лучше
+            // Этот способ лучше (Task.Run вместо Task.Factory.StartNew и Unwrap)
             await Task.Run(async () => //Task.Run automatically unwraps nested Task types!
             {
                 Debug.WriteLine("Start");
-                await Task.Delay(5000);
+                await Task.Delay(3000);
                 Debug.WriteLine("Done");
             });
             Debug.WriteLine("All done");

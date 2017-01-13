@@ -76,7 +76,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncDelayTests.cs" />
+    <Compile Include="Async\AsyncDelayTests.cs" />
     <Compile Include="Common\CallVirtualMemberInConstructorTests.cs" />
     <Compile Include="Common\CollectionTests.cs" />
     <Compile Include="Common\CultureInfoTests.cs" />

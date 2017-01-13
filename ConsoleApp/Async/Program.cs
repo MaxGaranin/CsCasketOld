@@ -1,11 +1,15 @@
-﻿namespace ConsoleApp.Async
+﻿using System;
+
+namespace ConsoleApp.Async
 {
     internal class Program
     {
         private static void Main()
         {
             var worker = new CancelAsyncWorker();
-            worker.Start();
+            worker.StartWithTasks();
+
+            Console.ReadLine();
         }
     }
 }

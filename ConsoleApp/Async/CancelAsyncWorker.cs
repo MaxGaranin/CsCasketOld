@@ -8,15 +8,17 @@ namespace ConsoleApp.Async
     {
         private CancellationTokenSource _cts;
 
-        public void Start()
+        /// <summary>
+        /// Вариант без использования оператора async (но тоже асинхронный)
+        /// </summary>
+        public void StartWithTasks()
         {
             Console.WriteLine("Start.");
 
             _cts = new CancellationTokenSource();
 
-            var task = Task
-                .Run(() => SomeWork(_cts.Token), _cts.Token)
-                .ContinueWith((t) =>
+            Task.Run(() => SomeWork(_cts.Token), _cts.Token)
+                .ContinueWith(t =>
                 {
                     // При отмене не покажет ничего
                     Console.WriteLine(t.Exception);
@@ -38,10 +40,8 @@ namespace ConsoleApp.Async
             Console.ReadLine();
         }
 
-        private int SomeWork(CancellationToken cancellationToken)
+        private void SomeWork(CancellationToken cancellationToken)
         {
-            int result = 1;
-
 //            throw new NullReferenceException();
 
             for (int i = 0; i < 3; i++)
@@ -51,7 +51,6 @@ namespace ConsoleApp.Async
             }
 
             Console.WriteLine("Work finished.");
-            return result;
         }
 
         private void Cancel()
