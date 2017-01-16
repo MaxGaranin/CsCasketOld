@@ -181,6 +181,9 @@
     <Compile Include="View\Async\SomeDialogView.xaml.cs">
       <DependentUpon>SomeDialogView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Async\TaskvsBW\TaskvsBwView.xaml.cs">
+      <DependentUpon>TaskvsBwView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ContentPresenterVsContentControl\ContentPresenterVsContentControlView.xaml.cs">
       <DependentUpon>ContentPresenterVsContentControlView.xaml</DependentUpon>
     </Compile>
@@ -433,6 +436,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\SimpleControlWithoutDp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Async\TaskvsBW\TaskvsBwView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
