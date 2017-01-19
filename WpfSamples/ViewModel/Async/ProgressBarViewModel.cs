@@ -12,7 +12,7 @@ namespace WpfSamples40.ViewModel.Async
             Title = "Выполнение...";
             Minimum = 0;
             Maximum = 100;
-            Value = 73;
+            Value = 0;
         }
 
         #region Title

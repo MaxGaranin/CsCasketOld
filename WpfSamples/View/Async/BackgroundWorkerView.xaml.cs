@@ -191,7 +191,7 @@ namespace WpfSamples40.View.Async
         {
             for (int i = 0; i < 100; i++)
             {
-                DispatcherHelper.DoEvents();
+                DispatcherHelperEx.DoEvents();
 
                 if (_cancelFlag) return;
                 Thread.Sleep(TimeSpan.FromSeconds(0.05));

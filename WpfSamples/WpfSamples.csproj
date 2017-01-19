@@ -175,6 +175,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controls\Common\DataGridCustomization\CustomColumns\DataGridComboBoxColumnWithBindingHack.cs" />
+    <Compile Include="Services\ProgressBarService.cs" />
     <Compile Include="View\Async\MainAsyncView.xaml.cs">
       <DependentUpon>MainAsyncView.xaml</DependentUpon>
     </Compile>
@@ -232,7 +233,7 @@
     <Compile Include="WpfInfrastructure\Converters\InverseBooleanToVisibilityConverter.cs" />
     <Compile Include="WpfInfrastructure\Converters\DoubleToStringConverter.cs" />
     <Compile Include="WpfInfrastructure\Converters\InverseBooleanConverter.cs" />
-    <Compile Include="Helpers\DispatcherHelper.cs" />
+    <Compile Include="Helpers\DispatcherHelperEx.cs" />
     <Compile Include="Helpers\FileDialogHelper.cs" />
     <Compile Include="Helpers\ICanceller.cs" />
     <Compile Include="WpfInfrastructure\ValidationRules\MyStringLengthValidationRule.cs" />

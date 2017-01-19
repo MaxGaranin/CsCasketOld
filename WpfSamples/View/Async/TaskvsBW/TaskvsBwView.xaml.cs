@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfSamples40.Services;
 
 namespace WpfSamples40.View.Async.TaskvsBW
 {
@@ -16,6 +17,8 @@ namespace WpfSamples40.View.Async.TaskvsBW
             InitializeComponent();
         }
 
+        #region BackgroundWorker
+
         private void UseBwButton_OnClick(object sender, RoutedEventArgs e)
         {
             _bgw = new BackgroundWorker();
@@ -23,9 +26,12 @@ namespace WpfSamples40.View.Async.TaskvsBW
             bgw.WorkerSupportsCancellation = true;
             bgw.WorkerReportsProgress = true;
 
+            var progressService = new ProgressBarService();
+            progressService.Show(_bgw);
+
             bgw.DoWork += (_, args) =>
             {
-                for (int i = 0; i < 100; i++)
+                for (int i = 1; i <= 100; i++)
                 {
                     if (bgw.CancellationPending)
                     {
@@ -40,6 +46,7 @@ namespace WpfSamples40.View.Async.TaskvsBW
             bgw.ProgressChanged += (_, args) =>
             {
                 BwProgressTextBox.Text = args.ProgressPercentage.ToString();
+                progressService.Update(args.ProgressPercentage);
             };
 
             bgw.RunWorkerCompleted += (_, args) =>
@@ -50,8 +57,9 @@ namespace WpfSamples40.View.Async.TaskvsBW
                 }
                 else
                 {
-                    MessageBox.Show("Completed.");                    
+                    MessageBox.Show("Completed.");
                 }
+                progressService.Close();
             };
 
             bgw.RunWorkerAsync();
@@ -59,37 +67,49 @@ namespace WpfSamples40.View.Async.TaskvsBW
 
         private void CancelBwButton_OnClick(object sender, RoutedEventArgs e)
         {
-            if (_bgw != null) 
+            if (_bgw != null)
                 _bgw.CancelAsync();
         }
+
+        #endregion
+
+        #region AsyncAwait
 
         private async void UseTasksButton_OnClick(object sender, RoutedEventArgs e)
         {
             _cts = new CancellationTokenSource();
             var token = _cts.Token;
 
+            var progressService = new ProgressBarService();
+            progressService.Show(_cts);
+
             IProgress<int> progressHandler = new Progress<int>(value =>
             {
                 TasksProgressTextBox.Text = value.ToString();
+                progressService.Update(value);
             });
 
             try
             {
                 await Task.Run(() =>
                 {
-                    for (int i = 0; i < 100; i++)
+                    for (int i = 1; i <= 100; i++)
                     {
                         token.ThrowIfCancellationRequested();
                         progressHandler.Report(i);
                         Thread.Sleep(100);
                     }
-                    MessageBox.Show("Completed.");                    
                 }, token);
 
+                MessageBox.Show("Completed.");
             }
             catch (OperationCanceledException)
             {
-                MessageBox.Show("Canceled.");                    
+                MessageBox.Show("Canceled.");
+            }
+            finally
+            {
+                progressService.Close();
             }
         }
 
@@ -98,5 +118,7 @@ namespace WpfSamples40.View.Async.TaskvsBW
             if (_cts != null)
                 _cts.Cancel();
         }
+
+        #endregion
     }
 }

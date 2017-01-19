@@ -6,7 +6,7 @@ namespace WpfSamples40.Helpers
     /// <summary>
     /// Encapsulates a WPF dispatcher with added functionalities.
     /// </summary>
-    public class DispatcherHelper
+    public class DispatcherHelperEx
     {
         private static DispatcherOperationCallback exitFrameCallback = new
              DispatcherOperationCallback(ExitFrame);
