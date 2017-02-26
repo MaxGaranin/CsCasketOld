@@ -12,7 +12,7 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"
                     Visibility="{Binding UseTelerikIndicator, Converter={StaticResource InverseBooleanToVisibilityConverter}}">
-            <Image Name="WaitImage" Source="../Resources/Images/loading3.gif" Width="40" Height="40" />
+            <Image Name="WaitImage" Source="/Resources/Images/loading3.gif" Width="40" Height="40" />
             <TextBlock Text="Пожалуйста, подождите, выполняется процесс..."
                        HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="16" Margin="5" />
@@ -28,6 +28,6 @@
 
         <Button Grid.Row="2" Width="100" Height="30" Content="Отмена"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Click="CancelButton_OnClick"/>
+                Click="CancelButton_OnClick" />
     </Grid>
 </Window>

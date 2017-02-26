@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfSamples40.View.Async.TaskWithDialog.TaskWithDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="Расчет с диалоговыми окнами" Height="300" Width="300">
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <telerik:RadBusyIndicator
+                    IsBusy="True" telerik:StyleManager.Theme="Windows7"
+                    Background="Transparent" BorderThickness="0"
+                    Visibility="{Binding IsInWork, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <telerik:RadBusyIndicator.BusyContent>
+                        <telerik:Label FontWeight="Bold" Content="Выполняется процесс..." Foreground="Gray" />
+                    </telerik:RadBusyIndicator.BusyContent>
+                </telerik:RadBusyIndicator>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Название" Width="80" VerticalAlignment="Center"/>
+                    <TextBox Width="200" Margin="5" />
+                </StackPanel>
+                
+                <Button Width="200" Height="30" Margin="5" Content="Запустить расчет..."
+                        HorizontalAlignment="Right"
+                        Click="OpenDialogButton_OnClick" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

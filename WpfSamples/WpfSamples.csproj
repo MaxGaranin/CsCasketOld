@@ -176,10 +176,10 @@
     </ApplicationDefinition>
     <Compile Include="Controls\Common\DataGridCustomization\CustomColumns\DataGridComboBoxColumnWithBindingHack.cs" />
     <Compile Include="Services\ProgressBarService.cs" />
-    <Compile Include="View\Async\MainAsyncView.xaml.cs">
-      <DependentUpon>MainAsyncView.xaml</DependentUpon>
+    <Compile Include="View\Async\TaskWithDialog\TaskWithDialogView.xaml.cs">
+      <DependentUpon>TaskWithDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Async\SomeDialogView.xaml.cs">
+    <Compile Include="View\Async\TaskWithDialog\SomeDialogView.xaml.cs">
       <DependentUpon>SomeDialogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Async\TaskvsBW\TaskvsBwView.xaml.cs">
@@ -424,11 +424,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\MainAsyncView.xaml">
+    <Page Include="View\Async\TaskWithDialog\TaskWithDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\SomeDialogView.xaml">
+    <Page Include="View\Async\TaskWithDialog\SomeDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

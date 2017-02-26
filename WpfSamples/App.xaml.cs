@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples40.View.Async.TaskvsBW;
+using WpfSamples40.View.Async.TaskWithDialog;
 using WpfSamples40.View.Tables;
 using WpfSamples40.WpfInfrastructure.Utils;
 
@@ -18,7 +19,7 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new TaskvsBwView();
+            var view = new TaskWithDialogView();
             view.Show();
         }
 
