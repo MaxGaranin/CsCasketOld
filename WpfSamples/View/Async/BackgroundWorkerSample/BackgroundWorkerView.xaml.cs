@@ -7,7 +7,7 @@ using System.Windows.Threading;
 using WpfSamples40.Helpers;
 using WpfSamples40.Properties;
 
-namespace WpfSamples40.View.Async
+namespace WpfSamples40.View.Async.BackgroundWorkerSample
 {
     public partial class BackgroundWorkerView : Window, INotifyPropertyChanged
     {

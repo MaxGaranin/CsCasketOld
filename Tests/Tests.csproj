@@ -79,8 +79,6 @@
     <Compile Include="Async\AsyncDelayTests.cs" />
     <Compile Include="Common\CallVirtualMemberInConstructorTests.cs" />
     <Compile Include="Common\CollectionTests.cs" />
-    <Compile Include="Common\CovarianceTests3.cs" />
-    <Compile Include="Common\CovarianceTests2.cs" />
     <Compile Include="Common\CultureInfoTests.cs" />
     <Compile Include="Common\ExplicitInterfaceTests.cs" />
     <Compile Include="Common\FabricTests.cs" />

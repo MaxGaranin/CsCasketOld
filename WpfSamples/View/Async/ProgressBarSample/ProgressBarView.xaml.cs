@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.Async
+namespace WpfSamples40.View.Async.ProgressBarSample
 {
     public partial class ProgressBarView : Window
     {

@@ -274,16 +274,16 @@
     <Compile Include="View\EditableComboboxView.xaml.cs">
       <DependentUpon>EditableComboboxView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Async\ProgressBarTestView.xaml.cs">
+    <Compile Include="View\Async\ProgressBarSample\ProgressBarTestView.xaml.cs">
       <DependentUpon>ProgressBarTestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Async\ProgressBarView.xaml.cs">
+    <Compile Include="View\Async\ProgressBarSample\ProgressBarView.xaml.cs">
       <DependentUpon>ProgressBarView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Charts\RadCartesianChartTestView.xaml.cs">
       <DependentUpon>RadCartesianChartTestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Async\UserLoginView.xaml.cs">
+    <Compile Include="View\Async\BackgroundWorkerSample\UserLoginView.xaml.cs">
       <DependentUpon>UserLoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Tables\RadGridViewTestViewModel.cs" />
@@ -298,7 +298,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\Async\BackgroundWorkerView.xaml.cs">
+    <Compile Include="View\Async\BackgroundWorkerSample\BackgroundWorkerView.xaml.cs">
       <DependentUpon>BackgroundWorkerView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -390,7 +390,7 @@
       <DependentUpon>ValidationTestView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\Async\WaitDialogView.xaml.cs">
+    <Compile Include="View\Async\BackgroundWorkerSample\WaitDialogView.xaml.cs">
       <DependentUpon>WaitDialogView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -432,7 +432,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\BackgroundWorkerView.xaml">
+    <Page Include="View\Async\BackgroundWorkerSample\BackgroundWorkerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -540,11 +540,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\ProgressBarTestView.xaml">
+    <Page Include="View\Async\ProgressBarSample\ProgressBarTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\ProgressBarView.xaml">
+    <Page Include="View\Async\ProgressBarSample\ProgressBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -580,7 +580,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\UserLoginView.xaml">
+    <Page Include="View\Async\BackgroundWorkerSample\UserLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -588,7 +588,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Async\WaitDialogView.xaml">
+    <Page Include="View\Async\BackgroundWorkerSample\WaitDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

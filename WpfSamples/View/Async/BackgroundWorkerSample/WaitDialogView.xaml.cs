@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Media.Imaging;
 using WpfSamples40.Properties;
 
-namespace WpfSamples40.View.Async
+namespace WpfSamples40.View.Async.BackgroundWorkerSample
 {
     /// <summary>
     /// Interaction logic for WaitDialogView.xaml
@@ -16,7 +16,7 @@ namespace WpfSamples40.View.Async
 
         private Bitmap _bitmap;
         private BitmapSource _source;
-        
+
         public WaitDialogView()
         {
             InitializeComponent();
@@ -75,6 +75,7 @@ namespace WpfSamples40.View.Async
         }
 
         private bool _useTelerikIndicator;
+
         public bool UseTelerikIndicator
         {
             get { return _useTelerikIndicator; }
@@ -87,7 +88,7 @@ namespace WpfSamples40.View.Async
         }
 
         #region INotifyPropertyChanged
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -96,7 +97,7 @@ namespace WpfSamples40.View.Async
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
- 
-	    #endregion    
+
+        #endregion
     }
 }

@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Threading;
 using GalaSoft.MvvmLight.Threading;
 using WpfSamples40.View.Async;
+using WpfSamples40.View.Async.ProgressBarSample;
 using WpfSamples40.ViewModel.Async;
 
 namespace WpfSamples40.Services

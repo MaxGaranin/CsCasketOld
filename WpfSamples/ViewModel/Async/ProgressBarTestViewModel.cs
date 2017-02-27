@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using ProgressBarView = WpfSamples40.View.Async.ProgressBarView;
+using ProgressBarView = WpfSamples40.View.Async.ProgressBarSample.ProgressBarView;
 
 namespace WpfSamples40.ViewModel.Async
 {
@@ -32,7 +32,7 @@ namespace WpfSamples40.ViewModel.Async
             var worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.WorkerSupportsCancellation = true;
-            worker.DoWork += worker_DoWork;
+            worker.DoWork += Worker_DoWork;
             worker.ProgressChanged += (sender, args) =>
             {
                 pbViewModel.Value = args.ProgressPercentage;
@@ -54,7 +54,7 @@ namespace WpfSamples40.ViewModel.Async
             worker.RunWorkerAsync();
         }
 
-        private void worker_DoWork(object sender, DoWorkEventArgs e)
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
         {
             var worker = sender as BackgroundWorker;
             for (int i = 0; i <= 100; i++)

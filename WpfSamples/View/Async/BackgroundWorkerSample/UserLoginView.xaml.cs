@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfSamples40.View.Async
+namespace WpfSamples40.View.Async.BackgroundWorkerSample
 {
     /// <summary>
     /// Interaction logic for UserLoginView.xaml
