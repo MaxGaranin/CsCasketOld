@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
-using GalaSoft.MvvmLight.Threading;
 
 namespace WpfSamples40.View.Async.TaskWithDialog
 {
@@ -45,16 +44,14 @@ namespace WpfSamples40.View.Async.TaskWithDialog
             await Task.Delay(2000);
 
             IsInWork = false;
-            await DispatcherHelper.UIDispatcher.BeginInvoke(
-                new Action(() => { new SomeDialogView().ShowDialog(); }));
+            new SomeDialogView().ShowDialog();
 
             IsInWork = true;
             Console.WriteLine("Further execution...");
             await Task.Delay(1000);
 
             IsInWork = false;
-            await DispatcherHelper.UIDispatcher.BeginInvoke(
-                new Action(() => { MessageBox.Show("Done!"); }));
+            MessageBox.Show("Done!");
 
             Console.WriteLine("Done.");
         }
@@ -63,7 +60,8 @@ namespace WpfSamples40.View.Async.TaskWithDialog
 
         protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
