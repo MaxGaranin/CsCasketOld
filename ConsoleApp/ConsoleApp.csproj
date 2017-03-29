@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.ConsoleUI.Program</StartupObject>
+    <StartupObject>ConsoleApp.Samples.WrapEapPatternsInTask.WebDataDownloader</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +87,7 @@
     <Compile Include="MethodCalls\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
+    <Compile Include="Samples\WrapEapPatternsInTask\WebDataDownloader.cs" />
     <Compile Include="WeakEvents\Program.cs" />
     <Compile Include="WeakEvents\WeakTests.cs" />
   </ItemGroup>
