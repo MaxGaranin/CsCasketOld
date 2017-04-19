@@ -38,7 +38,6 @@ namespace WpfSamples40.WpfInfrastructure.Utils
         /// <summary>
         /// Применить патч.
         /// </summary>
-        /// <remarks>
         public static void Init()
         {
         }

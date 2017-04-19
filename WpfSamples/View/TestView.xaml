@@ -2,9 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:viewModel="clr-namespace:WpfSamples40.ViewModel"
-        Title="TestView" Height="300" Width="300">
+        xmlns:validationRules="clr-namespace:WpfSamples40.WpfInfrastructure.ValidationRules"
+        xmlns:converters="clr-namespace:WpfSamples40.WpfInfrastructure.Converters"
+        Title="TestView" Height="500" Width="500">
     <Window.DataContext>
-        <viewModel:TestViewModel/>
+        <viewModel:TestViewModel />
     </Window.DataContext>
     <Window.Resources>
         <Style x:Key="LinkButton" TargetType="Button">
@@ -28,27 +30,38 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <StackPanel Grid.Row="0">
-            <TextBox Width="100" Height="20"
-                     Text="{Binding StringValue}"/>
+            <TextBox Width="100" Height="25" Margin="5"
+                     Text="{Binding StringValue}" />
 
-            <TextBox Width="100" Height="20" Margin="0,10,0,0"
-                     Text="{Binding MyComplexValues[0].Name}"/>
+            <TextBox Width="100" Height="25" Margin="5"
+                     Text="{Binding MyComplexValues[0].Name}" />
             
+            <TextBox Width="100" Height="25" Margin="5" TextAlignment="Right">
+                <TextBox.Text>
+                    <Binding Path="DoubleValue" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.Converter>
+                            <converters:DoubleToStringConverter />
+                        </Binding.Converter>
+                        <Binding.ValidationRules>
+                            <validationRules:DoubleValidationRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
             <Button Width="100" Height="30" Margin="0,5,0,0" Content="Обновить"
-                Command="{Binding UpdateCommand}"/>
-            
-            <Button Style="{StaticResource LinkButton}" 
-                    Content="Это кнопка-ссылка" Margin="5"
-                    Command="{Binding OpenViewCommand}"/>
-        </StackPanel>
-        
-        <Grid Grid.Row="1">
+                    Command="{Binding UpdateCommand}" />
 
-        </Grid>
+            <Button Style="{StaticResource LinkButton}"
+                    Content="Это кнопка-ссылка" Margin="5"
+                    Command="{Binding OpenViewCommand}" />
+        </StackPanel>
+
+        <Grid Grid.Row="1" />
     </Grid>
 </Window>

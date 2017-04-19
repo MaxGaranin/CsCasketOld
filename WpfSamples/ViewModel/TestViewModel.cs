@@ -5,12 +5,13 @@ using System.Diagnostics;
 using GalaSoft.MvvmLight.Command;
 using Telerik.Windows.Controls;
 using WpfSamples40.View;
+using WpfSamples40.View.Tables;
 using WpfSamples40.ViewModel.Tables;
-using RadGridViewTestView = WpfSamples40.View.Tables.RadGridViewTestView;
 using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
 
 namespace WpfSamples40.ViewModel
 {
+
     #region Class TestViewModelLauncher
 
     public class TestViewModelLauncher
@@ -22,7 +23,7 @@ namespace WpfSamples40.ViewModel
             // 1 способ
             var viewModel = new TestViewModel();
             viewModel.StringValue = "QQQQQ";
-            viewModel.MyComplexValue = new ComplexValue() { Name = "Vasya" };
+            viewModel.MyComplexValue = new ComplexValue() {Name = "Vasya"};
             viewModel.MyComplexValues = new ObservableCollection<ComplexValue>()
             {
                 new ComplexValue() {Name = "Orig"}
@@ -35,8 +36,8 @@ namespace WpfSamples40.ViewModel
 
             view.Show();
         }
-    } 
-    
+    }
+
     #endregion
 
     #region Class TestViewModel
@@ -46,6 +47,7 @@ namespace WpfSamples40.ViewModel
         #region Properties
 
         private string _stringValue;
+
         public string StringValue
         {
             get { return _stringValue; }
@@ -58,6 +60,7 @@ namespace WpfSamples40.ViewModel
         }
 
         private ComplexValue _myComplexValue;
+
         public ComplexValue MyComplexValue
         {
             get { return _myComplexValue; }
@@ -69,7 +72,21 @@ namespace WpfSamples40.ViewModel
             }
         }
 
+        private double _doubleValue;
+
+        public double DoubleValue
+        {
+            get { return _doubleValue; }
+            set
+            {
+                if (Equals(value, _doubleValue)) return;
+                _doubleValue = value;
+                RaisePropertyChanged("DoubleValue");
+            }
+        }
+
         private ObservableCollection<ComplexValue> _myComplexValues;
+
         public ObservableCollection<ComplexValue> MyComplexValues
         {
             get { return _myComplexValues; }
@@ -86,6 +103,7 @@ namespace WpfSamples40.ViewModel
         #region UpdateCommand
 
         private RelayCommand _updateCommand;
+
         public RelayCommand UpdateCommand
         {
             get
@@ -106,12 +124,13 @@ namespace WpfSamples40.ViewModel
         #region OpenViewCommand
 
         private RelayCommand _openViewCommand;
+
         public RelayCommand OpenViewCommand
         {
             get
             {
                 return _openViewCommand ??
-                    (_openViewCommand = new RelayCommand(OpenView));
+                       (_openViewCommand = new RelayCommand(OpenView));
             }
         }
 
@@ -155,7 +174,8 @@ namespace WpfSamples40.ViewModel
         }
 
         #endregion
-    } 
+    }
+
     #endregion
 
     #region Class ComplexValue
@@ -163,6 +183,7 @@ namespace WpfSamples40.ViewModel
     public class ComplexValue : INotifyPropertyChanged
     {
         private string _name;
+
         public string Name
         {
             get { return _name; }
@@ -175,6 +196,7 @@ namespace WpfSamples40.ViewModel
         }
 
         #region INotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void RaisePropertyChanged(string propertyName)
@@ -182,8 +204,9 @@ namespace WpfSamples40.ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
-    } 
-    #endregion
 
+        #endregion
+    }
+
+    #endregion
 }
