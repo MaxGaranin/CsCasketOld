@@ -3,21 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:async="clr-namespace:WpfSamples40.ViewModel.Async"
+        xmlns:progressBarSample="clr-namespace:WpfSamples40.ViewModel.Async.ProgressBarSample"
         mc:Ignorable="d"
-        Title="Тестирование индикатора выполнения" 
+        Title="Тестирование индикатора выполнения"
         Height="600" Width="800"
-        d:DataContext="{d:DesignInstance d:Type=async:ProgressBarTestViewModel}">
+        d:DataContext="{d:DesignInstance d:Type=progressBarSample:ProgressBarTestViewModel}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Left">
-            <Button Content="Запустить долгий расчет..." 
+            <Button Content="Запустить долгий расчет..."
                     Height="30" Width="200" Margin="5"
-                    Command="{Binding ProcessCommand}"/>
+                    Command="{Binding ProcessCommand}" />
         </StackPanel>
     </Grid>
 </Window>

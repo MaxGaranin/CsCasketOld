@@ -260,8 +260,8 @@
     <Compile Include="ViewModel\MultiTriggerViewModel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModel\Async\ProgressBarTestViewModel.cs" />
-    <Compile Include="ViewModel\Async\ProgressBarViewModel.cs" />
+    <Compile Include="ViewModel\Async\ProgressBarSample\ProgressBarTestViewModel.cs" />
+    <Compile Include="ViewModel\Async\ProgressBarSample\ProgressBarViewModel.cs" />
     <Compile Include="View\AnimationTestView.xaml.cs">
       <DependentUpon>AnimationTestView.xaml</DependentUpon>
     </Compile>

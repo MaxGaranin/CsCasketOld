@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SomeDialogView" Height="300" Width="600">
     <Grid>
-        
+        <TextBlock x:Name="InfoTextBlock" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="20" Text="Выполнение..."/>    
     </Grid>
 </Window>

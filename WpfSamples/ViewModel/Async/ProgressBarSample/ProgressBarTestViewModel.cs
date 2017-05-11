@@ -6,7 +6,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using ProgressBarView = WpfSamples40.View.Async.ProgressBarSample.ProgressBarView;
 
-namespace WpfSamples40.ViewModel.Async
+namespace WpfSamples40.ViewModel.Async.ProgressBarSample
 {
     public class ProgressBarTestViewModel : ViewModelBase
     {
