@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Samples.WrapEapPatternsInTask.WebDataDownloader</StartupObject>
+    <StartupObject>ConsoleApp.Samples.ThreadSyncWork.Test</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +87,16 @@
     <Compile Include="MethodCalls\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
+    <Compile Include="Samples\ThreadSyncWork\AutoResetEventWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\BarrierWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\ManualResetEventWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MonitorWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MutexAppRunOnce.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MutextIncDec.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MutexWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\SemaphoreWork.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MonitorTickTock.cs" />
+    <Compile Include="Samples\ThreadSyncWork\MonitorWait.cs" />
     <Compile Include="Samples\WrapEapPatternsInTask\WebDataDownloader.cs" />
     <Compile Include="WeakEvents\Program.cs" />
     <Compile Include="WeakEvents\WeakTests.cs" />
