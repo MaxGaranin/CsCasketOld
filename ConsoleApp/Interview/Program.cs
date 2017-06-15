@@ -6,50 +6,41 @@ namespace ConsoleApp.Interview
 {
     public class Program
     {
-        static IEnumerable<int> Square(IEnumerable<int> a)
+        private class Test
         {
-            foreach (var r in a)
+            public void Print()
             {
-                Console.WriteLine(r*r);
-                yield return r*r;
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+                    Console.Write("9");
+                    throw new Exception();
+                }
+                finally
+                {
+                    Console.Write("2");
+                }
             }
         }
-
-        class Wrap
+        static void Main(string[] args)
         {
-            private static int init = 0;
-
-            public int Value
+            var test = new Test();
+            try
             {
-                get { return ++init; }
+                test.Print();
             }
-        }
-
-        public static void Main(string[] args)
-        {
-            var w = new Wrap();
-            var wraps = new Wrap[3];
-            for (int i = 0; i < wraps.Length; i++)
+            catch (Exception)
             {
-                wraps[i] = w;
+                Console.Write("5");
             }
-
-            var values = wraps.Select(x => x.Value);
-            var results = Square(values);
-            int sum = 0;
-            int count = 0;
-            foreach (var r in results)
+            finally
             {
-                count++;
-                sum += r;
+                Console.Write("4");
             }
-            Console.WriteLine("Count {0}", count);
-            Console.WriteLine("Sum {0}", sum);
-
-            Console.WriteLine("Count {0}", results.Count());
-            Console.WriteLine("Sum {0}", results.Sum());
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }

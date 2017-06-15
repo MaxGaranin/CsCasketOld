@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Samples.ThreadSyncWork.Test</StartupObject>
+    <StartupObject>ConsoleApp.Interview.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -82,6 +82,7 @@
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />
+    <Compile Include="Interview\Program.cs" />
     <Compile Include="MethodCalls\Classes.cs" />
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
     <Compile Include="MethodCalls\Program.cs" />
