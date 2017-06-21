@@ -86,6 +86,7 @@
     <Compile Include="Common\GenericInheritanceTests.cs" />
     <Compile Include="Common\LinqTests.cs" />
     <Compile Include="Common\NumbersTests.cs" />
+    <Compile Include="Common\ImplicitInheritance.cs" />
     <Compile Include="Common\ReadOnlyObservableCollectionTests.cs" />
     <Compile Include="Common\ReflectionTests.cs" />
     <Compile Include="Common\ShallowCopyTests.cs" />
