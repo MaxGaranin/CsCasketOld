@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.ParallelTasks.Program</StartupObject>
+    <StartupObject>ConsoleApp.Async.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="MethodCalls\Program.cs" />
     <Compile Include="ParallelTasks\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Async\CancelAsyncWorker.cs" />
+    <Compile Include="Async\CancelTaskWorker.cs" />
     <Compile Include="Samples\ThreadSyncWork\AutoResetEventWork.cs" />
     <Compile Include="Samples\ThreadSyncWork\BarrierWork.cs" />
     <Compile Include="Samples\ThreadSyncWork\ManualResetEventWork.cs" />
@@ -106,6 +107,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConcurrentCollections\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

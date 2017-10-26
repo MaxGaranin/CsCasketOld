@@ -6,9 +6,12 @@ namespace ConsoleApp.Async
     {
         private static void Main()
         {
-            var worker = new CancelAsyncWorker();
+            var worker = new CancelTaskWorker();
             worker.StartWithTasks();
 
+//            var worker2 = new CancelAsyncWorker();
+//            worker2.Work();
+            
             Console.ReadLine();
         }
     }
