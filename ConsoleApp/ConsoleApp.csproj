@@ -77,6 +77,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\CancelAsyncWorker.cs" />
+    <Compile Include="Async\FileDownloader2.cs" />
+    <Compile Include="Async\FileDownloader.cs" />
     <Compile Include="Async\Program.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
@@ -108,9 +110,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConcurrentCollections\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
