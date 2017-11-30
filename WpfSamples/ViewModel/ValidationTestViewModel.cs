@@ -59,9 +59,9 @@ namespace WpfSamples40.ViewModel
             }
         }
 
-        private int _myLength;
+        private double _myLength;
 
-        public int MyLength
+        public double MyLength
         {
             get { return _myLength; }
             set

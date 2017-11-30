@@ -11,6 +11,10 @@ namespace WpfSamples40.WpfInfrastructure.Classes
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register("Value", typeof (int), typeof (IntegerContainer), new PropertyMetadata(0));
+            DependencyProperty.Register("Value", typeof (int), typeof (IntegerContainer), 
+                new PropertyMetadata(0, (s, e) =>
+                {
+                    
+                }));
     }
 }

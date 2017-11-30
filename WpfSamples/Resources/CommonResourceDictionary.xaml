@@ -2,11 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:converters="clr-namespace:WpfSamples40.WpfInfrastructure.Converters">
 
-    <converters:BooleanToVisibilityConverter
-        x:Key="BooleanToVisibilityConverter" />
-
-    <converters:InverseBooleanToVisibilityConverter
-        x:Key="InverseBooleanToVisibilityConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
+    <converters:DoubleToStringConverter x:Key="DoubleToStringConverter" />
 
     <!-- Шаблон раскраски контрола при появлении ошибки валидации данных -->
     <ControlTemplate x:Key="ValidationTemplate">

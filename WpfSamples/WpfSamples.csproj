@@ -209,6 +209,9 @@
     <Compile Include="View\ScrollItemsControlView.xaml.cs">
       <DependentUpon>ScrollItemsControlView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ValidationTestControl.xaml.cs">
+      <DependentUpon>ValidationTestControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfInfrastructure\Utils\LocalePatch.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\DragInCanvasBehavior.cs" />
     <Compile Include="WpfInfrastructure\Behaviors\WindowBehavior.cs" />
@@ -582,6 +585,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Async\BackgroundWorkerSample\UserLoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ValidationTestControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

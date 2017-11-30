@@ -3,97 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:converters="clr-namespace:WpfSamples40.WpfInfrastructure.Converters"
         xmlns:validationRules="clr-namespace:WpfSamples40.WpfInfrastructure.ValidationRules"
-        xmlns:classes="clr-namespace:WpfSamples40.WpfInfrastructure.Classes"
         xmlns:viewModel="clr-namespace:WpfSamples40.ViewModel"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:view="clr-namespace:WpfSamples40.View"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModel:ValidationTestViewModel}"
         Title="ValidationTestView" Height="700" Width="900">
 
-    <Window.Resources>
-        <!-- Конвервер строки в double значение -->
-        <converters:DoubleToStringConverter x:Key="DoubleConverter" />
-
-        <!-- Стиль DoubleRangeValidationRule - проверка исходных данных -->
-        <Style x:Key="WaterCutValidation" TargetType="TextBox">
-            <Setter Property="Text">
-                <Setter.Value>
-                    <Binding Path="WaterCut">
-                        <Binding.UpdateSourceTrigger>
-                            PropertyChanged
-                        </Binding.UpdateSourceTrigger>
-                        <Binding.Converter>
-                            <converters:DoubleToStringConverter />
-                        </Binding.Converter>
-                        <Binding.ValidationRules>
-                            <validationRules:DoubleRangeValidationRule Min="0" Max="100" />
-                        </Binding.ValidationRules>
-                    </Binding>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <!-- Показ всплывающей подсказки на контролом, если есть ошибки -->
-        <Style x:Key="ToolTipValidationStyle" TargetType="{x:Type TextBox}">
-            <Style.Triggers>
-                <Trigger Property="Validation.HasError" Value="true">
-                    <Setter Property="ToolTip"
-                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},
-                                            Path=(Validation.Errors)[0].ErrorContent}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <!-- Шаблон раскраски контрола при появлении ошибки -->
-        <ControlTemplate x:Key="ValidationTemplate">
-            <DockPanel LastChildFill="True">
-                <Border Background="Red" DockPanel.Dock="Right" Margin="5,0,0,0" Width="20" Height="20"
-                        CornerRadius="10"
-                        ToolTip="{Binding ElementName=customAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
-                    <TextBlock Text="!" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"
-                               Foreground="White" />
-                </Border>
-                <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center">
-                    <Border BorderBrush="Red" BorderThickness="1" />
-                </AdornedElementPlaceholder>
-            </DockPanel>
-        </ControlTemplate>
-
-        <FrameworkElement x:Key="DataContextBridge" />
-    </Window.Resources>
-
-    <Window.DataContext>
-        <Binding Mode="OneWayToSource"
-                 Path="DataContext"
-                 Source="{StaticResource DataContextBridge}" />
-    </Window.DataContext>
-
     <StackPanel>
-        <StackPanel HorizontalAlignment="Left">
-            <TextBox Name="WaterCutTextBox"
-                     Style="{StaticResource WaterCutValidation}"
-                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                     Height="30" Width="100" TextAlignment="Right"
-                     Margin="0,10,0,0" FontSize="16" />
-
-            <TextBox Width="100" Margin="5" TextAlignment="Right">
-                <TextBox.Text>
-                    <Binding Path="MyDoubleValue" UpdateSourceTrigger="PropertyChanged">
-                        <Binding.ValidationRules>
-                            <validationRules:MyStringLengthValidationRule>
-                                <validationRules:MyStringLengthValidationRule.LengthContainer>
-                                    <classes:IntegerContainer
-                                        DataContext="{Binding Source={StaticResource DataContextBridge}, Path=DataContext}"
-                                        Value="{Binding MyLength}" />
-                                </validationRules:MyStringLengthValidationRule.LengthContainer>
-                            </validationRules:MyStringLengthValidationRule>
-                        </Binding.ValidationRules>
-                    </Binding>
-                </TextBox.Text>
-            </TextBox>
-        </StackPanel>
+        <view:ValidationTestControl/> 
 
         <DataGrid Width="700" Height="300" Margin="5"
                   RowHeaderWidth="30"

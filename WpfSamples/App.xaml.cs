@@ -1,7 +1,9 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
+using WpfSamples40.View;
 using WpfSamples40.View.Async.TaskWithDialog;
+using WpfSamples40.ViewModel;
 using WpfSamples40.WpfInfrastructure.Utils;
 
 namespace WpfSamples40
@@ -17,7 +19,10 @@ namespace WpfSamples40
         {
             Init();
 
-            var view = new TaskWithDialogView();
+            // var view = new TaskWithDialogView();
+
+            var viewModel = new ValidationTestViewModel();
+            var view = new ValidationTestView { DataContext = viewModel };
             view.Show();
         }
 
