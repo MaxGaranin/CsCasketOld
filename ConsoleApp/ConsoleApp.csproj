@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Async.Program</StartupObject>
+    <StartupObject>ConsoleApp.SelfDelete.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -101,6 +101,7 @@
     <Compile Include="Samples\ThreadSyncWork\MonitorTickTock.cs" />
     <Compile Include="Samples\ThreadSyncWork\MonitorWait.cs" />
     <Compile Include="Samples\WrapEapPatternsInTask\WebDataDownloader.cs" />
+    <Compile Include="SelfDelete\Program.cs" />
     <Compile Include="WeakEvents\Program.cs" />
     <Compile Include="WeakEvents\WeakTests.cs" />
   </ItemGroup>
