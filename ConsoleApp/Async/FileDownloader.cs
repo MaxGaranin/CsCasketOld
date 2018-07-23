@@ -67,7 +67,7 @@ namespace ConsoleApp.Async
         {
             var webProxy = new WebProxy("10.214.104.214:3128", true)
             {
-                Credentials = new NetworkCredential("Garanin_MS", "<f,jxrf12")
+                Credentials = new NetworkCredential("Garanin_MS", "iSochi06")
             };
             WebRequest.DefaultWebProxy = webProxy;
         }

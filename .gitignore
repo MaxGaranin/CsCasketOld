@@ -190,6 +190,6 @@ ModelManifest.xml
 
 IPA.UI/Properties/AssemblyInfoAutoversion.cs
 IPA.UI/commit.txt
-/.idea/.idea.WpfSamples/
+/.idea/
 /.vscode/
 /.vs/
