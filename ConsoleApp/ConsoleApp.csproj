@@ -69,6 +69,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\Cancelation\CancelAsyncWorker.cs" />
-    <Compile Include="Async\FileDownloader2.cs" />
     <Compile Include="Async\FileDownloader.cs" />
     <Compile Include="Async\Program.cs" />
     <Compile Include="BigData\Program.cs" />
@@ -85,6 +85,7 @@
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />
+    <Compile Include="Helpers\ProxyHelper.cs" />
     <Compile Include="Interview\Program.cs" />
     <Compile Include="MethodCalls\Classes.cs" />
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
