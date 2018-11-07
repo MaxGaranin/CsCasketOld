@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp.HackerRanks.MinimumSwaps2
 {
@@ -13,7 +14,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
     public class Program
     {
-        #region Пузырьковые сортировки
+        #region Пузырьковые сортировки (сортировки обменом)
 
         /// <summary>
         /// Обычная пузырьковая сортировка
@@ -198,19 +199,66 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
         {
             var count = 0;
 
-            for (var j = 1; j < a.Length; j++)
+            for (var i = 1; i < a.Length; i++)
             {
-                var key = a[j];
-                var i = j - 1;
+                var key = a[i];
 
-                while (i >= 0 && a[i] > key)
+                var j = i - 1;
+
+                while (j >= 0 && a[j] > key)
                 {
-                    a[i + 1] = a[i];
-                    i = i - 1;
+                    a[j + 1] = a[j];
+                    j--;
                 }
 
-                a[i + 1] = key;
+                a[j + 1] = key;
                 count++;
+            }
+
+            return count;
+        }
+
+        #endregion
+
+        #region Быстрая сортировка
+
+        private static int QuickSort(int[] a)
+        {
+            return QuickSortRecursive(a, 0, a.Length - 1);
+        }
+
+        private static int QuickSortRecursive(int[] a, int left, int right)
+        {
+            var count = 0;
+            if (a.Length == 1) return count;
+
+            var l = left;
+            var r = right;
+            var baseValue = a[(l + r) / 2];
+
+            while (l < r)
+            {
+                while (a[l] < baseValue) { l++; }
+
+                while (a[r] > baseValue) { r--; }
+
+                if (l < r)
+                {
+                    Swap(a, l, r);
+                    count++;
+                }
+            }
+
+            if (left < r - 1)
+            {
+                var c1 = QuickSortRecursive(a, left, r - 1);
+                count += c1;
+            }
+
+            if (right > r + 1)
+            {
+                var c2 = QuickSortRecursive(a, r + 1, right);
+                count += c2;
             }
 
             return count;
@@ -232,15 +280,29 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
             str = null;
             str = str.MyDoubleString();
-
-
+            
             var s = "2 3 4 1 5";
             int[] arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-
             var res = InsertionsSort(arr);
-
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
+            Console.WriteLine();
+
+            Console.ReadKey();
+            return;
+
+            var rnd = new Random();
+            var k = 100;
+            var arr2 = new int[k];
+            for (int i = 0; i < k; i++)
+            {
+                arr2[i] = rnd.Next(1000);
+            }
+
+            res = QuickSort(arr2);
+            Console.WriteLine(string.Join(" ", arr2));
+            Console.WriteLine(res);
+
             Console.ReadKey();
         }
     }
