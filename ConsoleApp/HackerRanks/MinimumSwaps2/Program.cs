@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ConsoleApp.HackerRanks.MinimumSwaps2
 {
-    public static class MyExtensions
-    {
-        public static string MyDoubleString(this string s)
-        {
-            if (s == null) return null;
-            return s + s;
-        }
-    }
-
     public class Program
     {
         #region Пузырьковые сортировки (сортировки обменом)
@@ -224,44 +216,152 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         private static int QuickSort(int[] a)
         {
-            return QuickSortRecursive(a, 0, a.Length - 1);
+            QuickSortInPlace(a, 0, a.Length - 1);
+            return -1;
         }
 
-        private static int QuickSortRecursive(int[] a, int left, int right)
+        private static int QuickSortInPlace(int[] a, int start, int end)
         {
             var count = 0;
-            if (a.Length == 1) return count;
+            if (start >= end) return count;
 
-            var l = left;
-            var r = right;
-            var baseValue = a[(l + r) / 2];
+            var divider = a[start];
 
-            while (l < r)
+            var lo = start;
+            var hi = end;
+            while (true)
             {
-                while (a[l] < baseValue) { l++; }
-
-                while (a[r] > baseValue) { r--; }
-
-                if (l < r)
+                while (a[hi] >= divider)
                 {
-                    Swap(a, l, r);
-                    count++;
+                    hi--;
+                    if (hi <= lo) break;
+                }
+
+                if (hi <= lo)
+                {
+                    a[lo] = divider;
+                    break;
+                }
+
+                a[lo] = a[hi];
+                count++;
+
+                lo++;
+                while (a[lo] <= divider)
+                {
+                    lo++;
+                    if (lo >= hi) break;
+                }
+
+                if (lo >= hi)
+                {
+                    a[hi] = divider;
+                    break;
+                }
+
+                a[hi] = a[lo];
+                hi--;
+                count++;
+            }
+
+            var c1 = QuickSortInPlace(a, start, lo - 1);
+            count += c1;
+
+            var c2 = QuickSortInPlace(a, lo + 1, end);
+            count += c2;
+
+            return count;
+        }
+
+        private static void QuickSortWithStacks_MySelf(int[] a, int start, int end)
+        {
+            if (start >= end) return;
+
+            var divider = a[start];
+
+            var loValues = new int[end - start + 1];
+            var hiValues = new int[end - start + 1];
+
+            var lo = 0;
+            var hi = 0;
+
+            for (int i = start + 1; i <= end; i++)
+            {
+                if (a[i] >= divider)
+                {
+                    hiValues[hi] = a[i];
+                    hi++;
+                }
+                else
+                {
+                    loValues[lo] = a[i];
+                    lo++;
                 }
             }
 
-            if (left < r - 1)
+            a[lo] = divider;
+
+            if (lo > 0)
             {
-                var c1 = QuickSortRecursive(a, left, r - 1);
-                count += c1;
+                QuickSortWithStacks_MySelf(loValues, 0, lo - 1);
             }
 
-            if (right > r + 1)
+            if (hi > 0)
             {
-                var c2 = QuickSortRecursive(a, r + 1, right);
-                count += c2;
+                QuickSortWithStacks_MySelf(hiValues, 0, hi - 1);
             }
 
-            return count;
+            for (int i = 0; i < lo; i++)
+            {
+                a[i] = loValues[i];
+            }
+
+            for (int i = 0; i < hi; i++)
+            {
+                a[lo + 1 + i] = hiValues[i];
+            }
+        }
+
+        private static void QuickSortWithStacks_FromBook(int[] a, int start, int end)
+        {
+            if (start >= end) return;
+
+            var divider = a[start];
+
+            var loValues = new Stack<int>();
+            var hiValues = new Stack<int>();
+
+            for (int i = start + 1; i <= end; i++)
+            {
+                if (a[i] >= divider)
+                {
+                    hiValues.Push(a[i]);
+                }
+                else
+                {
+                    loValues.Push(a[i]);
+                }
+            }
+
+            var j = start;
+            foreach (var loValue in loValues)
+            {
+                a[j] = loValue;
+                j++;
+            }
+
+            var dividerIndex = j;
+            a[j] = divider;
+            j++;
+
+            foreach (var hiValue in hiValues)
+            {
+                a[j] = hiValue;
+                j++;
+            }
+
+            QuickSortWithStacks_FromBook(a, start, dividerIndex - 1);
+            QuickSortWithStacks_FromBook(a, dividerIndex + 1, end);
         }
 
         #endregion
@@ -275,21 +375,15 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         public static void Main()
         {
-            string str = "a";
-            str = str.MyDoubleString();
-
-            str = null;
-            str = str.MyDoubleString();
-            
             var s = "2 3 4 1 5";
             int[] arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-            var res = InsertionsSort(arr);
+            var res = QuickSort(arr);
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
             Console.WriteLine();
 
-            Console.ReadKey();
-            return;
+//            Console.ReadKey();
+//            return;
 
             var rnd = new Random();
             var k = 100;
