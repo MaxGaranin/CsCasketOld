@@ -180,6 +180,59 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             return count;
         }
 
+        public static int CycleSort(int[] a)
+        {
+            var count = 0;
+
+            for (int start = 0; start < a.Length; start++)
+            {
+                var value = a[start];
+
+                var pos = start;
+                var j = start + 1;
+                while (j < a.Length)
+                {
+                    if (a[j] < value) pos++;
+                    j++;
+                }
+
+                if (pos == start) continue;
+
+                while (value == a[pos]) pos++;
+
+                var tmp = a[pos];
+                a[pos] = value;
+                value = tmp;
+                count++;
+
+                while (pos != start)
+                {
+                    pos = start;
+                    j = start + 1;
+                    while (j < a.Length)
+                    {
+                        if (a[j] < value) pos++;
+                        j++;
+                    }
+
+                    if (pos == start)
+                    {
+                        a[pos] = value;
+                        continue;
+                    }
+
+                    while (value == a[pos]) pos++;
+
+                    tmp = a[pos];
+                    a[pos] = value;
+                    value = tmp;
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
         #endregion
 
         #region Сортировки вставками
@@ -366,6 +419,16 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         #endregion
 
+        #region Сортировка слиянием
+
+        private static int MergeSort(int[] a)
+        {
+
+            return -1;
+        }
+
+        #endregion
+
         private static void Swap(int[] a, int i, int j)
         {
             var temp = a[i];
@@ -377,7 +440,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
         {
             var s = "2 3 4 1 5";
             int[] arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-            var res = QuickSort(arr);
+            var res = CycleSort(arr);
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
             Console.WriteLine();
@@ -393,7 +456,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
                 arr2[i] = rnd.Next(1000);
             }
 
-            res = QuickSort(arr2);
+            res = CycleSort(arr2);
             Console.WriteLine(string.Join(" ", arr2));
             Console.WriteLine(res);
 
