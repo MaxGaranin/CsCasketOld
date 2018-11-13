@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 
 namespace ConsoleApp.HackerRanks.MinimumSwaps2
 {
@@ -180,6 +183,9 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             return count;
         }
 
+        /// <summary>
+        /// Циклическая сортировка
+        /// </summary>
         public static int CycleSort(int[] a)
         {
             var count = 0;
@@ -269,8 +275,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         private static int QuickSort(int[] a)
         {
-            QuickSortInPlace(a, 0, a.Length - 1);
-            return -1;
+            return QuickSortInPlace(a, 0, a.Length - 1);
         }
 
         private static int QuickSortInPlace(int[] a, int start, int end)
@@ -326,9 +331,10 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             return count;
         }
 
-        private static void QuickSortWithStacks_MySelf(int[] a, int start, int end)
+        private static int QuickSortWithStacks_MySelf(int[] a, int start, int end)
         {
-            if (start >= end) return;
+            var count = 0;
+            if (start >= end) return 0;
 
             var divider = a[start];
 
@@ -344,11 +350,13 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
                 {
                     hiValues[hi] = a[i];
                     hi++;
+                    count++;
                 }
                 else
                 {
                     loValues[lo] = a[i];
                     lo++;
+                    count++;
                 }
             }
 
@@ -356,12 +364,14 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
             if (lo > 0)
             {
-                QuickSortWithStacks_MySelf(loValues, 0, lo - 1);
+                var c1 = QuickSortWithStacks_MySelf(loValues, 0, lo - 1);
+                count += c1;
             }
 
             if (hi > 0)
             {
-                QuickSortWithStacks_MySelf(hiValues, 0, hi - 1);
+                var c2 = QuickSortWithStacks_MySelf(hiValues, 0, hi - 1);
+                count += c2;
             }
 
             for (int i = 0; i < lo; i++)
@@ -373,11 +383,14 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             {
                 a[lo + 1 + i] = hiValues[i];
             }
+
+            return count;
         }
 
-        private static void QuickSortWithStacks_FromBook(int[] a, int start, int end)
+        private static int QuickSortWithStacks_FromBook(int[] a, int start, int end)
         {
-            if (start >= end) return;
+            var count = 0;
+            if (start >= end) return 0;
 
             var divider = a[start];
 
@@ -401,6 +414,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             {
                 a[j] = loValue;
                 j++;
+                count++;
             }
 
             var dividerIndex = j;
@@ -411,10 +425,16 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             {
                 a[j] = hiValue;
                 j++;
+                count++;
             }
 
-            QuickSortWithStacks_FromBook(a, start, dividerIndex - 1);
-            QuickSortWithStacks_FromBook(a, dividerIndex + 1, end);
+            var c1 = QuickSortWithStacks_FromBook(a, start, dividerIndex - 1);
+            var c2 = QuickSortWithStacks_FromBook(a, dividerIndex + 1, end);
+
+            count += c1;
+            count += c2;
+
+            return count;
         }
 
         #endregion
@@ -423,8 +443,92 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         private static int MergeSort(int[] a)
         {
+            var scratch = new int[a.Length];
+            return MergeSortRecursive(a, scratch, 0, a.Length - 1);
+        }
 
-            return -1;
+        private static int MergeSortRecursive(int[] a, int[] scratch, int start, int end)
+        {
+            var count = 0;
+            if (end <= start) return 0;
+
+            var midPoint = (start + end) / 2;
+
+            var c1 = MergeSortRecursive(a, scratch, start, midPoint);
+            var c2 = MergeSortRecursive(a, scratch, midPoint + 1, end);
+            count += c1;
+            count += c2;
+
+            var leftIndex = start;
+            var rightIndex = midPoint + 1;
+            var scratchIndex = start;
+            while (leftIndex <= midPoint && rightIndex <= end)
+            {
+                if (a[leftIndex] <= a[rightIndex])
+                {
+                    scratch[scratchIndex] = a[leftIndex];
+                    leftIndex++;
+                }
+                else
+                {
+                    scratch[scratchIndex] = a[rightIndex];
+                    rightIndex++;
+                }
+
+                scratchIndex++;
+            }
+
+            for (int i = leftIndex; i <= midPoint; i++)
+            {
+                scratch[scratchIndex] = a[i];
+                scratchIndex++;
+            }
+
+            for (int i = rightIndex; i <= end; i++)
+            {
+                scratch[scratchIndex] = a[i];
+                scratchIndex++;
+            }
+
+            for (int i = start; i <= end; i++)
+            {
+                a[i] = scratch[i];
+                count++;
+            }
+
+            return count;
+        }
+
+        #endregion
+
+        #region Сортировка подсчетом
+
+        private static int CountingSort(int[] a)
+        {
+            var k = 0;
+            if (a.Length == 0) return 0;
+
+            var maxValue = a.Max();
+            var counts = new int[maxValue + 1];
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                var value = a[i];
+                counts[value]++;
+            }
+
+            var index = 0;
+            for (int i = 0; i < counts.Length; i++)
+            {
+                for (int j = 1; j <= counts[i]; j++)
+                {
+                    a[index] = i;
+                    index++;
+                    k++;
+                }
+            }
+
+            return k;
         }
 
         #endregion
@@ -438,13 +542,64 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 
         public static void Main()
         {
-            var s = "2 3 4 1 5";
-            int[] arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-            var res = CycleSort(arr);
+            var s = "";
+            s = "2 3 4 1 5";
+            s = "3 7 6 9 1 8 10 4 2 5";
+
+            var arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
+            var res = MergeSort(arr);
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
             Console.WriteLine();
 
+//            Console.ReadKey();
+//            return;
+            
+//            var sr = new StreamReader(@".\..\..\HackerRanks\MinimumSwaps2\input09.txt");
+//            sr.ReadLine();
+//            s = sr.ReadLine();
+//
+//            var sw = new Stopwatch();
+//            Console.WriteLine("Merge sort");
+//            arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
+//            sw.Start();
+//            res = MergeSort(arr);
+//            sw.Stop();
+//            Console.WriteLine("Elapsed: {0}", sw.Elapsed);
+////            Console.WriteLine(string.Join(" ", arr));
+//            Console.WriteLine(res);
+//            Console.WriteLine();
+//
+//            Console.WriteLine("Counting sort");
+//            arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
+//            sw.Start();
+//            res = CountingSort(arr);
+//            sw.Stop();
+//            Console.WriteLine("Elapsed: {0}", sw.Elapsed);
+////            Console.WriteLine(string.Join(" ", arr));
+//            Console.WriteLine(res);
+//            Console.WriteLine();
+//
+//            Console.WriteLine("Quick sort");
+//            arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
+//            sw.Start();
+//            res = QuickSort(arr);
+//            sw.Stop();
+//            Console.WriteLine("Elapsed: {0}", sw.Elapsed);
+////            Console.WriteLine(string.Join(" ", arr));
+//            Console.WriteLine(res);
+//            Console.WriteLine();
+//
+//            Console.WriteLine("Cycle sort");
+//            arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
+//            sw.Start();
+//            res = CycleSort(arr);
+//            sw.Stop();
+//            Console.WriteLine("Elapsed: {0}", sw.Elapsed);
+////            Console.WriteLine(string.Join(" ", arr));
+//            Console.WriteLine(res);
+//            Console.WriteLine();
+//            
 //            Console.ReadKey();
 //            return;
 
@@ -456,7 +611,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
                 arr2[i] = rnd.Next(1000);
             }
 
-            res = CycleSort(arr2);
+            res = MergeSort(arr2);
             Console.WriteLine(string.Join(" ", arr2));
             Console.WriteLine(res);
 
