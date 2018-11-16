@@ -473,6 +473,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
                 {
                     scratch[scratchIndex] = a[rightIndex];
                     rightIndex++;
+                    count++;
                 }
 
                 scratchIndex++;
@@ -493,10 +494,81 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             for (int i = start; i <= end; i++)
             {
                 a[i] = scratch[i];
-                count++;
             }
 
             return count;
+        }
+
+        #endregion
+
+        #region Пирамидальная сортировка
+
+        private static int HeapSort(int[] a)
+        {
+            var count = 0;
+
+            MakeHeap(a);
+
+            for (int i = a.Length - 1; i >= 1; i--)
+            {
+                var topValue = RemoveTopItem(a, i + 1);
+                a[i] = topValue;
+            }
+
+            return count;
+        }
+
+        private static void MakeHeap(int[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                var index = i;
+                while (index != 0)
+                {
+                    var parent = (index - 1) / 2;
+
+                    if (a[index] <= a[parent]) break;
+
+                    Swap(a, index, parent);
+
+                    index = parent;
+                }
+            }
+        }
+
+        private static int RemoveTopItem(int[] a, int count)
+        {
+            var result = a[0];
+
+            a[0] = a[count - 1];
+
+            var index = 0;
+            while (true)
+            {
+                var child1 = 2 * index + 1;
+                var child2 = 2 * index + 2;
+
+                if (child1 >= count) child1 = index;
+                if (child2 >= count) child2 = index;
+
+                if (a[index] >= a[child1] &&
+                    a[index] >= a[child2]) break;
+
+                int swapChild;
+                if (a[child1] >= a[child2])
+                {
+                    swapChild = child1;
+                }
+                else
+                {
+                    swapChild = child2;
+                }
+
+                Swap(a, index, swapChild);
+                index = swapChild;
+            }
+
+            return result;
         }
 
         #endregion
@@ -547,13 +619,13 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             s = "3 7 6 9 1 8 10 4 2 5";
 
             var arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-            var res = MergeSort(arr);
+            var res = HeapSort(arr);
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
             Console.WriteLine();
 
-//            Console.ReadKey();
-//            return;
+            Console.ReadKey();
+            return;
             
 //            var sr = new StreamReader(@".\..\..\HackerRanks\MinimumSwaps2\input09.txt");
 //            sr.ReadLine();
