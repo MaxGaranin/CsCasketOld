@@ -612,6 +612,31 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             a[j] = temp;
         }
 
+        /// <summary>
+        /// Реализация сортировки с минимальными перестановками в предположении,
+        /// что в массиве только целые числа без пропусков и дубликатов
+        /// </summary>
+        private static int MySort(int[] a)
+        {
+            var count = 0;
+
+            var i = 0;
+            while (i < a.Length)
+            {
+                if (a[i] == i + 1)
+                {
+                    i++;
+                }
+                else
+                {
+                    Swap(a, i, a[i] - 1);
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
         public static void Main()
         {
             var s = "";
@@ -619,13 +644,13 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
             s = "3 7 6 9 1 8 10 4 2 5";
 
             var arr = Array.ConvertAll(s.Split(' '), Convert.ToInt32);
-            var res = HeapSort(arr);
+            var res = MySort(arr);
             Console.WriteLine(string.Join(" ", arr));
             Console.WriteLine(res);
             Console.WriteLine();
 
-            Console.ReadKey();
-            return;
+//            Console.ReadKey();
+//            return;
             
 //            var sr = new StreamReader(@".\..\..\HackerRanks\MinimumSwaps2\input09.txt");
 //            sr.ReadLine();
