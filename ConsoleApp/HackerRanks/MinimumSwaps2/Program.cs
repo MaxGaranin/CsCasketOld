@@ -655,6 +655,7 @@ namespace ConsoleApp.HackerRanks.MinimumSwaps2
 //            var sr = new StreamReader(@".\..\..\HackerRanks\MinimumSwaps2\input09.txt");
 //            sr.ReadLine();
 //            s = sr.ReadLine();
+//            sr.Close();
 //
 //            var sw = new Stopwatch();
 //            Console.WriteLine("Merge sort");
