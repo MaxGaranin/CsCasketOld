@@ -1,91 +1,109 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace ConsoleApp.HackerRanks.ArrayManipulation
 {
     public class Program
     {
-        private class Part
+        /// <summary>
+        /// Такой метод не работает для большого количества массивов поиска,
+        /// невозможно дождаться конца поиска
+        /// </summary>
+        private static long ArrayManipulation_SimpleSearch(int n, int[][] queries)
         {
-            public Part(int start, int end, long value)
+            var arr = new long[n + 1];
+            var max = long.MinValue;
+
+            foreach (var query in queries)
             {
-                Start = start;
-                End = end;
-                Value = value;
+                var a = query[0];
+                var b = query[1];
+                var k = query[2];
+
+                for (var i = a; i <= b; i++)
+                {
+                    if (arr[i] > int.MaxValue - k)
+                    {
+                    }
+
+                    arr[i] += k;
+                    if (arr[i] > max) max = arr[i];
+                }
             }
 
-            public int Start { get; private set; }
-            public int End { get; private set; }
-            public long Value { get; private set; }
+            return max;
         }
 
-        private static long ArrayManipulation(int n, int[][] queries) {
+        private static long ArrayManipulation(int n, int[][] queries)
+        {
+            var arr = new int[n + 1];
 
-            var parts = new List<Part>();
+            var starts = new Dictionary<int, List<int>>();
+            var ends = new Dictionary<int, List<int>>();
 
-            var query = queries[0];
-            var a = query[0];
-            var b = query[1];
-            var k = query[2];
-
-            var initPart = new Part(a, b, k);
-            parts.Add(initPart);
-
-            for (int i = 1; i < queries.Length; i++)
+            for (int i = 0; i < queries.Length; i++)
             {
-                query = queries[i];
-                a = query[0];
-                b = query[1];
-                k = query[2];
+                var query = queries[i];
+                var a = query[0];
+                var b = query[1];
+                var k = query[2];
 
-                var tempParts = new List<Part>();
+                arr[a] += -1;
+                arr[b] += -2;
 
-                foreach (var part in parts)
+                if (starts.TryGetValue(a, out var startValues))
                 {
-                    var minEnd = Math.Min(b, part.End);
-                    var maxStart = Math.Max(a, part.Start);
-                    if (minEnd - maxStart > 0)
-                    {
-                        tempParts.Add(new Part(a, b, k + part.Value));
-
-//                        if (a > part.Start)
-//                        {
-//                            tempParts.Add(new Part(part.Start, a, k));
-//                        }
-//                        else
-//                        {
-//                            tempParts.Add(new Part(a, part.Start, k));
-//                        }
-//
-//                        if (b > part.End)
-//                        {
-//                            tempParts.Add(new Part(part.End, b, k));
-//                        }
-//                        else
-//                        {
-//                            tempParts.Add(new Part(b, part.End, k));
-//                        }
-                    }
-                    else
-                    {
-                        // нет пересечения
-//                        tempParts.Add(new Part(a, b, k));
-                    }
+                    startValues.Add(k);
+                }
+                else
+                {
+                    starts.Add(a, new List<int> {k});
                 }
 
-                parts.AddRange(tempParts);
+                if (ends.TryGetValue(b, out var endValues))
+                {
+                    endValues.Add(k);
+                }
+                else
+                {
+                    ends.Add(b, new List<int> {k});
+                }
             }
 
-            var max = parts.Max(p => p.Value);
+            var max = long.MinValue;
+            var currentSum = 0L;
+
+            for (int j = 1; j < n + 1; j++)
+            {
+                if (arr[j] < 0)
+                {
+                    if (ends.TryGetValue(j, out var endValues))
+                    {
+                        if (currentSum > max) max = currentSum;
+
+                        foreach (var endValue in endValues)
+                        {
+                            currentSum -= endValue;
+                        }
+                    }
+
+                    if (starts.TryGetValue(j, out var startValues))
+                    {
+                        foreach (var startValue in startValues)
+                        {
+                            currentSum += startValue;
+                        }
+                    }
+                }
+            }
 
             return max;
         }
 
         public static void Main()
         {
-            var sr = new StreamReader(@".\..\..\HackerRanks\ArrayManipulation\input07.txt");
+            var sr = new StreamReader(@".\..\..\HackerRanks\ArrayManipulation\input04.txt");
             var s = sr.ReadLine();
             var tokens = s.Split(' ');
 
@@ -101,33 +119,10 @@ namespace ConsoleApp.HackerRanks.ArrayManipulation
 
                 queries[i] = Array.ConvertAll(line.Split(' '), Convert.ToInt32);
             }
+
             sr.Close();
 
             long result = ArrayManipulation(n, queries);
-
-            Console.WriteLine(result);
-            Console.ReadKey();
-        }
-
-        public static void Main2()
-        {
-            var n = 5;
-            var m = 3;
-            var s = "1 2 100\n" +
-                    "2 5 100\n" +
-                    "3 4 100\n";
-
-            var queries = new int[m][];
-
-            var strQueries = s.Split('\n').Where(x => !string.IsNullOrEmpty(x));
-            var i = 0;
-            foreach (var strQuery in strQueries)
-            {
-                queries[i] = Array.ConvertAll(strQuery.Split(' '), Convert.ToInt32);
-                i++;
-            }
-
-            var result = ArrayManipulation(n, queries);
 
             Console.WriteLine(result);
             Console.ReadKey();

@@ -133,8 +133,10 @@
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HackerRanks\ArrayManipulation\input02.txt" />
     <Content Include="HackerRanks\ArrayManipulation\input04.txt" />
     <Content Include="HackerRanks\ArrayManipulation\input07.txt" />
+    <Content Include="HackerRanks\ArrayManipulation\input14.txt" />
     <Content Include="HackerRanks\MinimumSwaps2\input09.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
