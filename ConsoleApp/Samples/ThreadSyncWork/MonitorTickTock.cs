@@ -34,6 +34,7 @@ namespace ConsoleApp.Samples.ThreadSyncWork
                 }
 
                 Console.Write("Тик ");
+
                 // Разрешить выполнение метода Tock()
                 Monitor.Pulse(_lockOn);
 
@@ -53,6 +54,7 @@ namespace ConsoleApp.Samples.ThreadSyncWork
                 }
 
                 Console.WriteLine("так");
+
                 Monitor.Pulse(_lockOn);
                 Monitor.Wait(_lockOn);
             }

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace ConsoleApp.Interview
+namespace ConsoleApp.CodingInterviews
 {
     public class Program
     {
@@ -25,7 +23,8 @@ namespace ConsoleApp.Interview
                 }
             }
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
             var test = new Test();
             try
@@ -40,6 +39,7 @@ namespace ConsoleApp.Interview
             {
                 Console.Write("4");
             }
+
             Console.ReadLine();
         }
     }

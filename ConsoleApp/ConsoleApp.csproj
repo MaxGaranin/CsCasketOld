@@ -101,7 +101,7 @@
     <Compile Include="HackerRanks\MagicSquare\Narayana.cs" />
     <Compile Include="HackerRanks\MagicSquare\Program.cs" />
     <Compile Include="HackerRanks\NewYearChaos\Program.cs" />
-    <Compile Include="Interview\Program.cs" />
+    <Compile Include="CodingInterviews\Program.cs" />
     <Compile Include="MethodCalls\Classes.cs" />
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
     <Compile Include="MethodCalls\Program.cs" />
