@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 
-namespace WpfSamples40.View.Async.TaskWithDialog
+namespace WpfSamples.View.Async.TaskWithDialog
 {
     public partial class TaskWithDialogView : Window, INotifyPropertyChanged
     {

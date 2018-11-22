@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfSamples40.Controls.Common
+namespace WpfSamples.Controls.Common
 {
     public class CustomGrid : Grid
     {

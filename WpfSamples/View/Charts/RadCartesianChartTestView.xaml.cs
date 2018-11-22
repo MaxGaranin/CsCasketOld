@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using GalaSoft.MvvmLight;
 
-namespace WpfSamples40.View.Charts
+namespace WpfSamples.View.Charts
 {
     public partial class RadCartesianChartTestView : Window
     {

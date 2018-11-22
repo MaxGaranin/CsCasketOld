@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfSamples40.View.ControlDataContext
+namespace WpfSamples.View.ControlDataContext
 {
     /// <summary>
     /// Interaction logic for SecondControl.xaml

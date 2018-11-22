@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace WpfSamples40.Helpers
+namespace WpfSamples.Helpers
 {
     public class FileDialogHelper
     {

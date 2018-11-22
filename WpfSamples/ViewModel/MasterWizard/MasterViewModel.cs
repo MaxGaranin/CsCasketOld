@@ -3,7 +3,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace WpfSamples40.ViewModel.MasterWizard
+namespace WpfSamples.ViewModel.MasterWizard
 {
     // 
     //    Способ инициализации данной ViewModel

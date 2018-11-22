@@ -4,9 +4,9 @@ using System.Windows;
 using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using ProgressBarView = WpfSamples40.View.Async.ProgressBarSample.ProgressBarView;
+using ProgressBarView = WpfSamples.View.Async.ProgressBarSample.ProgressBarView;
 
-namespace WpfSamples40.ViewModel.Async.ProgressBarSample
+namespace WpfSamples.ViewModel.Async.ProgressBarSample
 {
     public class ProgressBarTestViewModel : ViewModelBase
     {

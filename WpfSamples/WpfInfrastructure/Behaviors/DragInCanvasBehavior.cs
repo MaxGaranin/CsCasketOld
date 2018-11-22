@@ -4,7 +4,7 @@ using System.Windows.Input;
 using System.Windows.Interactivity;
 using System.Windows.Media;
 
-namespace WpfSamples40.WpfInfrastructure.Behaviors
+namespace WpfSamples.WpfInfrastructure.Behaviors
 {
     public class DragInCanvasBehavior : Behavior<FrameworkElement>
     {

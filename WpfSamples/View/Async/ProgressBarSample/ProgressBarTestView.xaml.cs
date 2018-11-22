@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.Async.ProgressBarSample
+namespace WpfSamples.View.Async.ProgressBarSample
 {
     /// <summary>
     /// Interaction logic for ProgressBarTestView.xaml

@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace WpfSamples40.Utils
+namespace WpfSamples.Utils
 {
     public static class ObjectUtils
     {

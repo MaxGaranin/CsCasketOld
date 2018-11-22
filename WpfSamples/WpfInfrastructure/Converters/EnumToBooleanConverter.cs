@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace WpfSamples40.WpfInfrastructure.Converters
+namespace WpfSamples.WpfInfrastructure.Converters
 {
     public class EnumToBooleanConverter : IValueConverter
     {

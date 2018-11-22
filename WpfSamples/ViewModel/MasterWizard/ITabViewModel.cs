@@ -1,4 +1,4 @@
-﻿namespace WpfSamples40.ViewModel.MasterWizard
+﻿namespace WpfSamples.ViewModel.MasterWizard
 {
     public interface ITabViewModel
     {

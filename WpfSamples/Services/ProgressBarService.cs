@@ -2,12 +2,10 @@
 using System.ComponentModel;
 using System.Threading;
 using GalaSoft.MvvmLight.Threading;
-using WpfSamples40.View.Async;
-using WpfSamples40.View.Async.ProgressBarSample;
-using WpfSamples40.ViewModel.Async;
-using WpfSamples40.ViewModel.Async.ProgressBarSample;
+using WpfSamples.View.Async.ProgressBarSample;
+using WpfSamples.ViewModel.Async.ProgressBarSample;
 
-namespace WpfSamples40.Services
+namespace WpfSamples.Services
 {
     public class ProgressBarService
     {

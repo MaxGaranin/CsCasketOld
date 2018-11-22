@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
-using WpfSamples40.ViewModel.MasterWizard;
+using WpfSamples.ViewModel.MasterWizard;
 
-namespace WpfSamples40.View.MasterWizard
+namespace WpfSamples.View.MasterWizard
 {
     /// <summary>
     /// Interaction logic for Control2.xaml

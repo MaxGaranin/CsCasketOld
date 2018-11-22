@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using WpfSamples40.View.MasterWizard;
+using WpfSamples.View.MasterWizard;
 
-namespace WpfSamples40.ViewModel.MasterWizard
+namespace WpfSamples.ViewModel.MasterWizard
 {
     public class MasterViewHelper
     {

@@ -3,7 +3,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace WpfSamples40.ViewModel.Async.ProgressBarSample
+namespace WpfSamples.ViewModel.Async.ProgressBarSample
 {
     public class ProgressBarViewModel : ViewModelBase
     {

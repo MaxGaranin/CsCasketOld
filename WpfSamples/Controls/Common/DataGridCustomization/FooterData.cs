@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization
+namespace WpfSamples.Controls.Common.DataGridCustomization
 {
     public class FooterData : INotifyPropertyChanged
     {

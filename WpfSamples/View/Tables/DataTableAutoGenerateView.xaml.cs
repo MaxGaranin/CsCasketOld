@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.Data;
 using System.Windows;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.View.Tables
+namespace WpfSamples.View.Tables
 {
     public partial class DataTableAutoGenerateView : Window, INotifyPropertyChanged
     {

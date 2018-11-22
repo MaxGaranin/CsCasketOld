@@ -1,4 +1,4 @@
-﻿namespace WpfSamples40.Helpers
+﻿namespace WpfSamples.Helpers
 {
     public interface ICanceller
     {

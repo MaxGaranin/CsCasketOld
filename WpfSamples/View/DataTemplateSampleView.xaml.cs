@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Markup;
-using GalaSoft.MvvmLight;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class DataTemplateSampleView : Window, INotifyPropertyChanged
     {

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace WpfSamples40.Controls.Common
+namespace WpfSamples.Controls.Common
 {
     public partial class ColorPicker : UserControl
     {

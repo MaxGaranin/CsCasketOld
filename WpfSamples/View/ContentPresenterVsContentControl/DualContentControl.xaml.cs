@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfSamples40.View.ContentPresenterVsContentControl
+namespace WpfSamples.View.ContentPresenterVsContentControl
 {
     public partial class DualContentControl : UserControl
     {

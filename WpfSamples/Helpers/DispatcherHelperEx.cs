@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Threading;
 
-namespace WpfSamples40.Helpers
+namespace WpfSamples.Helpers
 {
     /// <summary>
     /// Encapsulates a WPF dispatcher with added functionalities.

@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace WpfSamples40.Utils
+namespace WpfSamples.Utils
 {
     public enum StringPadDirection
     {

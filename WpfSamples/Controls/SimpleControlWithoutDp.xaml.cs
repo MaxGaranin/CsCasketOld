@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfSamples40.Controls
+namespace WpfSamples.Controls
 {
     /// <summary>
     /// Interaction logic for TestControl.xaml

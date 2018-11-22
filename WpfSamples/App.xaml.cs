@@ -1,12 +1,11 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
-using WpfSamples40.View;
-using WpfSamples40.View.Async.TaskWithDialog;
-using WpfSamples40.ViewModel;
-using WpfSamples40.WpfInfrastructure.Utils;
+using WpfSamples.View;
+using WpfSamples.ViewModel;
+using WpfSamples.WpfInfrastructure.Utils;
 
-namespace WpfSamples40
+namespace WpfSamples
 {
     public partial class App : Application
     {

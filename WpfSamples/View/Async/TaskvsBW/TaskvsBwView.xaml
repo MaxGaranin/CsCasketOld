@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfSamples40.View.Async.TaskvsBW.TaskvsBwView"
+﻿<Window x:Class="WpfSamples.View.Async.TaskvsBW.TaskvsBwView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Tasks vs BackgroundWorker" Height="300" Width="300">

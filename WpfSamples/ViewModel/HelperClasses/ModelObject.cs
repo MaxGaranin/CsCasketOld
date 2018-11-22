@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 
-namespace WpfSamples40.ViewModel.HelperClasses
+namespace WpfSamples.ViewModel.HelperClasses
 {
     public class ModelObject : ObservableObject
     {

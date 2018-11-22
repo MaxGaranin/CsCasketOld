@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using System.Windows.Controls;
-using WpfSamples40.Utils;
+using WpfSamples.Utils;
 
-namespace WpfSamples40.WpfInfrastructure.ValidationRules
+namespace WpfSamples.WpfInfrastructure.ValidationRules
 {
     public class PositiveDoubleValidationRule : ValidationRule
     {

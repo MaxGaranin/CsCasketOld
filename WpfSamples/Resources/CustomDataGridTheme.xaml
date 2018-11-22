@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:dg="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization"
-                    xmlns:columnsVisibilityControl="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization.ColumnsVisibility"
-                    xmlns:filter="clr-namespace:WpfSamples40.Controls.Common.DataGridCustomization.Filter">
+                    xmlns:dg="clr-namespace:WpfSamples.Controls.Common.DataGridCustomization"
+                    xmlns:columnsVisibilityControl="clr-namespace:WpfSamples.Controls.Common.DataGridCustomization.ColumnsVisibility"
+                    xmlns:filter="clr-namespace:WpfSamples.Controls.Common.DataGridCustomization.Filter">
 
     <Style
         x:Key="{ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}"

@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using WpfSamples40.Utils;
+using WpfSamples.Utils;
 
-namespace WpfSamples40.WpfInfrastructure.Converters
+namespace WpfSamples.WpfInfrastructure.Converters
 {
     public class DoubleToStringConverter : IValueConverter
     {

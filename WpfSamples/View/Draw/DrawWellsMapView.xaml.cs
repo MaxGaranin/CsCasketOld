@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace WpfSamples40.View.Draw
+namespace WpfSamples.View.Draw
 {
     public partial class DrawWellsMapView : Window
     {

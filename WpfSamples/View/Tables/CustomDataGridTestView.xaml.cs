@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 
-namespace WpfSamples40.View.Tables
+namespace WpfSamples.View.Tables
 {
     public partial class CustomDataGridTestView : Window
     {

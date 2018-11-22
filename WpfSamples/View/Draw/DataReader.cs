@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace WpfSamples40.View.Draw
+namespace WpfSamples.View.Draw
 {
     public class DataReader
     {

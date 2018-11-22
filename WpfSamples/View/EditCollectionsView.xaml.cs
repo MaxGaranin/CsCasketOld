@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 using System.Windows;
 using AutoMapper;
 using Omu.ValueInjecter;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     /// <summary>
     /// Interaction logic for EditCollectionsView.xaml

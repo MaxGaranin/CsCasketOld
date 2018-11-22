@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Threading;
+﻿using System.Windows;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class TabView : Window
     {

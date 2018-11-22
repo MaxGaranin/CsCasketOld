@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.ControlDataContext
+namespace WpfSamples.View.ControlDataContext
 {
     /// <summary>
     /// Interaction logic for ControlDataContextView.xaml

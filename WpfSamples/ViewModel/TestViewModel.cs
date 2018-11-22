@@ -4,12 +4,12 @@ using System.ComponentModel;
 using System.Diagnostics;
 using GalaSoft.MvvmLight.Command;
 using Telerik.Windows.Controls;
-using WpfSamples40.View;
-using WpfSamples40.View.Tables;
-using WpfSamples40.ViewModel.Tables;
+using WpfSamples.View;
+using WpfSamples.View.Tables;
+using WpfSamples.ViewModel.Tables;
 using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
 
-namespace WpfSamples40.ViewModel
+namespace WpfSamples.ViewModel
 {
 
     #region Class TestViewModelLauncher

@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization.CustomColumns
+namespace WpfSamples.Controls.Common.DataGridCustomization.CustomColumns
 {
     public class AutoNumberColumn : DataGridBoundColumn
     {

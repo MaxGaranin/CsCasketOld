@@ -1,7 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
-using WpfSamples40.ViewModel.HelperClasses;
+using WpfSamples.ViewModel.HelperClasses;
 
-namespace WpfSamples40.ViewModel
+namespace WpfSamples.ViewModel
 {
 
     public class SimpleControlTestViewModel : ViewModelBase

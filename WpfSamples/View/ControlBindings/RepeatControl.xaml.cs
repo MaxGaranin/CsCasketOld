@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfSamples40.View.ControlBindings
+namespace WpfSamples.View.ControlBindings
 {
     public partial class RepeatControl : UserControl
     {

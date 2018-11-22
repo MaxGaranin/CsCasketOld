@@ -1,4 +1,4 @@
-﻿namespace WpfSamples40.WpfInfrastructure.Converters
+﻿namespace WpfSamples.WpfInfrastructure.Converters
 {
     public class InverseBooleanConverter : BooleanConverter<bool>
     {

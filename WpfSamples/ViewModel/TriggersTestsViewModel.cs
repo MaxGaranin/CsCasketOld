@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 
-namespace WpfSamples40.ViewModel
+namespace WpfSamples.ViewModel
 {
     public class TriggersTestsViewModel : ViewModelBase
     {

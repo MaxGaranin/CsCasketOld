@@ -1,6 +1,6 @@
-﻿using WpfSamples40.View.ControlDataContext;
+﻿using WpfSamples.View.ControlDataContext;
 
-namespace WpfSamples40.ViewModel.ControlDataContext
+namespace WpfSamples.ViewModel.ControlDataContext
 {
     public class ControlDataContextLauncher
     {

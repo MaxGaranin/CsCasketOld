@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class AnimationTestView : Window
     {

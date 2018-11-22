@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.WpfInfrastructure.Converters
+namespace WpfSamples.WpfInfrastructure.Converters
 {
     public class BooleanToVisibilityConverter : BooleanConverter<Visibility>
     {

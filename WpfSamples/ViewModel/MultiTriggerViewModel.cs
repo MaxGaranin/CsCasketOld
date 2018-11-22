@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace WpfSamples40.ViewModel
+namespace WpfSamples.ViewModel
 {
     public class Place
     {

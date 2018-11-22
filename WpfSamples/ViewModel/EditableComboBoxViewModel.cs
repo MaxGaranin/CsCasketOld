@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 
-namespace WpfSamples40.ViewModel
+namespace WpfSamples.ViewModel
 {
     public class EditableComboBoxViewModel : ObservableObject
     {

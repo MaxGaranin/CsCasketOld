@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization
+namespace WpfSamples.Controls.Common.DataGridCustomization
 {
     public class DataGridFootersPresenter : ItemsControl
     {

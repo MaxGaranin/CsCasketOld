@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfSamples40.Services;
+using WpfSamples.Services;
 
-namespace WpfSamples40.View.Async.TaskvsBW
+namespace WpfSamples.View.Async.TaskvsBW
 {
     public partial class TaskvsBwView : Window
     {

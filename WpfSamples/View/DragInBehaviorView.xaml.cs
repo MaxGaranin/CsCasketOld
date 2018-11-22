@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class DragInBehaviorView : Window
     {

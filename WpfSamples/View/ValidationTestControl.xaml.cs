@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class ValidationTestControl : UserControl
     {

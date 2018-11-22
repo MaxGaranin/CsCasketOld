@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.View.Async.BackgroundWorkerSample
+namespace WpfSamples.View.Async.BackgroundWorkerSample
 {
     /// <summary>
     /// Interaction logic for WaitDialogView.xaml

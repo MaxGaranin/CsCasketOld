@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.WpfInfrastructure.Classes
+namespace WpfSamples.WpfInfrastructure.Classes
 {
     public class IntegerContainer : FrameworkElement
     {

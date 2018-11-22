@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.Tables
+namespace WpfSamples.View.Tables
 {
     /// <summary>
     /// Interaction logic for RadGridViewTestView.xaml

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     /// <summary>
     /// Interaction logic for TestView.xaml

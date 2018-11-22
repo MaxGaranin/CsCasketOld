@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Markup;
 
-namespace WpfSamples40.WpfInfrastructure.Utils
+namespace WpfSamples.WpfInfrastructure.Utils
 {
     /// <summary>
     /// Патч, который исправляет баг WPF, из-за которого игнорируются настройки локали, измененные в панели управления.

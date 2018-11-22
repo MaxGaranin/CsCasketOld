@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using GalaSoft.MvvmLight;
 using Telerik.Windows.Controls;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization.ColumnsVisibility
+namespace WpfSamples.Controls.Common.DataGridCustomization.ColumnsVisibility
 {
     public partial class ColumnsVisibilityControl : INotifyPropertyChanged
     {

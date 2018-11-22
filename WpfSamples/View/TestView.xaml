@@ -1,12 +1,13 @@
-﻿<Window x:Class="WpfSamples40.View.TestView"
+﻿<Window x:Class="WpfSamples.View.TestView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:viewModel="clr-namespace:WpfSamples40.ViewModel"
-        xmlns:validationRules="clr-namespace:WpfSamples40.WpfInfrastructure.ValidationRules"
-        xmlns:converters="clr-namespace:WpfSamples40.WpfInfrastructure.Converters"
+        xmlns:viewModel="clr-namespace:WpfSamples40.ViewModel" 
+        xmlns:viewModel1="clr-namespace:WpfSamples.ViewModel"
+        xmlns:converters="clr-namespace:WpfSamples.WpfInfrastructure.Converters"
+        xmlns:validationRules="clr-namespace:WpfSamples.WpfInfrastructure.ValidationRules"
         Title="TestView" Height="500" Width="500">
     <Window.DataContext>
-        <viewModel:TestViewModel />
+        <viewModel1:TestViewModel />
     </Window.DataContext>
     <Window.Resources>
         <Style x:Key="LinkButton" TargetType="Button">

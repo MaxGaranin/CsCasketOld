@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 
-namespace WpfSamples40.ViewModel.ControlDataContext
+namespace WpfSamples.ViewModel.ControlDataContext
 {
     public class ComplexViewModel : ViewModelBase
     {

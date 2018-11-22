@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.MasterWizard
+namespace WpfSamples.View.MasterWizard
 {
     public partial class MasterView : Window
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfSamples40.View.ContentPresenterVsContentControl
+namespace WpfSamples.View.ContentPresenterVsContentControl
 {
     /// <summary>
     /// Interaction logic for ContentControlContentPresenterCompareView.xaml

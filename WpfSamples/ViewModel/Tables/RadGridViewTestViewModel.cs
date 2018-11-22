@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using WpfSamples40.ViewModel.HelperClasses;
+using WpfSamples.ViewModel.HelperClasses;
 
-namespace WpfSamples40.ViewModel.Tables
+namespace WpfSamples.ViewModel.Tables
 {
     public class RadGridViewTestViewModel
     {

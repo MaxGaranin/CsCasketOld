@@ -6,9 +6,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class ShowImageView : Window, INotifyPropertyChanged
     {

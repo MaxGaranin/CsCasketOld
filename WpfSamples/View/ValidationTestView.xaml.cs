@@ -3,7 +3,7 @@ using System.Reactive.Linq;
 using System.Windows;
 using System.Windows.Input;
 
-namespace WpfSamples40.View
+namespace WpfSamples.View
 {
     public partial class ValidationTestView : Window
     {

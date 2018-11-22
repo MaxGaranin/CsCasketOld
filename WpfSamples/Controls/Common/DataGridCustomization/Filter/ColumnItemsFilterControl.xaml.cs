@@ -8,9 +8,9 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using GalaSoft.MvvmLight;
 using Telerik.Windows.Controls;
-using WpfSamples40.Properties;
+using WpfSamples.Properties;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization.Filter
+namespace WpfSamples.Controls.Common.DataGridCustomization.Filter
 {
     public partial class ColumnItemsFilterControl : INotifyPropertyChanged
     {

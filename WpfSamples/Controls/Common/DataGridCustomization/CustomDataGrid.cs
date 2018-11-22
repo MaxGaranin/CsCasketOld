@@ -6,9 +6,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Microsoft.Office.Interop.Excel;
 using Telerik.Windows.Controls;
-using WpfSamples40.Utils;
+using WpfSamples.Utils;
 
-namespace WpfSamples40.Controls.Common.DataGridCustomization
+namespace WpfSamples.Controls.Common.DataGridCustomization
 {
     public class CustomDataGrid : DataGrid
     {
