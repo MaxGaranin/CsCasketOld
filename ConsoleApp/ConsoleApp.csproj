@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.HackerRanks.ArrayManipulation.Program</StartupObject>
+    <StartupObject>ConsoleApp.Async.Albahari.ProducerConsumerQueue</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Async\Albahari\AcknowledgedWaitHandle.cs" />
+    <Compile Include="Async\Albahari\ProducerConsumerQueue.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
     <Compile Include="BigData\Program.cs" />
