@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.HackerRanks.MagicSquare
+﻿namespace ConsoleApp.HackerRanks.Arrays.MagicSquare
 {
     public static class Narayana
     {

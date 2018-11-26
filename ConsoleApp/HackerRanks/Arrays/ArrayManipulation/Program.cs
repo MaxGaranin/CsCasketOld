@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ConsoleApp.HackerRanks.ArrayManipulation
+namespace ConsoleApp.HackerRanks.Arrays.ArrayManipulation
 {
     public class Program
     {

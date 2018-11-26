@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp.HackerRanks.NewYearChaos
+namespace ConsoleApp.HackerRanks.Arrays.NewYearChaos
 {
     public class Program
     {

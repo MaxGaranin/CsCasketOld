@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp.HackerRanks.MagicSquare
+namespace ConsoleApp.HackerRanks.Arrays.MagicSquare
 {
     public class Program
     {

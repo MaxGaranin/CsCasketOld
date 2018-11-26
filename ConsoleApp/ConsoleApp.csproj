@@ -96,14 +96,14 @@
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="Finalizer\Program.cs" />
-    <Compile Include="HackerRanks\ArrayManipulation\Program.cs" />
-    <Compile Include="HackerRanks\MinimumSwaps2\Program.cs" />
+    <Compile Include="HackerRanks\Arrays\ArrayManipulation\Program.cs" />
+    <Compile Include="HackerRanks\Arrays\MinimumSwaps2\Program.cs" />
     <Compile Include="Hardware\HardwareInfoHelper.cs" />
     <Compile Include="Hardware\NativeMethods.cs" />
     <Compile Include="Hardware\Program.cs" />
-    <Compile Include="HackerRanks\MagicSquare\Narayana.cs" />
-    <Compile Include="HackerRanks\MagicSquare\Program.cs" />
-    <Compile Include="HackerRanks\NewYearChaos\Program.cs" />
+    <Compile Include="HackerRanks\Arrays\MagicSquare\Narayana.cs" />
+    <Compile Include="HackerRanks\Arrays\MagicSquare\Program.cs" />
+    <Compile Include="HackerRanks\Arrays\NewYearChaos\Program.cs" />
     <Compile Include="CodingInterviews\Program.cs" />
     <Compile Include="MethodCalls\Classes.cs" />
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
@@ -140,11 +140,11 @@
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HackerRanks\ArrayManipulation\input02.txt" />
-    <Content Include="HackerRanks\ArrayManipulation\input04.txt" />
-    <Content Include="HackerRanks\ArrayManipulation\input07.txt" />
-    <Content Include="HackerRanks\ArrayManipulation\input14.txt" />
-    <Content Include="HackerRanks\MinimumSwaps2\input09.txt" />
+    <Content Include="HackerRanks\Arrays\ArrayManipulation\input02.txt" />
+    <Content Include="HackerRanks\Arrays\ArrayManipulation\input04.txt" />
+    <Content Include="HackerRanks\Arrays\ArrayManipulation\input07.txt" />
+    <Content Include="HackerRanks\Arrays\ArrayManipulation\input14.txt" />
+    <Content Include="HackerRanks\Arrays\MinimumSwaps2\input09.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
