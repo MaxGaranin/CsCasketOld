@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.HackerRanks.Stacks.MaximumElement.Program</StartupObject>
+    <StartupObject>ConsoleApp.HackerRanks.Stacks.BalancedBrackets.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +98,7 @@
     <Compile Include="Finalizer\Program.cs" />
     <Compile Include="HackerRanks\Arrays\ArrayManipulation\Program.cs" />
     <Compile Include="HackerRanks\Arrays\MinimumSwaps2\Program.cs" />
+    <Compile Include="HackerRanks\Stacks\BalancedBrackets\Program.cs" />
     <Compile Include="HackerRanks\Stacks\MaximumElement\Program.cs" />
     <Compile Include="Hardware\HardwareInfoHelper.cs" />
     <Compile Include="Hardware\NativeMethods.cs" />
@@ -146,6 +147,7 @@
     <Content Include="HackerRanks\Arrays\ArrayManipulation\input07.txt" />
     <Content Include="HackerRanks\Arrays\ArrayManipulation\input14.txt" />
     <Content Include="HackerRanks\Arrays\MinimumSwaps2\input09.txt" />
+    <Content Include="HackerRanks\Stacks\BalancedBrackets\input17.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input03.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input06.txt" />
   </ItemGroup>
