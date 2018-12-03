@@ -128,7 +128,7 @@
     <Compile Include="SelfDelete\Program.cs" />
     <Compile Include="WeakEvents\Program.cs" />
     <Compile Include="WeakEvents\WeakTests.cs" />
-    <Compile Include="Web\Program.cs" />
+    <Compile Include="Async\Web\Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

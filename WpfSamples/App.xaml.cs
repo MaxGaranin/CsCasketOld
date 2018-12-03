@@ -1,8 +1,7 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
-using WpfSamples.View;
-using WpfSamples.ViewModel;
+using WpfSamples.View.Draw;
 using WpfSamples.WpfInfrastructure.Utils;
 
 namespace WpfSamples
@@ -18,10 +17,7 @@ namespace WpfSamples
         {
             Init();
 
-            // var view = new TaskWithDialogView();
-
-            var viewModel = new ValidationTestViewModel();
-            var view = new ValidationTestView { DataContext = viewModel };
+            var view = new DrawWellsMapView();
             view.Show();
         }
 
