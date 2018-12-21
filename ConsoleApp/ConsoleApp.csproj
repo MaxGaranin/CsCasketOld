@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.HackerRanks.Stacks.BalancedBrackets.Program</StartupObject>
+    <StartupObject>ConsoleApp.LeetCodes.ThreeSum.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +98,7 @@
     <Compile Include="Finalizer\Program.cs" />
     <Compile Include="HackerRanks\Arrays\ArrayManipulation\Program.cs" />
     <Compile Include="HackerRanks\Arrays\MinimumSwaps2\Program.cs" />
+    <Compile Include="HackerRanks\BitManipulations\LonelyInteger\Program.cs" />
     <Compile Include="HackerRanks\Stacks\BalancedBrackets\Program.cs" />
     <Compile Include="HackerRanks\Stacks\MaximumElement\Program.cs" />
     <Compile Include="Hardware\HardwareInfoHelper.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="HackerRanks\Arrays\MagicSquare\Program.cs" />
     <Compile Include="HackerRanks\Arrays\NewYearChaos\Program.cs" />
     <Compile Include="CodingInterviews\Program.cs" />
+    <Compile Include="LeetCodes\ThreeSum\Program.cs" />
     <Compile Include="MethodCalls\Classes.cs" />
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
     <Compile Include="MethodCalls\Program.cs" />
@@ -150,6 +152,7 @@
     <Content Include="HackerRanks\Stacks\BalancedBrackets\input17.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input03.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input06.txt" />
+    <Content Include="LeetCodes\ThreeSum\input01.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
