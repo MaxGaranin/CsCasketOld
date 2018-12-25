@@ -1,10 +1,17 @@
 ﻿<Window x:Class="WpfSamples.View.Async.TaskWithDialog.SomeDialogView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SomeDialogView" Height="300" Width="600">
-    <Grid>
-        <TextBlock x:Name="InfoTextBlock" 
-                   HorizontalAlignment="Center" VerticalAlignment="Center"
-                   FontSize="20" Text="Выполнение..."/>    
+        Title="Окно подтверждения и ввода данных" Height="300" Width="600">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="InfoTextBlock"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontSize="20" Margin="5,5,5,0"
+                       Text="Здесь мы вводим какие-нибудь данные и продолжаем..." />
+            <CheckBox IsChecked="{Binding IsPermissionGranted}"
+                      Margin="5,5,5,0">
+                Разрешить доступ?
+            </CheckBox>
+        </StackPanel>
     </Grid>
 </Window>

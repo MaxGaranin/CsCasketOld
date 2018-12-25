@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
+using WpfSamples.View.Async.TaskWithDialog;
 using WpfSamples.View.Draw;
 using WpfSamples.WpfInfrastructure.Utils;
 
@@ -17,7 +18,7 @@ namespace WpfSamples
         {
             Init();
 
-            var view = new DrawWellsMapView();
+            var view = new TaskWithDialogView();
             view.Show();
         }
 

@@ -24,7 +24,8 @@
 
             <StackPanel Grid.Row="1">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Название" Width="80" VerticalAlignment="Center"/>
+                    <TextBlock Text="Название" 
+                               Margin="5" Width="80" VerticalAlignment="Center"/>
                     <TextBox Width="200" Margin="5" />
                 </StackPanel>
                 
@@ -35,6 +36,10 @@
                 <Button Width="200" Height="30" Margin="5,20,5,5" Content="Резерное копирование..."
                         HorizontalAlignment="Left"
                         Click="RunProcessButton_OnClick" />
+
+                <Button Width="250" Height="30" Margin="5,20,5,5" Content="Использование TaskCompletionSource..."
+                        HorizontalAlignment="Left"
+                        Click="RunTaskCompletionSourceTask_OnClick" />
             </StackPanel>
         </Grid>
     </Grid>

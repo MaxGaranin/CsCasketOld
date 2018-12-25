@@ -19,7 +19,7 @@ namespace WpfSamples.View.Async.TaskWithDialog
             RadBusyIndicator.IsBusy = true;
         }
 
-        #region IsInWork
+        #region Properties
 
         private bool _isInWork;
 
@@ -31,6 +31,19 @@ namespace WpfSamples.View.Async.TaskWithDialog
                 if (Equals(value, _isInWork)) return;
                 _isInWork = value;
                 RaisePropertyChanged("IsInWork");
+            }
+        }
+
+        private string _someName;
+
+        public string SomeName
+        {
+            get { return _someName; }
+            set
+            {
+                if (Equals(value, _someName)) return;
+                _someName = value;
+                RaisePropertyChanged("SomeName");
             }
         }
 
@@ -84,11 +97,14 @@ namespace WpfSamples.View.Async.TaskWithDialog
                     dialogView.ShowDialog();
                 }));
 
-            await CopyDirectory(@"d:\work835\Dev\Sources\From Books\", @"d:\work835\Temp\Copy\");
+            await CopyDirectory(@"d:\work835\Dev\Sources\Decompiled\PetroleumOffice\", @"d:\work835\Temp\Copy\");
             await Task.Delay(1000);
 
             DispatcherHelper.UIDispatcher.Invoke(
-                () => { if (dialogView != null) dialogView.Close(); });
+                () =>
+                {
+                    if (dialogView != null) dialogView.Close();
+                });
 
             // Архивирование
             var fileName = @"""c:\Program Files\WinRAR\Rar.exe""";
@@ -165,6 +181,35 @@ namespace WpfSamples.View.Async.TaskWithDialog
                     await source.CopyToAsync(destination);
                 }
             }
+        }
+
+        #endregion
+
+        #region TaskCompletionSource example
+
+        private async void RunTaskCompletionSourceTask_OnClick(object sender, RoutedEventArgs e)
+        {
+            var result = await GetUserPermission();
+
+            MessageBox.Show($"Результат: {result}");
+        }
+
+        private Task<bool> GetUserPermission()
+        {
+            // Создать объект TaskCompletionSource, чтобы можно было вернуть задачу-марионетку
+            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+
+            // Создать диалог
+            SomeDialogView dialog = new SomeDialogView();
+
+            // Когда пользователь закроет диалог, сделать задачу завершившейся с помощью метода SetResult
+            dialog.Closed += delegate { tcs.SetResult(dialog.IsPermissionGranted); };
+
+            // Показать диалог на экране
+            dialog.Show();
+
+            // Вернуть еще не завершившуюся задачу-марионетку
+            return tcs.Task;
         }
 
         #endregion
