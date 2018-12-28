@@ -153,6 +153,7 @@
     <Content Include="HackerRanks\Dictionaries\CountTriplets\input03.txt" />
     <Content Include="HackerRanks\Dictionaries\CountTriplets\input04.txt" />
     <Content Include="HackerRanks\Dictionaries\CountTriplets\input06.txt" />
+    <Content Include="HackerRanks\Dictionaries\CountTriplets\input10.txt" />
     <Content Include="HackerRanks\Stacks\BalancedBrackets\input17.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input03.txt" />
     <Content Include="HackerRanks\Stacks\MaximumElement\input06.txt" />
