@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
+using WpfSamples.View;
 using WpfSamples.View.Async.TaskWithDialog;
 using WpfSamples.View.Draw;
 using WpfSamples.WpfInfrastructure.Utils;
@@ -18,7 +19,7 @@ namespace WpfSamples
         {
             Init();
 
-            var view = new TaskWithDialogView();
+            var view = new NotifyIconView();
             view.Show();
         }
 
