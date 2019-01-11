@@ -85,7 +85,7 @@ namespace ConsoleApp.HackerRanks.Dictionaries.CountTriplets
 
                 #endregion
 
-                #region 3 словаря, счет после
+                #region 3 словаря, счет после (не проходит 2 теста)
 
 //                var dict1 = new Dictionary<long, List<long>>();
 //                var dict2 = new Dictionary<long, List<long>>();
@@ -137,49 +137,84 @@ namespace ConsoleApp.HackerRanks.Dictionaries.CountTriplets
 
                 #endregion
 
-                #region 3 словаря, счет во время прохода
+                #region 3 словаря, счет во время прохода (не проходит 2 теста)
 
-                var dictCand1 = new Dictionary<long, long>();
-                var dict1 = new Dictionary<long, long>();
+//                var dictCand1 = new Dictionary<long, long>();
+//                var dict1 = new Dictionary<long, long>();
+//                var dict2 = new Dictionary<long, long>();
+//                var dict3 = new Dictionary<long, long>();
+//                var n = 0L;
+//
+//                for (int i = 0; i < arr.Count; i++)
+//                {
+//                    var val = arr[i];
+//
+//                    if (!dictCand1.ContainsKey(val)) dictCand1.Add(val, 0);
+//                    dictCand1[val]++;
+//
+//                    if (val % r == 0)
+//                    {
+//                        if (!dict2.ContainsKey(val)) dict2.Add(val, 0);
+//                        dict2[val]++;
+//
+//                        var val2 = val / r;
+//
+//                        if (dictCand1.ContainsKey(val2))
+//                        {
+//                            if (!dict1.ContainsKey(val2)) dict1.Add(val2, 0);
+//                            dict1[val2] += dictCand1[val2];
+//                            dictCand1.Remove(val2);
+//                        }
+//
+//                        if (val2 % r == 0)
+//                        {
+//                            if (!dict3.ContainsKey(val)) dict3.Add(val, 0);
+//                            dict3[val]++;
+//
+//                            var val1 = val2 / r;
+//                            if (dict2.ContainsKey(val2) && dict1.ContainsKey(val1))
+//                            {
+//                                var n2 = dict2[val2];
+//                                var n1 = dict1[val1];
+//                                n += n1 * n2;
+//                            }
+//                        }
+//                    }
+//                }
+//
+//                return n;
+
+                #endregion
+
+                #region 2 словаря
+
                 var dict2 = new Dictionary<long, long>();
                 var dict3 = new Dictionary<long, long>();
                 var n = 0L;
 
-                for (int i = 0; i < arr.Count; i++)
+                for (var i = 0; i < arr.Count; i++)
                 {
                     var val = arr[i];
 
-                    if (!dictCand1.ContainsKey(val)) dictCand1.Add(val, 0);
-                    dictCand1[val]++;
-
-                    if (val % r == 0)
+                    if (dict3.TryGetValue(val, out var count))
                     {
-                        if (!dict2.ContainsKey(val)) dict2.Add(val, 0);
-                        dict2[val]++;
-
-                        var val2 = val / r;
-
-                        if (dictCand1.ContainsKey(val2))
-                        {
-                            if (!dict1.ContainsKey(val2)) dict1.Add(val2, 0);
-                            dict1[val2] += dictCand1[val2];
-                            dictCand1.Remove(val2);
-                        }
-
-                        if (val2 % r == 0)
-                        {
-                            if (!dict3.ContainsKey(val)) dict3.Add(val, 0);
-                            dict3[val]++;
-
-                            var val1 = val2 / r;
-                            if (dict2.ContainsKey(val2) && dict1.ContainsKey(val1))
-                            {
-                                var n2 = dict2[val2];
-                                var n1 = dict1[val1];
-                                n += n1 * n2;
-                            }
-                        }
+                        n += count;
                     }
+
+                    if (dict2.ContainsKey(val))
+                    {
+                        var c = val * r;
+                        if (!dict3.ContainsKey(c)) 
+                            dict3.Add(c, 0L);
+
+                        dict3[c] += dict2[val];
+                    }
+
+                    var b = val * r;
+                    if (!dict2.ContainsKey(b)) 
+                        dict2.Add(b, 0L);
+
+                    dict2[b]++;
                 }
 
                 return n;
@@ -213,14 +248,14 @@ namespace ConsoleApp.HackerRanks.Dictionaries.CountTriplets
         public static void Main()
         {
             {
-//                var arr = new List<long> {1, 3, 9, 9, 27, 81};
-//                var r = 3L;
-//                var n = CountTriplets(arr, r);
-//                Console.WriteLine($"Result: {n}");
+                var arr = new List<long> {1, 3, 9, 9, 27, 81};
+                var r = 3L;
+                var n = CountTriplets(arr, r);
+                Console.WriteLine($"Result: {n}");
             }
 
             {
-                var textReader = new StreamReader(@".\..\..\HackerRanks\Dictionaries\CountTriplets\input10.txt");
+                var textReader = new StreamReader(@".\..\..\HackerRanks\Dictionaries\CountTriplets\input06.txt");
                 var line = textReader.ReadLine();
                 var tokens = line.Split(' ').Select(long.Parse).ToList();
                 var r = tokens[1];
