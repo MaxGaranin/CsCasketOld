@@ -11,43 +11,37 @@ namespace ConsoleApp.LeetCodes.ThreeSum
         {
             var results = new List<IList<int>>();
 
-            for (var i = 0; i < nums.Length - 2; i++)
+            Array.Sort(nums);
+
+            int i1 = 0;
+            int i2 = 0;
+
+            for (int i = 1; i < nums.Length; i++)
             {
-                for (var j = i + 1; j < nums.Length - 1; j++)
+                if (nums[i] == nums[i1]) continue;
+
+                i1 = i - 1;
+                i2 = i;
+
+                for (int j = i; j < nums.Length; j++)
                 {
-                    for (var k = j + 1; k < nums.Length; k++)
+                    if (nums[j] == nums[i2]) continue;
+                    i2 = j - 1;
+
+                    var k = nums[i1] + nums[i2];
+                    if (k > 0 && nums[j] > 0) break;
+
+                    var i3 = Array.BinarySearch(nums, j, nums.Length - j, -k);
+                    if (i3 > 0)
                     {
-                        var sum = nums[i] + nums[j] + nums[k];
-                        if (sum == 0)
-                        {
-                            var test = new List<int>
-                            {
-                                nums[i], nums[j], nums[k]
-                            };
-                            test.Sort();
-
-                            var isDuplicate = false;
-                            foreach (var result in results)
-                            {
-                                if (result.SequenceEqual(test))
-                                {
-                                    isDuplicate = true;
-                                    break;
-                                }
-                            }
-
-                            if (isDuplicate) break;
-
-                            var newResult = new List<int>
-                            {
-                                nums[i], nums[j], nums[k]
-                            };
-                            newResult.Sort();
-
-                            results.Add(newResult);
-                        }
+                        var result = new List<int> {nums[i1], nums[i2], nums[i3]};
+                        results.Add(result);
                     }
+
+                    i2 = j;
                 }
+
+                i1 = i;
             }
 
             return results;
@@ -55,19 +49,37 @@ namespace ConsoleApp.LeetCodes.ThreeSum
 
         public static void Main()
         {
-            var sr = new StreamReader(@".\..\..\LeetCodes\ThreeSum\input01.txt");
-            var s = sr.ReadLine();
-            var nums = s.Split(',').Select(int.Parse).ToArray();
-            sr.Close();
-
-            var result = ThreeSum(nums);
-            foreach (var item in result)
             {
-                var str = string.Join(",", item);
-                Console.WriteLine(str);
+                var nums = new int[] {-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0, 9};
+                var result = ThreeSum(nums);
+                PrintResult(result);
             }
 
             Console.ReadKey();
+            return;
+
+            {
+                var sr = new StreamReader(@".\..\..\LeetCodes\ThreeSum\input01.txt");
+                var s = sr.ReadLine();
+                var nums = s.Split(',').Select(int.Parse).ToArray();
+                sr.Close();
+
+                var result = ThreeSum(nums);
+                PrintResult(result);
+            }
+
+            Console.ReadKey();
+        }
+
+        private static void PrintResult(IList<IList<int>> result)
+        {
+            foreach (var item in result)
+            {
+                var str = string.Join(", ", item);
+                Console.WriteLine(str);
+            }
+
+            Console.WriteLine();
         }
     }
 }
