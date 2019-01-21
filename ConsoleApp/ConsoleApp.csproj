@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.LeetCodes.ThreeSum.Program</StartupObject>
+    <StartupObject>ConsoleApp.Samples.AppDomains.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -91,6 +91,7 @@
     <Compile Include="Async\Albahari\ProducerConsumerQueue.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
+    <Compile Include="Async\ThreadsSynchronization\SynchronizationSamples.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
     <Compile Include="Files\Program.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="ParallelTasks\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelTaskWorker.cs" />
+    <Compile Include="Samples\AppDomains\Program.cs" />
     <Compile Include="Samples\ThreadSyncWork\AutoResetEventWork.cs" />
     <Compile Include="Samples\ThreadSyncWork\BarrierWork.cs" />
     <Compile Include="Samples\ThreadSyncWork\ManualResetEventWork.cs" />
