@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Samples.AppDomains.Program</StartupObject>
+    <StartupObject>ConsoleApp.Finalizer.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -96,7 +96,7 @@
     <Compile Include="ConsoleUI\Program.cs" />
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
-    <Compile Include="Finalizer\Program.cs" />
+    <Compile Include="OOP\Virtual01\Program.cs" />
     <Compile Include="HackerRanks\Arrays\ArrayManipulation\Program.cs" />
     <Compile Include="HackerRanks\Arrays\MinimumSwaps2\Program.cs" />
     <Compile Include="HackerRanks\BitManipulations\LonelyInteger\Program.cs" />
@@ -115,6 +115,7 @@
     <Compile Include="MethodCalls\MethodCallsHelper.cs" />
     <Compile Include="MethodCalls\Program.cs" />
     <Compile Include="Observables\Program.cs" />
+    <Compile Include="OOP\Virtual02\Program.cs" />
     <Compile Include="ParallelTasks\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelTaskWorker.cs" />
@@ -143,9 +144,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="HackerRanks\Arrays\ArrayManipulation\input02.txt" />
     <Content Include="HackerRanks\Arrays\ArrayManipulation\input04.txt" />

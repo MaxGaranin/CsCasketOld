@@ -10,15 +10,15 @@ namespace ConsoleApp.Async.ThreadsSynchronization
 
         public static void Main(string[] args)
         {
-            var t1 = Task.Run(() => { Go(); });
-            var t2 = Task.Run(() => { Go(); });
+            var t1 = Task.Run(() => { Go(1); });
+            var t2 = Task.Run(() => { Go(2); });
 
             Task.WaitAll(t1, t2);
             Console.WriteLine("Done!");
             Console.ReadKey();
         }
 
-        private static void Go()
+        private static void Go(int k)
         {
             lock (typeof(SynchronizationSamples))
             {
@@ -29,6 +29,7 @@ namespace ConsoleApp.Async.ThreadsSynchronization
 
                 _val2 = 0;
                 
+                Console.WriteLine($"Thread: {k}");
                 Thread.Sleep(2000);
             }
         }
