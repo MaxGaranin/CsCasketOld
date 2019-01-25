@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Finalizer.Program</StartupObject>
+    <StartupObject>ConsoleApp.Async.ThreadsSynchronization.Gosling</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -91,7 +91,9 @@
     <Compile Include="Async\Albahari\ProducerConsumerQueue.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
-    <Compile Include="Async\ThreadsSynchronization\SynchronizationSamples.cs" />
+    <Compile Include="Async\ThreadsSynchronization\Garden.cs" />
+    <Compile Include="Async\ThreadsSynchronization\Gosling.cs" />
+    <Compile Include="Async\ThreadsSynchronization\LockByType.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
     <Compile Include="Files\Program.cs" />
