@@ -4,33 +4,42 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Async.ThreadsSynchronization
 {
-    public class LockByType
+    public class Program
     {
-        private static int _val1, _val2;
-
         public static void Main(string[] args)
         {
-            var t1 = Task.Run(() => { Go(1); });
-            var t2 = Task.Run(() => { Go(2); });
+            var lockTask = Task.Run(() => { LockByType.OuterLockType(); });
+            var goTask = Task.Run(() => { LockByType.Go(1); });
 
-            Task.WaitAll(t1, t2);
-            Console.WriteLine("Done!");
             Console.ReadKey();
         }
+    }
 
-        private static void Go(int k)
+    public class LockByType
+    {
+        private static object _lock = new object();
+
+        public static void Go(int k)
         {
-            lock (typeof(LockByType))
+            while (true)
             {
-                if (_val2 != 0)
+                lock (typeof(LockByType))
                 {
-                    Console.WriteLine(_val1 / _val2);
+                    Console.WriteLine($"Thread: {k}");
+                    Thread.Sleep(1000);
                 }
+            }
+        }
 
-                _val2 = 0;
-                
-                Console.WriteLine($"Thread: {k}");
-                Thread.Sleep(2000);
+        public static void OuterLockType()
+        {
+            while (true)
+            {
+                lock (typeof(LockByType))
+                {
+                    Console.WriteLine("Lock");
+                    Thread.Sleep(3000);
+                }
             }
         }
     }
