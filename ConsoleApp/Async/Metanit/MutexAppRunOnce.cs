@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace ConsoleApp.Samples.ThreadSyncWork
+namespace ConsoleApp.Async.Metanit
 {
     public class MutexAppRunOnce
     {

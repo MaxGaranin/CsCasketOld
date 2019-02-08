@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Threading;
 
-namespace ConsoleApp.Samples.ThreadSyncWork
+namespace ConsoleApp.Async.Metanit
 {
-    public class MutexWork
+    public class AutoResetEventWork
     {
-        private static Mutex _mutexObj = new Mutex();
+        private static AutoResetEvent _waitHandler = new AutoResetEvent(true);
         private static int _x = 0;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
-                Thread myThread = new Thread(Count);
+                var myThread = new Thread(Count);
                 myThread.Name = "Поток " + i;
                 myThread.Start();
             }
@@ -22,15 +22,15 @@ namespace ConsoleApp.Samples.ThreadSyncWork
 
         public static void Count()
         {
-            _mutexObj.WaitOne();
+            _waitHandler.WaitOne();
             _x = 1;
-            for (int i = 1; i < 9; i++)
+            for (var i = 1; i < 9; i++)
             {
                 Console.WriteLine("{0}: {1}", Thread.CurrentThread.Name, _x);
                 _x++;
                 Thread.Sleep(100);
             }
-            _mutexObj.ReleaseMutex();
+            _waitHandler.Set();
         }
     }
 }

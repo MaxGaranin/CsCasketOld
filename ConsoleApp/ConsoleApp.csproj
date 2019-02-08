@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Async.ThreadsSynchronization.Garden</StartupObject>
+    <StartupObject>ConsoleApp.Async.ThreadsSynchronization.WhoWins</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -88,12 +88,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\Albahari\AcknowledgedWaitHandle.cs" />
-    <Compile Include="Async\Albahari\ProducerConsumerQueue.cs" />
+    <Compile Include="Async\Albahari\ProducerConsumerQueueWaitHandle.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
-    <Compile Include="Async\ThreadsSynchronization\Garden.cs" />
-    <Compile Include="Async\ThreadsSynchronization\Gosling.cs" />
-    <Compile Include="Async\ThreadsSynchronization\LockByType.cs" />
+    <Compile Include="Async\SomeTasks\WhoWins.cs" />
+    <Compile Include="Async\SomeTasks\Garden.cs" />
+    <Compile Include="Async\SomeTasks\Gosling.cs" />
+    <Compile Include="Async\SomeTasks\LockByType.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
     <Compile Include="Files\Program.cs" />
@@ -122,16 +123,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Async\CancelTaskWorker.cs" />
     <Compile Include="Samples\AppDomains\Program.cs" />
-    <Compile Include="Samples\ThreadSyncWork\AutoResetEventWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\BarrierWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\ManualResetEventWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MonitorWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MutexAppRunOnce.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MutextIncDec.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MutexWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\SemaphoreWork.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MonitorTickTock.cs" />
-    <Compile Include="Samples\ThreadSyncWork\MonitorWait.cs" />
+    <Compile Include="Async\Metanit\AutoResetEventWork.cs" />
+    <Compile Include="Async\Metanit\BarrierWork.cs" />
+    <Compile Include="Async\Metanit\ManualResetEventWork.cs" />
+    <Compile Include="Async\Metanit\MonitorWork.cs" />
+    <Compile Include="Async\Metanit\MutexAppRunOnce.cs" />
+    <Compile Include="Async\Metanit\MutextIncDec.cs" />
+    <Compile Include="Async\Metanit\MutexWork.cs" />
+    <Compile Include="Async\Metanit\SemaphoreWork.cs" />
+    <Compile Include="Async\Metanit\MonitorTickTock.cs" />
+    <Compile Include="Async\Metanit\MonitorWait.cs" />
     <Compile Include="Samples\WrapEapPatternsInTask\WebDataDownloader.cs" />
     <Compile Include="SelfDelete\Program.cs" />
     <Compile Include="WeakEvents\Program.cs" />

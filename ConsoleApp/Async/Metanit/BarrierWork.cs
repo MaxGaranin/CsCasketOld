@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.Samples.ThreadSyncWork
+namespace ConsoleApp.Async.Metanit
 {
     public class BarrierWork
     {
