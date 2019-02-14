@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Async.ThreadsSynchronization.WhoWins</StartupObject>
+    <StartupObject>ConsoleApp.Async.SomeTasks.ProducerConsumerByMonitor</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -91,6 +91,9 @@
     <Compile Include="Async\Albahari\ProducerConsumerQueueWaitHandle.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
+    <Compile Include="Async\SomeTasks\ProducerConsumerByMonitor2.cs" />
+    <Compile Include="Async\SomeTasks\ProducerConsumerByMonitor.cs" />
+    <Compile Include="Async\SomeTasks\ProducerConsumerBySemaphore.cs" />
     <Compile Include="Async\SomeTasks\WhoWins.cs" />
     <Compile Include="Async\SomeTasks\Garden.cs" />
     <Compile Include="Async\SomeTasks\Gosling.cs" />
