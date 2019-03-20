@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Async.SomeTasks.ProducerConsumerByMonitor</StartupObject>
+    <StartupObject>ConsoleApp.DisposePattern.ExceptionInDispose.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +100,7 @@
     <Compile Include="Async\SomeTasks\LockByType.cs" />
     <Compile Include="BigData\Program.cs" />
     <Compile Include="ConsoleUI\Program.cs" />
+    <Compile Include="DisposePattern\ExceptionInDispose\Program.cs" />
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
     <Compile Include="OOP\Virtual01\Program.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Async\Metanit\MonitorWait.cs" />
     <Compile Include="Samples\WrapEapPatternsInTask\WebDataDownloader.cs" />
     <Compile Include="SelfDelete\Program.cs" />
+    <Compile Include="Teplyakov\WeakReferences\Program.cs" />
     <Compile Include="WeakEvents\Program.cs" />
     <Compile Include="WeakEvents\WeakTests.cs" />
     <Compile Include="Async\Web\Program.cs" />
