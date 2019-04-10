@@ -11,7 +11,6 @@ using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
 
 namespace WpfSamples.ViewModel
 {
-
     #region Class TestViewModelLauncher
 
     public class TestViewModelLauncher
@@ -44,6 +43,11 @@ namespace WpfSamples.ViewModel
 
     public class TestViewModel : ViewModelBase
     {
+        public TestViewModel()
+        {
+            StringValue = "Hello, world!";
+        }
+
         #region Properties
 
         private string _stringValue;
@@ -115,8 +119,7 @@ namespace WpfSamples.ViewModel
 
         public void Update()
         {
-            MyComplexValue.Name = "New Name";
-            MyComplexValues[0].Name = "New QQQ";
+            StringValue = "Hello, world!";
         }
 
         #endregion
