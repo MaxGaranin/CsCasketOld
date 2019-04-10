@@ -686,6 +686,12 @@
   <ItemGroup>
     <Resource Include="Resources\Images\ball_yellow.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WpfControls\WpfControls.csproj">
+      <Project>{65e132e5-ddf1-4b19-8cc9-c18d7754097e}</Project>
+      <Name>WpfControls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
