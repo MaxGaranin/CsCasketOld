@@ -2,8 +2,7 @@
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples.View;
-using WpfSamples.View.Async.TaskWithDialog;
-using WpfSamples.View.Draw;
+using WpfSamples.ViewModel;
 using WpfSamples.WpfInfrastructure.Utils;
 
 namespace WpfSamples
@@ -19,7 +18,8 @@ namespace WpfSamples
         {
             Init();
 
-            var view = new NotifyIconView();
+            var viewModel = new ValidationTestViewModel();
+            var view = new ValidationTestView {DataContext = viewModel};
             view.Show();
         }
 

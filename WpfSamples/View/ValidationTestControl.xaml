@@ -6,8 +6,10 @@
              xmlns:converters="clr-namespace:WpfSamples.WpfInfrastructure.Converters"
              xmlns:validationRules="clr-namespace:WpfSamples.WpfInfrastructure.ValidationRules"
              xmlns:classes="clr-namespace:WpfSamples.WpfInfrastructure.Classes"
+             xmlns:viewModel="clr-namespace:WpfSamples.ViewModel"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance viewModel:ValidationTestViewModel}">
 
     <UserControl.Resources>
         <Style x:Key="WaterCutValidation" TargetType="TextBox">
@@ -52,7 +54,7 @@
                 <TextBox.Text>
                     <Binding Path="MyDoubleValue" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>
-                            <validationRules:MyStringLengthValidationRule>
+                            <validationRules:MyStringLengthValidationRule ValidatesOnTargetUpdated="True">
                                 <validationRules:MyStringLengthValidationRule.LengthContainer>
                                     <classes:IntegerContainer
                                         DataContext="{Binding Source={StaticResource DataContextBridge}, Path=DataContext}"

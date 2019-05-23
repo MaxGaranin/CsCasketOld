@@ -3,12 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:viewModel="clr-namespace:WpfSamples40.ViewModel"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:view="clr-namespace:WpfSamples.View"
         xmlns:validationRules="clr-namespace:WpfSamples.WpfInfrastructure.ValidationRules"
+        xmlns:viewModel1="clr-namespace:WpfSamples.ViewModel"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance viewModel:ValidationTestViewModel}"
+        d:DataContext="{d:DesignInstance viewModel1:ValidationTestViewModel}"
         Title="ValidationTestView" Height="700" Width="900">
 
     <StackPanel>
