@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.DisposePattern.ExceptionInDispose.Program</StartupObject>
+    <StartupObject>ConsoleApp.HackerRanks.WarmUp.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -103,13 +103,14 @@
     <Compile Include="DisposePattern\ExceptionInDispose\Program.cs" />
     <Compile Include="Files\Program.cs" />
     <Compile Include="Files\TextFileReader.cs" />
+    <Compile Include="HackerRanks\Dictionaries\SherlockAndAnagrams\Program.cs" />
     <Compile Include="OOP\Virtual01\Program.cs" />
     <Compile Include="HackerRanks\Arrays\ArrayManipulation\Program.cs" />
     <Compile Include="HackerRanks\Arrays\MinimumSwaps2\Program.cs" />
     <Compile Include="HackerRanks\BitManipulations\LonelyInteger\Program.cs" />
     <Compile Include="HackerRanks\Dictionaries\CountTriplets\Program.cs" />
     <Compile Include="HackerRanks\Stacks\BalancedBrackets\Program.cs" />
-    <Compile Include="HackerRanks\Stacks\MaximumElement\Program.cs" />
+    <Compile Include="HackerRanks\WarmUp\Program.cs" />
     <Compile Include="Hardware\HardwareInfoHelper.cs" />
     <Compile Include="Hardware\NativeMethods.cs" />
     <Compile Include="Hardware\Program.cs" />
