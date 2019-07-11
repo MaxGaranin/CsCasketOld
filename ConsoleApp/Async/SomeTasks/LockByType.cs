@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Async.SomeTasks
 {
-    public class Program
+    public class LockByTypeRunner
     {
         public static void Main(string[] args)
         {
@@ -35,6 +35,10 @@ namespace ConsoleApp.Async.SomeTasks
         {
             while (true)
             {
+                // В этом случае потоки не блокируют друга друга
+                // lock (_lock)             
+
+                // Здесь Go() будет ждать, пока не выполнится данный lock
                 lock (typeof(LockByType))
                 {
                     Console.WriteLine("Lock");
