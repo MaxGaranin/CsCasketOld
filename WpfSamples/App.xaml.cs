@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Threading;
 using Telerik.Windows.Controls;
 using WpfSamples.View;
+using WpfSamples.View.Templates;
 using WpfSamples.ViewModel;
 using WpfSamples.WpfInfrastructure.Utils;
 
@@ -18,8 +19,7 @@ namespace WpfSamples
         {
             Init();
 
-            var viewModel = new ValidationTestViewModel();
-            var view = new ValidationTestView {DataContext = viewModel};
+            var view = new RelativeSourceSamplesView();
             view.Show();
         }
 

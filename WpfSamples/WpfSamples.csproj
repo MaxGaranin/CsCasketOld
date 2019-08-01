@@ -226,6 +226,11 @@
     <Compile Include="View\ScrollItemsControlView.xaml.cs">
       <DependentUpon>ScrollItemsControlView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Templates\MyTemplateSelector.cs" />
+    <Compile Include="View\Templates\RelativeSourceSamplesView.xaml.cs">
+      <DependentUpon>RelativeSourceSamplesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Templates\RelativeSourceSampleViewModel.cs" />
     <Compile Include="View\ValidationTestControl.xaml.cs">
       <DependentUpon>ValidationTestControl.xaml</DependentUpon>
     </Compile>
@@ -590,6 +595,10 @@
     <Page Include="View\TabView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Templates\RelativeSourceSamplesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TestView.xaml">
       <SubType>Designer</SubType>
