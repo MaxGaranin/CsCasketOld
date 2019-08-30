@@ -81,6 +81,7 @@
     <Compile Include="Common\CallVirtualMemberInConstructorTests.cs" />
     <Compile Include="Common\CollectionTests.cs" />
     <Compile Include="Common\CultureInfoTests.cs" />
+    <Compile Include="Common\DateTimeTests.cs" />
     <Compile Include="Common\ExplicitInterfaceTests.cs" />
     <Compile Include="Common\FabricTests.cs" />
     <Compile Include="Common\GenericCovarianceTests.cs" />
