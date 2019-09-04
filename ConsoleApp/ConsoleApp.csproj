@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApp.Async.SomeTasks.Program</StartupObject>
+    <StartupObject>ConsoleApp.Async.SomeTasks.LockByThisRunner</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -91,6 +91,7 @@
     <Compile Include="Async\Albahari\ProducerConsumerQueueWaitHandle.cs" />
     <Compile Include="Async\CancelAsyncWorker.cs" />
     <Compile Include="Async\Program.cs" />
+    <Compile Include="Async\SomeTasks\LockByThis.cs" />
     <Compile Include="Async\SomeTasks\ProducerConsumerByMonitor2.cs" />
     <Compile Include="Async\SomeTasks\ProducerConsumerByMonitor.cs" />
     <Compile Include="Async\SomeTasks\ProducerConsumerBySemaphore.cs" />
