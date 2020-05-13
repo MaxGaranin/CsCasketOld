@@ -72,6 +72,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -199,6 +202,9 @@
     </Compile>
     <Compile Include="View\Async\TaskvsBW\TaskvsBwView.xaml.cs">
       <DependentUpon>TaskvsBwView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttachConsoleView.xaml.cs">
+      <DependentUpon>AttachConsoleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ContentPresenterVsContentControl\ContentPresenterVsContentControlView.xaml.cs">
       <DependentUpon>ContentPresenterVsContentControlView.xaml</DependentUpon>
@@ -465,6 +471,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Async\TaskvsBW\TaskvsBwView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttachConsoleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

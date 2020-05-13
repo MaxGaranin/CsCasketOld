@@ -19,7 +19,7 @@ namespace WpfSamples
         {
             Init();
 
-            var view = new RelativeSourceSamplesView();
+            var view = new AttachConsoleView();
             view.Show();
         }
 
